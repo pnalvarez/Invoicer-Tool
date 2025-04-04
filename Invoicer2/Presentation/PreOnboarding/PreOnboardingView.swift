@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct PreOnboardingView: View {
+    @ObservedObject var viewModel: PreOnboardingViewModel
+    
     var body: some View {
         VStack(spacing: .zero) {
             Text("Welcome to the Invoice tool!")
@@ -27,11 +29,11 @@ struct PreOnboardingView: View {
 }
 
 extension PreOnboardingView {
-    static func getViewController() -> UIViewController {
-        UIHostingController(rootView: PreOnboardingView())
+    static func getViewController(viewModel: PreOnboardingViewModel) -> UIViewController {
+        UIHostingController(rootView: PreOnboardingView(viewModel: viewModel))
     }
 }
 
 #Preview {
-    PreOnboardingView()
+    PreOnboardingView(viewModel: .init(coordinator: PreOnboardingCoordinator()))
 }
