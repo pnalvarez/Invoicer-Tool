@@ -1,0 +1,37 @@
+//
+//  PreOnboardingView.swift
+//  Invoicer
+//
+//  Created by Pedro Alvarez on 31/03/25.
+//
+
+import SwiftUI
+
+struct PreOnboardingView: View {
+    var body: some View {
+        VStack(spacing: .zero) {
+            Text("Welcome to the Invoice tool!")
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(Colors.textPrimary)
+            Spacer()
+                .frame(height: 8)
+            Text("It seems like it's your first time here.")
+                .font(.subheadline)
+                .foregroundColor(Colors.textPrimary)
+            Spacer()
+                .frame(height: 24)
+            PrimaryButton(text: "Start", action: {})
+        }
+    }
+}
+
+extension PreOnboardingView {
+    static func getViewController() -> UIViewController {
+        UIHostingController(rootView: PreOnboardingView())
+    }
+}
+
+#Preview {
+    PreOnboardingView()
+}
