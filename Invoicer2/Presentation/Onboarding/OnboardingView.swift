@@ -9,6 +9,11 @@ import SwiftUI
 
 struct OnboardingView: View {
     var body: some View {
-        Text("OnboardingView")
+        mainContent
+            .inMainNavigationView(title: "Onboarding")
+    }
+    
+    private var mainContent: some View {
+        EmptyView()
     }
 }

@@ -21,7 +21,7 @@ enum LeadingItem {
     }
 }
 
-struct MainNavigationView<Content: View, CenterView: View, TrailingView: View>: View {
+private struct MainNavigationView<Content: View, CenterView: View, TrailingView: View>: View {
     let title: String
     let scrollable: Bool
     let leadingItem: LeadingItem?
@@ -110,5 +110,25 @@ struct MainNavigationViewModifier<CenterView: View, TrailingView: View>: ViewMod
             centerView: centerView,
             trailingView: trailingView
         )
+    }
+}
+
+extension View {
+    func inMainNavigationView<CenterView: View, TrailingView: View>(
+        title: String,
+        scrollable: Bool = true,
+        leadingItem: LeadingItem? = nil,
+        leadingAction: (() -> Void)? = nil,
+        @ViewBuilder centerView: @escaping () -> CenterView = { EmptyView() },
+        @ViewBuilder trailingView: @escaping () -> TrailingView = { EmptyView() }
+    ) -> some View {
+        modifier(MainNavigationViewModifier(
+            title: title,
+            scrollable: scrollable,
+            leadingItem: leadingItem,
+            leadingAction: leadingAction,
+            centerView: centerView,
+            trailingView: trailingView
+        ))
     }
 }
