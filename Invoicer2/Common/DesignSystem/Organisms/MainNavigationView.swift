@@ -50,27 +50,49 @@ private struct MainNavigationView<Content: View, CenterView: View, TrailingView:
     
     var body: some View {
         VStack {
-            HStack {
-                if let leadingItem = leadingItem {
-                    Button(action: leadingAction ?? { }) {
-                        Image(systemName: leadingItem.imageName)
-                            .foregroundColor(.primary)
+            ZStack {
+                HStack {
+                    if let leadingItem = leadingItem {
+                        Button(action: leadingAction ?? { }) {
+                            Image(systemName: leadingItem.imageName)
+                                .foregroundColor(.primary)
+                        }
                     }
+                    
+                    Spacer()
+                    
+                    trailingView()
                 }
-                
-                Spacer()
+                .padding(.horizontal, 16)
                 
                 VStack {
                     Text(title)
-                        .font(.title)
+                        .font(.title3)
                         .fontWeight(.bold)
                     
                     centerView()
                 }
+            }
+            .padding(.bottom, 16)
+            .overlay(
+                Rectangle()
+                    .frame(height: 1)
+                    .foregroundColor(Color.gray.opacity(0.1)), // thin border
+                alignment: .bottom
+            )
+            
+            
+            
+            Spacer()
+            
+            if scrollable {
+                ScrollView(showsIndicators: false) {
+                    content()
+                }
+            } else {
+                content()
                 
                 Spacer()
-                
-                trailingView()
             }
         }
     }

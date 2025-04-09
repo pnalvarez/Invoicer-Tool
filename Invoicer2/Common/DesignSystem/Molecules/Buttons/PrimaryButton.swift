@@ -24,7 +24,7 @@ struct PrimaryButton: View {
             extraSpacer
         })
         .background(Colors.buttonPrimary)
-        .cornerRadius(8)
+        .cornerRadius(16)
     }
     
     @ViewBuilder
