@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @ObservedObject var viewModel: OnboardingViewModel = .init()
+    @ObservedObject var viewModel: OnboardingViewModel
     
     var body: some View {
         VStack {
             mainContent
                 .inMainNavigationView(
-                    title: "Onboarding",
-                    scrollable: true,
                     leadingItem: .close,
+                    centerView: {
+                        StepProgressIndicator(step: viewModel.step.count, total: 4, size: .small)
+                            .frame(maxWidth: 120)
+                    },
                     trailingView: { Button(action: { }) {
                         Image(systemName: "info.circle")
                     }
@@ -27,26 +29,31 @@ struct OnboardingView: View {
             
             PrimaryButton(
                 text: "Save",
+                enabled: viewModel.ctaEnabled,
                 expandedWidth: true,
-                action: {}
+                action: viewModel.didTapCTA
             )
             .padding(.bottom, 32)
             .padding(.horizontal, 20)
                
         }
         .environmentObject(viewModel)
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
         .ignoresSafeArea(edges: .bottom)
+        .navigationBarHidden(true)
     }
     
     private var mainContent: some View {
         VStack(spacing: .zero) {
-            Text(viewModel.step?.title ?? "")
+            Text(viewModel.step.title)
                 .font(.headline)
                 .foregroundColor(Colors.textPrimary)
             
             Spacer().frame(height: 16)
             
-            Text(viewModel.step?.description ?? "")
+            Text(viewModel.step.description)
                 .font(.body)
                 .foregroundColor(Colors.textPrimary)
                 .multilineTextAlignment(.center)
@@ -62,8 +69,6 @@ struct OnboardingView: View {
                 OnboardingBankInfoView()
             case .serviceInfo:
                 OnboardingServiceInfoView()
-            case .none:
-                EmptyView()
             }
         }
         .padding(.horizontal, 24)
@@ -71,6 +76,12 @@ struct OnboardingView: View {
     }
 }
 
+extension OnboardingView {
+    func getViewController(viewModel: OnboardingViewModel) -> UIViewController {
+        UIHostingController(rootView: OnboardingView(viewModel: viewModel))
+    }
+}
+
 #Preview {
-    OnboardingView()
+    OnboardingView(viewModel: OnboardingViewModel(coordinator: OnboardingCoordinator()))
 }

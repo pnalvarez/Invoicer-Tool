@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PrimaryButton: View {
     let text: String
+    var enabled: Bool = true
     var expandedWidth: Bool = false
     let action: () -> Void
     
@@ -23,7 +24,8 @@ struct PrimaryButton: View {
             
             extraSpacer
         })
-        .background(Colors.buttonPrimary)
+        .disabled(!enabled)
+        .background(enabled ? Colors.buttonPrimary : Colors.primaryDisabled)
         .cornerRadius(16)
     }
     
@@ -37,5 +39,7 @@ struct PrimaryButton: View {
 
 #Preview {
     PrimaryButton(text: "Test", expandedWidth: true, action: { })
+        .padding()
+    PrimaryButton(text: "Test", enabled: false, expandedWidth: true, action: { })
         .padding()
 }

@@ -22,21 +22,21 @@ enum LeadingItem {
 }
 
 private struct MainNavigationView<Content: View, CenterView: View, TrailingView: View>: View {
-    let title: String
+    var title: String?
     let scrollable: Bool
     let leadingItem: LeadingItem?
     let leadingAction: (() -> Void)?
     let content: () -> Content
     let centerView: () -> CenterView
     let trailingView: () -> TrailingView
-    
+
     init(
-        title: String,
+        title: String? = nil,
         scrollable: Bool = true,
         leadingItem: LeadingItem? = nil,
         leadingAction: (() -> Void)? = nil,
         @ViewBuilder content: @escaping () -> Content,
-        @ViewBuilder centerView: @escaping () -> CenterView = { EmptyView()},
+        @ViewBuilder centerView: @escaping () -> CenterView = { EmptyView() },
         @ViewBuilder trailingView: @escaping () -> TrailingView = { EmptyView() }
     ) {
         self.title = title
@@ -47,12 +47,12 @@ private struct MainNavigationView<Content: View, CenterView: View, TrailingView:
         self.centerView = centerView
         self.trailingView = trailingView
     }
-    
+
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             ZStack {
                 HStack {
-                    if let leadingItem = leadingItem {
+                    if let leadingItem {
                         Button(action: leadingAction ?? { }) {
                             Image(systemName: leadingItem.imageName)
                                 .foregroundColor(.primary)
@@ -65,41 +65,41 @@ private struct MainNavigationView<Content: View, CenterView: View, TrailingView:
                 }
                 .padding(.horizontal, 16)
                 
-                VStack {
+                if let title {
                     Text(title)
                         .font(.title3)
                         .fontWeight(.bold)
-                    
+                } else {
                     centerView()
                 }
             }
-            .padding(.bottom, 16)
+            .padding(.vertical, 16)
             .overlay(
                 Rectangle()
                     .frame(height: 1)
-                    .foregroundColor(Color.gray.opacity(0.1)), // thin border
+                    .foregroundColor(Color.gray.opacity(0.1)),
                 alignment: .bottom
             )
-            
-            
-            
-            Spacer()
-            
+            .frame(maxHeight: 68)
+
+            // Content area
             if scrollable {
                 ScrollView(showsIndicators: false) {
                     content()
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
             } else {
                 content()
-                
-                Spacer()
+                    .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
+
 struct MainNavigationViewModifier<CenterView: View, TrailingView: View>: ViewModifier {
-    let title: String
+    var title: String?
     let scrollable: Bool
     let leadingItem: LeadingItem?
     let leadingAction: (() -> Void)?
@@ -107,7 +107,7 @@ struct MainNavigationViewModifier<CenterView: View, TrailingView: View>: ViewMod
     let trailingView: () -> TrailingView
     
     init(
-        title: String,
+        title: String? = nil,
         scrollable: Bool = true,
         leadingItem: LeadingItem? = nil,
         leadingAction: (() -> Void)? = nil,
@@ -137,7 +137,7 @@ struct MainNavigationViewModifier<CenterView: View, TrailingView: View>: ViewMod
 
 extension View {
     func inMainNavigationView<CenterView: View, TrailingView: View>(
-        title: String,
+        title: String? = nil,
         scrollable: Bool = true,
         leadingItem: LeadingItem? = nil,
         leadingAction: (() -> Void)? = nil,

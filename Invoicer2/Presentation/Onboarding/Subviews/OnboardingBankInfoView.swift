@@ -66,6 +66,6 @@ struct OnboardingBankInfoView: View {
 
 #Preview {
     OnboardingBankInfoView()
-        .environmentObject(OnboardingViewModel())
+        .environmentObject(OnboardingViewModel(coordinator: OnboardingCoordinator()))
         .padding(24)
 }

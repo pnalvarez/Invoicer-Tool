@@ -12,9 +12,15 @@ protocol PreOnboardingCoordinatorProtocol {
 }
 
 final class PreOnboardingCoordinator: PreOnboardingCoordinatorProtocol {
+    private let onboardingBuilder: OnboardingBuilderProtocol
     weak var viewController: UIViewController?
     
+    init(onboardingBuilder: OnboardingBuilderProtocol = OnboardingBuilder()) {
+        self.onboardingBuilder = onboardingBuilder
+    }
+    
     func navigateToOnboarding() {
-        // TO DO
+        let onboardingController = onboardingBuilder.build()
+        viewController?.navigationController?.pushViewController(onboardingController, animated: true)
     }
 }

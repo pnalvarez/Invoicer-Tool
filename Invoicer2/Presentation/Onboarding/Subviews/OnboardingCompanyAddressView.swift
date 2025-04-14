@@ -67,5 +67,5 @@ struct OnboardingCompanyAddressView: View {
 
 #Preview {
     OnboardingCompanyAddressView()
-        .environmentObject(OnboardingViewModel())
+        .environmentObject(OnboardingViewModel(coordinator: OnboardingCoordinator()))
 }

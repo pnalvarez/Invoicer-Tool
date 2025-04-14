@@ -39,6 +39,19 @@ enum OnboardingStep {
         }
     }
     
+    var count: Int {
+        switch self {
+        case .contractorInfo:
+            return 1
+        case .companyAddress:
+            return 2
+        case .bankInfo:
+            return 3
+        case .serviceInfo:
+            return 4
+        }
+    }
+    
     var nextStep: OnboardingStep? {
         switch self {
         case .contractorInfo:
@@ -51,6 +64,15 @@ enum OnboardingStep {
             return nil
         }
     }
+    
+    var finishesOnboarding: Bool {
+        switch self {
+        case .serviceInfo:
+            return true
+        default:
+            return false
+        }
+    }
 }
 
 final class OnboardingViewModel: ObservableObject {
@@ -58,10 +80,168 @@ final class OnboardingViewModel: ObservableObject {
     @Published var companyAddress: OnboardingCompanyAddress = .init()
     @Published var bankAccountInfo: OnboardingBankAccount = .init()
     @Published var serviceInfo: OnboardingServiceInfo = .init()
-    @Published var step: OnboardingStep? = .contractorInfo
+    @Published var step: OnboardingStep = .contractorInfo
+    
     @Published var shouldShowSecondaryBankForms: Bool = false
     
-    func goToNextStep() {
-        step = step?.nextStep
+    @Published var ctaEnabled: Bool = false
+    
+    @Published var fullNameHasError: Bool = true
+    @Published var taxIdHasError: Bool = true
+    @Published var companyNameHasError: Bool = true
+    @Published var companyEmailHasError: Bool = true
+    @Published var streetAddressHasError: Bool = true
+    @Published var cityHasError: Bool = true
+    @Published var stateHasError: Bool = true
+    @Published var zipCodeHasError: Bool = true
+    @Published var countryHasError: Bool = true
+    @Published var neighbourhoodHasError: Bool = true
+    @Published var numberHasError: Bool = true
+    
+    private var disposeBag: Set<AnyCancellable> = []
+    
+    private let coordinator: OnboardingCoordinatorProtocol
+    
+    init(coordinator: OnboardingCoordinatorProtocol) {
+        self.coordinator = coordinator
+        setUpSubscriptions()
+    }
+    
+    func didTapCTA() {
+        goToNextStep()
+    }
+    
+    private func goToNextStep() {
+        if step.finishesOnboarding {
+            coordinator.navigateToInvoiceList()
+        } else {
+            if let nextStep = step.nextStep  {
+                step = nextStep
+            }
+        }
+        ctaEnabled = false
+    }
+    
+    private func setUpSubscriptions() {
+        setUpFieldValidation()
+        setUpCTAValidation()
+    }
+    
+    private func setUpFieldValidation() {
+        $contractorInfo
+            .map(\.fullName)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.fullNameHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $contractorInfo
+            .map(\.cnpj)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.taxIdHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $contractorInfo
+            .map(\.companyName)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.companyNameHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $contractorInfo
+            .map(\.companyEmail)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.companyEmailHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.streetAddress)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.companyEmailHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.city)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.cityHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.state)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.stateHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.zipCode)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.zipCodeHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.country)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.countryHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.neighbourhood)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.neighbourhoodHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .map(\.number)
+            .removeDuplicates()
+            .dropFirst()
+            .sink { [weak self] in
+                self?.numberHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+    }
+    
+    private func setUpCTAValidation() {
+        Publishers.CombineLatest4(
+            $fullNameHasError,
+            $taxIdHasError,
+            $companyNameHasError,
+            $companyEmailHasError
+        )
+        .map { !$0 && !$1 && !$2 && !$3 }
+        .combineLatest($step)
+        //        .dropFirst()
+        .map { formsIsValid, step in
+            (step == .contractorInfo) ? formsIsValid : false
+        }
+        .sink { [weak self] in self?.ctaEnabled = $0 }
+        .store(in: &disposeBag)
     }
 }

@@ -15,7 +15,7 @@ struct OnboardingContractorInfo {
 struct OnboardingCompanyAddress {
     var streetAddress: String = ""
     var city: String = ""
-    var neighborhood: String = ""
+    var neighbourhood: String = ""
     var number: String = ""
     var state: String = ""
     var country: String = ""

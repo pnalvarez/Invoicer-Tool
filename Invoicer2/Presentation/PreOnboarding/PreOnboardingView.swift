@@ -23,7 +23,7 @@ struct PreOnboardingView: View {
                 .foregroundColor(Colors.textPrimary)
             Spacer()
                 .frame(height: 24)
-            PrimaryButton(text: "Start", action: {})
+            PrimaryButton(text: "Start", action: viewModel.didTapCTA)
         }
     }
 }

@@ -14,4 +14,5 @@ enum Colors {
     static let inputHover = Color(hex: "#FF6866BE")
     static let secondaryDisabled = Color(hex: "#FFCDC5D9")
     static let errorPrimary = Color(hex: "#FFD94949")
+    static let primaryDisabled = Color(hex: "#FFCDC5D9")
 }

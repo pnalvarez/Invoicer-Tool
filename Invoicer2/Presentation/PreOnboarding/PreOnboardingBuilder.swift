@@ -13,7 +13,8 @@ protocol PreOnboardingBuilderProtocol {
 
 final class PreOnboardingBuilder: PreOnboardingBuilderProtocol {
     func build() -> UIViewController {
-        let coordinator = PreOnboardingCoordinator()
+        let onboardingBuilder = OnboardingBuilder()
+        let coordinator = PreOnboardingCoordinator(onboardingBuilder: onboardingBuilder)
         let viewModel = PreOnboardingViewModel(coordinator: coordinator)
         let viewController = PreOnboardingView.getViewController(viewModel: viewModel)
         coordinator.viewController = viewController
