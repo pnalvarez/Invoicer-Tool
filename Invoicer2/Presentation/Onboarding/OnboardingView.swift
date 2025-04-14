@@ -14,7 +14,8 @@ struct OnboardingView: View {
         VStack {
             mainContent
                 .inMainNavigationView(
-                    leadingItem: .close,
+                    leadingItem: .backArrow,
+                    leadingAction: viewModel.didTapBack,
                     centerView: {
                         StepProgressIndicator(step: viewModel.step.count, total: 4, size: .small)
                             .frame(maxWidth: 120)

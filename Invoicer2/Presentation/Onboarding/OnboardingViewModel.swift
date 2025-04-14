@@ -65,6 +65,19 @@ enum OnboardingStep {
         }
     }
     
+    var previousStep: OnboardingStep? {
+        switch self {
+        case .contractorInfo:
+            return nil
+        case .companyAddress:
+            return .contractorInfo
+        case .bankInfo:
+            return .companyAddress
+        case .serviceInfo:
+            return .bankInfo
+        }
+    }
+    
     var finishesOnboarding: Bool {
         switch self {
         case .serviceInfo:
@@ -107,6 +120,15 @@ final class OnboardingViewModel: ObservableObject {
         setUpSubscriptions()
     }
     
+    func didTapBack() {
+        guard let previousStep = step.previousStep else {
+            coordinator.navigateBack()
+            return
+        }
+        step = previousStep
+        ctaEnabled = true
+    }
+    
     func didTapCTA() {
         goToNextStep()
     }
@@ -119,7 +141,6 @@ final class OnboardingViewModel: ObservableObject {
                 step = nextStep
             }
         }
-        ctaEnabled = false
     }
     
     private func setUpSubscriptions() {
@@ -169,7 +190,7 @@ final class OnboardingViewModel: ObservableObject {
             .removeDuplicates()
             .dropFirst()
             .sink { [weak self] in
-                self?.companyEmailHasError = $0.isEmpty
+                self?.streetAddressHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
@@ -237,11 +258,35 @@ final class OnboardingViewModel: ObservableObject {
         )
         .map { !$0 && !$1 && !$2 && !$3 }
         .combineLatest($step)
-        //        .dropFirst()
         .map { formsIsValid, step in
             (step == .contractorInfo) ? formsIsValid : false
         }
-        .sink { [weak self] in self?.ctaEnabled = $0 }
+        .sink { [weak self] in
+            guard let self else { return }
+            ctaEnabled = $0
+        }
+        .store(in: &disposeBag)
+        
+        Publishers.CombineLatest4(
+            $streetAddressHasError,
+            $numberHasError,
+            $neighbourhoodHasError,
+            $cityHasError
+        )
+        .combineLatest(
+            $stateHasError,
+            $countryHasError,
+            $zipCodeHasError
+        )
+        .map { !$0.0 && !$0.1 && !$0.2 && !$0.3 && !$1 && !$2 && !$3 }
+        .combineLatest($step)
+        .map { formsIsValid, step in
+            (step == .companyAddress) ? formsIsValid : false
+        }
+        .sink { [weak self] in
+            guard let self else { return }
+            ctaEnabled = $0
+        }
         .store(in: &disposeBag)
     }
 }

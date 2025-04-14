@@ -31,9 +31,8 @@ struct OnboardingCompanyAddressView: View {
                     InputField(
                         label: "Neighbourhood",
                         placeholder: "Eg: Mangathan",
-                        text: $viewModel.companyAddress.streetAddress,
+                        text: $viewModel.companyAddress.neighbourhood,
                     )
-                    .frame(width: .infinity)
                     
                     HStack {
                         InputField(
@@ -57,9 +56,8 @@ struct OnboardingCompanyAddressView: View {
                     }
                     InputField(
                         label: "Zip Code",
-                        text: $viewModel.companyAddress.streetAddress,
+                        text: $viewModel.companyAddress.zipCode,
                     )
-                    .frame(width: .infinity)
                 }
             }
         }
