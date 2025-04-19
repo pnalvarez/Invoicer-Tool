@@ -179,7 +179,7 @@ final class OnboardingViewModel: ObservableObject {
         $contractorInfo
             .mapDistinct(\.companyEmail)
             .sink { [weak self] in
-                self?.companyEmailHasError = $0.isEmpty
+                self?.companyEmailHasError = !$0.isValidEmail
             }
             .store(in: &disposeBag)
         

@@ -27,7 +27,7 @@ struct OnboardingContractorInfoView: View {
                 label: "Company e-mail",
                 placeholder: "Eg: company@google.com",
                 text: $viewModel.contractorInfo.companyEmail,
-                errorMessage: viewModel.companyEmailHasError ? "Company e-mail is required" : nil
+                errorMessage: viewModel.companyEmailHasError ? "Company e-mail is required and should be valid" : nil
             )
         }
     }

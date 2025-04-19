@@ -34,36 +34,6 @@
             endingLineNumber = "430"
             landmarkName = "setUpCTAValidation()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7F3A3830-3F9C-47D4-A170-84B061526A02 - baed3b2354f7c398"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Invoicer2.OnboardingViewModel.setUpCTAValidation() -&gt; ()"
-                  moduleName = "Invoicer2.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pedroalvarez/Projects/iOS/Invoicer2/Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "430"
-                  endingLineNumber = "430">
-               </Location>
-               <Location
-                  uuid = "7F3A3830-3F9C-47D4-A170-84B061526A02 - 8b0f5fb4f6c9c8a8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #12 (Swift.Bool) -&gt; () in Invoicer2.OnboardingViewModel.setUpCTAValidation() -&gt; ()"
-                  moduleName = "Invoicer2.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/pedroalvarez/Projects/iOS/Invoicer2/Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "430"
-                  endingLineNumber = "430">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
