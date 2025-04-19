@@ -1,10 +1,3 @@
-//
-//  OnboardingView.swift
-//  Invoicer2
-//
-//  Created by Pedro Alvarez on 04/04/25.
-//
-
 import SwiftUI
 
 struct OnboardingView: View {
@@ -72,7 +65,7 @@ struct OnboardingView: View {
                 OnboardingServiceInfoView()
             }
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, 16)
         .padding(.top, 20)
     }
 }

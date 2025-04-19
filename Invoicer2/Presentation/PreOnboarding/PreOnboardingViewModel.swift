@@ -1,10 +1,3 @@
-//
-//  PreOnboardingViewModel.swift
-//  Invoicer2
-//
-//  Created by Pedro Alvarez on 04/04/25.
-//
-
 import Combine
 
 final class PreOnboardingViewModel: ObservableObject {

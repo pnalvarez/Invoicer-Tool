@@ -27,22 +27,24 @@ struct InputField: View {
                 }
                 didFocusChange($0)
             }
-                .keyboardType(keyboardType)
-                .padding(8)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 4)
-                        .stroke(errorMessage != nil && hasAlreadyFocused ? Colors.errorPrimary : isFocused ? Colors.inputHover : Colors.inputBorder.opacity(0.5), lineWidth: isFocused || errorMessage != nil && hasAlreadyFocused ? 2 : 1)
-                )
-                .onChange(of: internalText) { _, newValue in
-                    let formatted = formatter(newValue)
-                    if formatted != newValue {
-                        internalText = formatted
-                    }
-                    text.wrappedValue = formatted
+            .keyboardType(keyboardType)
+            .autocapitalization(.none)
+            .disableAutocorrection(true)
+            .padding(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(errorMessage != nil && hasAlreadyFocused ? Colors.errorPrimary : isFocused ? Colors.inputHover : Colors.inputBorder.opacity(0.5), lineWidth: isFocused || errorMessage != nil && hasAlreadyFocused ? 2 : 1)
+            )
+            .onChange(of: internalText) { _, newValue in
+                let formatted = formatter(newValue)
+                if formatted != newValue {
+                    internalText = formatted
                 }
-                .onAppear {
-                    internalText = formatter(text.wrappedValue)
-                }
+                text.wrappedValue = formatted
+            }
+            .onAppear {
+                internalText = formatter(text.wrappedValue)
+            }
             
             if let errorMessage, hasAlreadyFocused {
                 Spacer().frame(height: 4)

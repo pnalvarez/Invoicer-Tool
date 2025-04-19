@@ -1,10 +1,3 @@
-//
-//  OnboardingViewModel.swift
-//  Invoicer2
-//
-//  Created by Pedro Alvarez on 04/04/25.
-//
-
 import Combine
 
 enum OnboardingStep {
@@ -110,6 +103,19 @@ final class OnboardingViewModel: ObservableObject {
     @Published var countryHasError: Bool = true
     @Published var neighbourhoodHasError: Bool = true
     @Published var numberHasError: Bool = true
+    @Published var benefitiaryNameHasError: Bool = true
+    @Published var accountNumberHasError: Bool = true
+    @Published var swiftCodeHasError: Bool = true
+    @Published var bankNameHasError: Bool = true
+    @Published var bankAddressHasError: Bool = true
+    @Published var secondaryBenefitiaryNameHasError: Bool = true
+    @Published var secondaryAccountNumberHasError: Bool = true
+    @Published var secondarySwiftCodeHasError: Bool = true
+    @Published var secondaryBankNameHasError: Bool = true
+    @Published var secondaryBankAddressHasError: Bool = true
+    @Published var jobDescriptionHasError: Bool = true
+    @Published var quantityHasError: Bool = true
+    @Published var unitPriceHasError: Bool = true
     
     private var disposeBag: Set<AnyCancellable> = []
     
@@ -150,101 +156,184 @@ final class OnboardingViewModel: ObservableObject {
     
     private func setUpFieldValidation() {
         $contractorInfo
-            .map(\.fullName)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.fullName)
             .sink { [weak self] in
                 self?.fullNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $contractorInfo
-            .map(\.cnpj)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.cnpj)
             .sink { [weak self] in
                 self?.taxIdHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $contractorInfo
-            .map(\.companyName)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.companyName)
             .sink { [weak self] in
                 self?.companyNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $contractorInfo
-            .map(\.companyEmail)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.companyEmail)
             .sink { [weak self] in
                 self?.companyEmailHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.streetAddress)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.streetAddress)
             .sink { [weak self] in
                 self?.streetAddressHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.city)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.city)
             .sink { [weak self] in
                 self?.cityHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.state)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.state)
             .sink { [weak self] in
                 self?.stateHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.zipCode)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.zipCode)
             .sink { [weak self] in
                 self?.zipCodeHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.country)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.country)
             .sink { [weak self] in
                 self?.countryHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.neighbourhood)
-            .removeDuplicates()
-            .dropFirst()
+            .mapDistinct(\.neighbourhood)
             .sink { [weak self] in
                 self?.neighbourhoodHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
-            .map(\.number)
+            .mapDistinct(\.number)
+            .sink { [weak self] in
+                self?.numberHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.benefitiaryName)
+            .sink { [weak self] in
+                self?.benefitiaryNameHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.bankInfo.bankName)
+            .sink { [weak self] in
+                self?.bankNameHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.bankInfo.iban)
+            .sink { [weak self] in
+                self?.accountNumberHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.bankInfo.swiftCode)
+            .sink { [weak self] in
+                self?.swiftCodeHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.bankInfo.bankAddress)
+            .sink { [weak self] in
+                self?.bankAddressHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.secondaryBankInfo.bankName)
+            .sink { [weak self] in
+                self?.secondaryBankNameHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.secondaryBankInfo.bankName)
+            .sink { [weak self] in
+                self?.secondaryBankNameHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.secondaryBankInfo.iban)
+            .sink { [weak self] in
+                self?.secondaryAccountNumberHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .mapDistinct(\.secondaryBankInfo.swiftCode)
+            .sink { [weak self] in
+                self?.secondarySwiftCodeHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
+            .map(\.secondaryBankInfo.bankAddress)
             .removeDuplicates()
             .dropFirst()
             .sink { [weak self] in
-                self?.numberHasError = $0.isEmpty
+                self?.secondaryBankAddressHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $serviceInfo
+            .mapDistinct(\.jobDescription)
+            .sink { [weak self] in
+                self?.jobDescriptionHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $serviceInfo
+            .mapDistinct(\.quantity)
+            .sink { [weak self] in
+                guard let quantityDoubleValue = Double($0),
+                      quantityDoubleValue > 0.0 else {
+                    self?.quantityHasError = true
+                    return
+                }
+                
+                self?.quantityHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $serviceInfo
+            .mapDistinct(\.unitPrice)
+            .sink { [weak self] in
+                guard let unitPriceDoubleValue = Double($0),
+                      unitPriceDoubleValue > 0.0 else {
+                    self?.unitPriceHasError = true
+                    return
+                }
+                
+                self?.unitPriceHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
     }
@@ -286,6 +375,66 @@ final class OnboardingViewModel: ObservableObject {
         .sink { [weak self] in
             guard let self else { return }
             ctaEnabled = $0
+        }
+        .store(in: &disposeBag)
+        
+        $benefitiaryNameHasError
+            .combineLatest($bankNameHasError)
+            .combineLatest($accountNumberHasError)
+            .combineLatest($swiftCodeHasError)
+            .combineLatest($bankAddressHasError)
+            .combineLatest($shouldShowSecondaryBankForms)
+            .combineLatest($secondaryBankNameHasError)
+            .combineLatest($secondaryAccountNumberHasError)
+            .combineLatest($secondarySwiftCodeHasError)
+            .combineLatest($secondaryBankAddressHasError)
+            .map {
+                let (((((((((beneficiaryHasError, bankNameHasError), accountNumberHasError), swiftCodeHasError), bankAddressHasError), shouldShowSecondaryBankForms), secondaryBankNameHasError), secondaryAccountNumberHasError), secondarySwiftCodeHasError), secondaryBankAddressHasError) = $0
+                   
+                   let secondaryBankInfoValid = shouldShowSecondaryBankForms ? (
+                       !secondaryBankNameHasError &&
+                       !secondaryAccountNumberHasError &&
+                       !secondarySwiftCodeHasError &&
+                       !secondaryBankAddressHasError
+                   ) : true
+                   
+                   return (
+                       !beneficiaryHasError &&
+                       !bankNameHasError &&
+                       !accountNumberHasError &&
+                       !swiftCodeHasError &&
+                       !bankAddressHasError &&
+                       secondaryBankInfoValid
+                   )
+            }
+            .combineLatest($step)
+            .map { formsIsValid, step in
+                (step == .bankInfo) ? formsIsValid : false
+            }
+            .sink { [weak self] in
+                guard let self else { return }
+                ctaEnabled = $0
+            }
+            .store(in: &disposeBag)
+        
+        Publishers.CombineLatest3(
+            $jobDescriptionHasError,
+            $quantityHasError,
+            $unitPriceHasError
+        )
+        .map {
+            return !$0 && !$1 && !$2
+        }
+        .combineLatest($step)
+        .map { formsIsValid, step in
+            (step == .serviceInfo) ? formsIsValid : false
+        }
+        .sink { [weak self] in
+            guard let self else { return }
+            print(jobDescriptionHasError,
+                  quantityHasError,
+                  unitPriceHasError)
+            self.ctaEnabled = $0
         }
         .store(in: &disposeBag)
     }

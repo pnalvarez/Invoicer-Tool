@@ -1,10 +1,3 @@
-//
-//  MainNavigationView.swift
-//  Invoicer2
-//
-//  Created by Pedro Alvarez on 06/04/25.
-//
-
 import SwiftUI
 
 enum LeadingItem {
