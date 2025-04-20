@@ -1,0 +1,50 @@
+protocol StorageDataSourceProtocol {
+    func saveContractorInfo(_ data: ContractorInfoData) async
+    func getContractorInfo() async -> ContractorInfoData?
+    func saveCompanyAddress(_ data: CompanyAddressData) async
+    func getCompanyAddress() async -> CompanyAddressData?
+    func saveBankAccount(_ data: BankAccountData) async
+    func getBankAccount() async -> BankAccountData?
+    func saveServiceInfo(_ data: ServiceInfoData) async
+    func getServiceInfo() async -> ServiceInfoData?
+}
+
+final class StorageDataSource: StorageDataSourceProtocol {
+    private let client: StorageClientProtocol
+    
+    init(client: StorageClientProtocol) {
+        self.client = client
+    }
+    
+    func saveContractorInfo(_ data: ContractorInfoData) async {
+        await client.save(data)
+    }
+    
+    func getContractorInfo() async -> ContractorInfoData? {
+        return await client.fetchSingle()
+    }
+    
+    func saveCompanyAddress(_ data: CompanyAddressData) async {
+        await client.save(data)
+    }
+    
+    func getCompanyAddress() async -> CompanyAddressData? {
+        return await client.fetchSingle()
+    }
+    
+    func saveBankAccount(_ data: BankAccountData) async {
+        await client.save(data)
+    }
+    
+    func getBankAccount() async -> BankAccountData? {
+        return await client.fetchSingle()
+    }
+    
+    func saveServiceInfo(_ data: ServiceInfoData) async {
+        await client.save(data)
+    }
+    
+    func getServiceInfo() async -> ServiceInfoData? {
+        return await client.fetchSingle()
+    }
+}

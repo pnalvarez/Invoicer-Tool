@@ -28,7 +28,6 @@ struct OnboardingBankInfo {
     var bankAddress: String = ""
 }
 
-
 struct OnboardingServiceInfo {
     var jobDescription: String = ""
     var quantity: String = ""
