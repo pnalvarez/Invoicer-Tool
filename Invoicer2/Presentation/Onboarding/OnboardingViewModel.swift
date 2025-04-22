@@ -1,4 +1,5 @@
 import Combine
+import Observation
 
 enum OnboardingStep {
     case contractorInfo
@@ -90,7 +91,7 @@ final class OnboardingViewModel: ObservableObject {
     
     @Published var shouldShowSecondaryBankForms: Bool = false
     
-    @Published var ctaEnabled: Bool = false
+    var ctaEnabled: Bool = false
     
     @Published var fullNameHasError: Bool = true
     @Published var taxIdHasError: Bool = true
