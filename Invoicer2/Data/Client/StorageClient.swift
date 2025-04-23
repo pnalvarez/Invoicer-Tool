@@ -9,10 +9,9 @@ protocol StorageClientProtocol {
     func fetchSingle<T: PersistentModel>() async -> T? 
 }
 
-@MainActor
 final class StorageClient: StorageClientProtocol {
-    private let context: ModelContext
-    private let container: ModelContainer
+    private var context: ModelContext?
+    private var container: ModelContainer
     
     init() {
         do {
@@ -23,7 +22,10 @@ final class StorageClient: StorageClientProtocol {
                                            ServiceInfoData.self,
                                            configurations: ModelConfiguration(isStoredInMemoryOnly: true)
             )
-            context = container.mainContext
+            
+            Task { @MainActor in
+                context = container.mainContext
+            }
         } catch {
             fatalError("Failed to set up SwiftData container: \(error)")
         }
@@ -31,6 +33,7 @@ final class StorageClient: StorageClientProtocol {
     
     @MainActor
     func save<T: PersistentModel>(_ model: T) async {
+        guard let context else { return }
         context.insert(model)
         do {
             try context.save()
@@ -47,6 +50,7 @@ final class StorageClient: StorageClientProtocol {
     ) async {
         let fetchDescriptor = FetchDescriptor<T>()
         
+        guard let context else { return }
         do {
             let existingObjects = try context.fetch(fetchDescriptor)
             
@@ -66,7 +70,7 @@ final class StorageClient: StorageClientProtocol {
     @MainActor
     func fetchSingle<T: PersistentModel>() -> T? {
         let fetchDescriptor = FetchDescriptor<T>()
-        
+        guard let context else { return nil }
         do {
             let results = try context.fetch(fetchDescriptor)
             return results.first

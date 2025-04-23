@@ -2,10 +2,10 @@ protocol GetContractorInfoProtocol {
     func get() async -> ContractorInfoDomain?
 }
 
-final class GetContractorInfoU: GetContractorInfoProtocol {
+final class GetContractorInfo: GetContractorInfoProtocol {
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol) {
+    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
         self.repository = repository
     }
     

@@ -5,7 +5,7 @@ protocol SaveContractorInfoProtocol {
 final class SaveContractorInfo: SaveContractorInfoProtocol {
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol) {
+    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
         self.repository = repository
     }
     

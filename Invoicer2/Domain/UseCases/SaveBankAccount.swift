@@ -5,7 +5,7 @@ protocol SaveBankAccountProtocol {
 final class SaveBankAccount: SaveBankAccountProtocol{
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol) {
+    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
         self.repository = repository
     }
     

@@ -9,10 +9,11 @@ protocol StorageDataSourceProtocol {
     func getServiceInfo() async -> ServiceInfoData?
 }
 
+
 final class StorageDataSource: StorageDataSourceProtocol {
     private let client: StorageClientProtocol
     
-    init(client: StorageClientProtocol) {
+    init(client: StorageClientProtocol = StorageClient()) {
         self.client = client
     }
     

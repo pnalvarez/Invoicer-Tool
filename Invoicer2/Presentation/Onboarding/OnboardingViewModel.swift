@@ -1,5 +1,6 @@
 import Combine
 import Observation
+import Foundation
 
 enum OnboardingStep {
     case contractorInfo
@@ -83,6 +84,15 @@ enum OnboardingStep {
 }
 
 final class OnboardingViewModel: ObservableObject {
+    private let saveContractorInfo: SaveContractorInfoProtocol
+    private let getContractorInfo: GetContractorInfoProtocol
+    private let saveCompanyAddress: SaveCompanyAddressProtocol
+    private let getCompanyAddress: GetCompanyAddressProtocol
+    private let saveBankAccount: SaveBankAccountProtocol
+    private let getBankAccount: GetBankAccountProtocol
+    private let saveServiceInfo: SaveServiceInfoProtocol
+    private let getServiceInfo: GetServiceInfoProtocol
+    
     @Published var contractorInfo: OnboardingContractorInfo = .init()
     @Published var companyAddress: OnboardingCompanyAddress = .init()
     @Published var bankAccountInfo: OnboardingBankAccount = .init()
@@ -122,7 +132,25 @@ final class OnboardingViewModel: ObservableObject {
     
     private let coordinator: OnboardingCoordinatorProtocol
     
-    init(coordinator: OnboardingCoordinatorProtocol) {
+    init(
+        saveContractorInfo: SaveContractorInfoProtocol = SaveContractorInfo(),
+        getContractorInfo: GetContractorInfoProtocol = GetContractorInfo(),
+        saveCompanyAddress: SaveCompanyAddressProtocol = SaveCompanyAddress(),
+        getCompanyAddress: GetCompanyAddressProtocol = GetCompanyAddress(),
+        saveBankAccount: SaveBankAccountProtocol = SaveBankAccount(),
+        getBankAccount: GetBankAccountProtocol = GetBankAccount(),
+        saveServiceInfo: SaveServiceInfoProtocol = SaveServiceInfo(),
+        getServiceInfo: GetServiceInfoProtocol = GetServiceInfo(),
+        coordinator: OnboardingCoordinatorProtocol
+    ) {
+        self.saveContractorInfo = saveContractorInfo
+        self.getContractorInfo = getContractorInfo
+        self.saveCompanyAddress = saveCompanyAddress
+        self.getCompanyAddress = getCompanyAddress
+        self.saveBankAccount = saveBankAccount
+        self.getBankAccount = getBankAccount
+        self.saveServiceInfo = saveServiceInfo
+        self.getServiceInfo = getServiceInfo
         self.coordinator = coordinator
         setUpSubscriptions()
     }
@@ -137,16 +165,29 @@ final class OnboardingViewModel: ObservableObject {
     }
     
     func didTapCTA() {
-        goToNextStep()
+        Task {
+            if step.finishesOnboarding {
+                coordinator.navigateToInvoiceList()
+            } else {
+                switch step {
+                case .contractorInfo:
+                    await saveContractorInfo.save(contractorInfo.toDomainModel())
+                case .companyAddress:
+                    await saveCompanyAddress.save(companyAddress.toDomainModel())
+                case .bankInfo:
+                    await saveBankAccount.save(bankAccountInfo.toDomainModel())
+                case .serviceInfo:
+                    await saveServiceInfo.save(serviceInfo.toDomainModel())
+                }
+                await goToNextStep()
+            }
+        }
     }
     
-    private func goToNextStep() {
-        if step.finishesOnboarding {
-            coordinator.navigateToInvoiceList()
-        } else {
-            if let nextStep = step.nextStep  {
-                step = nextStep
-            }
+    @MainActor
+    private func goToNextStep()  {
+        if let nextStep = step.nextStep  {
+            step = nextStep
         }
     }
     
@@ -432,9 +473,6 @@ final class OnboardingViewModel: ObservableObject {
         }
         .sink { [weak self] in
             guard let self else { return }
-            print(jobDescriptionHasError,
-                  quantityHasError,
-                  unitPriceHasError)
             self.ctaEnabled = $0
         }
         .store(in: &disposeBag)

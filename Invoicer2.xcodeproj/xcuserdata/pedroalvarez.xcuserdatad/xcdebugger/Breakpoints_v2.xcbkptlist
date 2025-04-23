@@ -14,8 +14,8 @@
             filePath = "Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "427"
-            endingLineNumber = "427"
+            startingLineNumber = "468"
+            endingLineNumber = "468"
             landmarkName = "setUpCTAValidation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "431"
-            endingLineNumber = "431"
+            startingLineNumber = "472"
+            endingLineNumber = "472"
             landmarkName = "setUpCTAValidation()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "434"
-            endingLineNumber = "434"
+            startingLineNumber = "475"
+            endingLineNumber = "475"
             landmarkName = "setUpCTAValidation()"
             landmarkType = "7">
          </BreakpointContent>

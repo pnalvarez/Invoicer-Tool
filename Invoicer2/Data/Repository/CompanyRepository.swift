@@ -1,7 +1,7 @@
 final class CompanyRepository: CompanyRepositoryProtocol {
     private let dataSource: StorageDataSourceProtocol
     
-    init(dataSource: StorageDataSourceProtocol) {
+    init(dataSource: StorageDataSourceProtocol = StorageDataSource()) {
         self.dataSource = dataSource
     }
     

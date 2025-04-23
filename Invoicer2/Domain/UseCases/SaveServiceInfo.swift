@@ -5,7 +5,7 @@ protocol SaveServiceInfoProtocol {
 final class SaveServiceInfo: SaveServiceInfoProtocol{
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol) {
+    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
         self.repository = repository
     }
     

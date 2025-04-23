@@ -5,7 +5,7 @@ protocol GetCompanyAddressProtocol {
 final class GetCompanyAddress: GetCompanyAddressProtocol {
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol) {
+    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
         self.repository = repository
     }
     

@@ -5,7 +5,7 @@ protocol GetServiceInfoProtocol {
 final class GetServiceInfo: GetServiceInfoProtocol {
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol) {
+    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
         self.repository = repository
     }
     
