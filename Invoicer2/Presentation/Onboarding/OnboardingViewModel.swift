@@ -2,87 +2,6 @@ import Combine
 import Observation
 import Foundation
 
-enum OnboardingStep {
-    case contractorInfo
-    case companyAddress
-    case bankInfo
-    case serviceInfo
-    
-    var title: String {
-        switch self {
-        case .contractorInfo:
-            return "Contractor info"
-        case .companyAddress:
-            return "Company address"
-        case .bankInfo:
-            return "Bank info"
-        case .serviceInfo:
-            return "Service info"
-        }
-    }
-    
-    var description: String {
-        switch self {
-        case .contractorInfo:
-            return "Please enter your company's information. This is where you tell us who you are and the company you represent as a contractor."
-        case .companyAddress:
-            return "Now we need to know where your company is located. Please provide the business address of your company, not the company that hired you."
-        case .bankInfo:
-            return "Enter your company's bank account. This information will be used to process payments for the services you have provided."
-        case .serviceInfo:
-            return "Describe the service you company provides. We want to know the details about what your company does."
-        }
-    }
-    
-    var count: Int {
-        switch self {
-        case .contractorInfo:
-            return 1
-        case .companyAddress:
-            return 2
-        case .bankInfo:
-            return 3
-        case .serviceInfo:
-            return 4
-        }
-    }
-    
-    var nextStep: OnboardingStep? {
-        switch self {
-        case .contractorInfo:
-            return .companyAddress
-        case .companyAddress:
-            return .bankInfo
-        case .bankInfo:
-            return .serviceInfo
-        case .serviceInfo:
-            return nil
-        }
-    }
-    
-    var previousStep: OnboardingStep? {
-        switch self {
-        case .contractorInfo:
-            return nil
-        case .companyAddress:
-            return .contractorInfo
-        case .bankInfo:
-            return .companyAddress
-        case .serviceInfo:
-            return .bankInfo
-        }
-    }
-    
-    var finishesOnboarding: Bool {
-        switch self {
-        case .serviceInfo:
-            return true
-        default:
-            return false
-        }
-    }
-}
-
 final class OnboardingViewModel: ObservableObject {
     private let saveContractorInfo: SaveContractorInfoProtocol
     private let getContractorInfo: GetContractorInfoProtocol
@@ -92,12 +11,13 @@ final class OnboardingViewModel: ObservableObject {
     private let getBankAccount: GetBankAccountProtocol
     private let saveServiceInfo: SaveServiceInfoProtocol
     private let getServiceInfo: GetServiceInfoProtocol
+    private let saveOnboardingStep: SaveOnboardingStepProtocol
     
     @Published var contractorInfo: OnboardingContractorInfo = .init()
     @Published var companyAddress: OnboardingCompanyAddress = .init()
     @Published var bankAccountInfo: OnboardingBankAccount = .init()
     @Published var serviceInfo: OnboardingServiceInfo = .init()
-    @Published var step: OnboardingStep = .contractorInfo
+    @Published var step: OnboardingStepUI
     
     @Published var shouldShowSecondaryBankForms: Bool = false
     
@@ -128,6 +48,8 @@ final class OnboardingViewModel: ObservableObject {
     @Published var quantityHasError: Bool = true
     @Published var unitPriceHasError: Bool = true
     
+    @Published var shouldShowInfoDialog: Bool = false
+    
     private var disposeBag: Set<AnyCancellable> = []
     
     private let coordinator: OnboardingCoordinatorProtocol
@@ -141,6 +63,8 @@ final class OnboardingViewModel: ObservableObject {
         getBankAccount: GetBankAccountProtocol = GetBankAccount(),
         saveServiceInfo: SaveServiceInfoProtocol = SaveServiceInfo(),
         getServiceInfo: GetServiceInfoProtocol = GetServiceInfo(),
+        saveOnboardingStep: SaveOnboardingStepProtocol = SaveOnboardingStep(),
+        step: OnboardingStepUI = .contractorInfo,
         coordinator: OnboardingCoordinatorProtocol
     ) {
         self.saveContractorInfo = saveContractorInfo
@@ -151,22 +75,45 @@ final class OnboardingViewModel: ObservableObject {
         self.getBankAccount = getBankAccount
         self.saveServiceInfo = saveServiceInfo
         self.getServiceInfo = getServiceInfo
+        self.saveOnboardingStep = saveOnboardingStep
+        self.step = step
         self.coordinator = coordinator
         setUpSubscriptions()
+        restoreOnboardingStep()
     }
     
     func didTapBack() {
+        saveOnboardingStep.save(step.previousStep?.toDomainModel())
         guard let previousStep = step.previousStep else {
             coordinator.navigateBack()
             return
         }
         step = previousStep
+        Task {
+            switch step {
+            case .contractorInfo:
+                await fillContractorInfoData()
+            case .companyAddress:
+                await fillCompanyAddressData()
+            case .bankInfo:
+                await fillBankAccountData()
+            case .serviceInfo:
+                await fillServiceInfoData()
+            default:
+                break
+            }
+        }
         ctaEnabled = true
+    }
+    
+    func didTapInfo() {
+        shouldShowInfoDialog = true
     }
     
     func didTapCTA() {
         Task {
             if step.finishesOnboarding {
+                saveOnboardingStep.save(.done)
                 coordinator.navigateToInvoiceList()
             } else {
                 switch step {
@@ -178,15 +125,22 @@ final class OnboardingViewModel: ObservableObject {
                     await saveBankAccount.save(bankAccountInfo.toDomainModel())
                 case .serviceInfo:
                     await saveServiceInfo.save(serviceInfo.toDomainModel())
+                default:
+                    break
                 }
                 await goToNextStep()
             }
         }
     }
     
+    func didTapCloseInfoDialog() {
+        shouldShowInfoDialog = false
+    }
+    
     @MainActor
     private func goToNextStep()  {
         if let nextStep = step.nextStep  {
+            saveOnboardingStep.save(nextStep.toDomainModel())
             step = nextStep
         }
     }
@@ -380,6 +334,44 @@ final class OnboardingViewModel: ObservableObject {
             .store(in: &disposeBag)
     }
     
+    private func restoreOnboardingStep() {
+        Task {
+            switch step {
+            case .contractorInfo:
+                let domainModel = await getContractorInfo.get()
+                saveOnboardingStep.save(.contractorInfo)
+                if let domainModel {
+                    Task { @MainActor in
+                        contractorInfo = .init(domainModel: domainModel)
+                    }
+                }
+            case .companyAddress:
+                let domainModel = await getCompanyAddress.get()
+                if let domainModel {
+                    Task { @MainActor in
+                        companyAddress = .init(domainModel: domainModel)
+                    }
+                }
+            case .bankInfo:
+                let domainModel = await getBankAccount.get()
+                if let domainModel {
+                    Task { @MainActor in
+                        bankAccountInfo = .init(domainModel: domainModel)
+                    }
+                }
+            case .serviceInfo:
+                let domainModel = await getServiceInfo.get()
+                if let domainModel {
+                    Task { @MainActor in
+                        serviceInfo = .init(domainModel: domainModel)
+                    }
+                }
+            default:
+                break
+            }
+        }
+    }
+    
     private func setUpCTAValidation() {
         Publishers.CombineLatest4(
             $fullNameHasError,
@@ -476,5 +468,45 @@ final class OnboardingViewModel: ObservableObject {
             self.ctaEnabled = $0
         }
         .store(in: &disposeBag)
+    }
+    
+    private func fillContractorInfoData() async {
+        let domainModel = await getContractorInfo.get()
+        saveOnboardingStep.save(.contractorInfo)
+        if let domainModel {
+            Task { @MainActor in
+                contractorInfo = .init(domainModel: domainModel)
+            }
+        }
+    }
+    
+    private func fillCompanyAddressData() async {
+        let domainModel = await getCompanyAddress.get()
+        saveOnboardingStep.save(.companyAddress)
+        if let domainModel {
+            Task { @MainActor in
+                companyAddress = .init(domainModel: domainModel)
+            }
+        }
+    }
+    
+    private func fillBankAccountData() async {
+        let domainModel = await getBankAccount.get()
+        saveOnboardingStep.save(.bankAccount)
+        if let domainModel {
+            Task { @MainActor in
+                bankAccountInfo = .init(domainModel: domainModel)
+            }
+        }
+    }
+    
+    private func fillServiceInfoData() async {
+        let domainModel = await getServiceInfo.get()
+        saveOnboardingStep.save(.serviceInfo)
+        if let domainModel {
+            Task { @MainActor in
+                serviceInfo = .init(domainModel: domainModel)
+            }
+        }
     }
 }

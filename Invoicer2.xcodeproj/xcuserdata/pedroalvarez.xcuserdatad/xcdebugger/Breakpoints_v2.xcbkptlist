@@ -7,48 +7,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "311C5CDD-1E42-414D-811F-BDCCB56EC7A8"
+            uuid = "B1BA9BA6-CA62-478D-B8B0-4526B5057EAC"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
+            filePath = "Invoicer2/Data/DataSource/StorageDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "468"
-            endingLineNumber = "468"
-            landmarkName = "setUpCTAValidation()"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "getContractorInfo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7F3A3830-3F9C-47D4-A170-84B061526A02"
+            uuid = "39270D97-BD0B-40F7-87DD-05471F392C04"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
+            filePath = "Invoicer2/Data/DataSource/StorageDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "472"
-            endingLineNumber = "472"
-            landmarkName = "setUpCTAValidation()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D49B55D7-F6BA-4E94-BC62-F92893CDDC56"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Invoicer2/Presentation/Onboarding/OnboardingViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "475"
-            endingLineNumber = "475"
-            landmarkName = "setUpCTAValidation()"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "saveCompanyAddress(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

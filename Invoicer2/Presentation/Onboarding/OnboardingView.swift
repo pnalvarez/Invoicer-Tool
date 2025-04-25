@@ -13,8 +13,9 @@ struct OnboardingView: View {
                         StepProgressIndicator(step: viewModel.step.count, total: 4, size: .small)
                             .frame(maxWidth: 120)
                     },
-                    trailingView: { Button(action: { }) {
+                    trailingView: { Button(action: viewModel.didTapInfo) {
                         Image(systemName: "info.circle")
+                            .tint(Colors.textPrimary)
                     }
                     }
                 )
@@ -29,7 +30,28 @@ struct OnboardingView: View {
             )
             .padding(.bottom, 32)
             .padding(.horizontal, 20)
-               
+            
+        }
+        .modalDialogue(isPresented: $viewModel.shouldShowInfoDialog) {
+            VStack(spacing: .zero) {
+                Text(viewModel.step.title)
+                    .font(.title3)
+                    .fontWeight(.bold)
+                    .foregroundColor(Colors.textPrimary)
+                Spacer()
+                    .frame(height: 16)
+                Text(viewModel.step.description)
+                    .font(.body)
+                    .foregroundColor(Colors.textPrimary)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                    .frame(height: 16)
+                PrimaryButton(
+                    text: "Close",
+                    expandedWidth: true,
+                    action: viewModel.didTapCloseInfoDialog
+                )
+            }
         }
         .environmentObject(viewModel)
         .onTapGesture {
@@ -63,6 +85,8 @@ struct OnboardingView: View {
                 OnboardingBankInfoView()
             case .serviceInfo:
                 OnboardingServiceInfoView()
+            default:
+                EmptyView()
             }
         }
         .padding(.horizontal, 16)

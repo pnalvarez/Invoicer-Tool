@@ -18,6 +18,31 @@ struct PreOnboardingView: View {
                 .frame(height: 24)
             PrimaryButton(text: "Start", action: viewModel.didTapCTA)
         }
+        .onAppear(perform: viewModel.onAppear)
+        .modalDialogue(isPresented: $viewModel.shouldShowOnboardingReminderDialog) {
+            VStack(spacing: .zero) {
+                Text("Resume onboarding?")
+                Spacer()
+                    .frame(height: 16)
+                Text("You can resume the onboarding where you stopped: \(viewModel.onboardingStep?.title ?? "")")
+                    .font(.body)
+                    .foregroundColor(Colors.textPrimary)
+                    .multilineTextAlignment(.center)
+                Spacer()
+                    .frame(height: 16)
+                PrimaryButton(
+                    text: "Resume",
+                    expandedWidth: true,
+                    action: viewModel.didTapTapToResumeOnboarding)
+                    Spacer()
+                        .frame(height: 16)
+                PrimaryButton(
+                    text: "Restart",
+                    expandedWidth: true,
+                    action: viewModel.didTapDialogCloseButton
+                )
+            }
+        }
     }
 }
 

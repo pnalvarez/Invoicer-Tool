@@ -22,7 +22,8 @@ final class StorageDataSource: StorageDataSourceProtocol {
     }
     
     func getContractorInfo() async -> ContractorInfoData? {
-        return await client.fetchSingle()
+        let contractorInfo: ContractorInfoData? = await client.fetchSingle()
+        return contractorInfo
     }
     
     func saveCompanyAddress(_ data: CompanyAddressData) async {

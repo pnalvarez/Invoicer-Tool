@@ -1,7 +1,7 @@
 import UIKit
 
 protocol PreOnboardingCoordinatorProtocol {
-    func navigateToOnboarding()
+    func navigateToOnboarding(step: OnboardingStepUI)
 }
 
 final class PreOnboardingCoordinator: PreOnboardingCoordinatorProtocol {
@@ -12,8 +12,8 @@ final class PreOnboardingCoordinator: PreOnboardingCoordinatorProtocol {
         self.onboardingBuilder = onboardingBuilder
     }
     
-    func navigateToOnboarding() {
-        let onboardingController = onboardingBuilder.build()
+    func navigateToOnboarding(step: OnboardingStepUI) {
+        let onboardingController = onboardingBuilder.build(step: step)
         viewController?.navigationController?.pushViewController(onboardingController, animated: true)
     }
 }
