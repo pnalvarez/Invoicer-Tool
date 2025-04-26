@@ -7,4 +7,5 @@ protocol CompanyRepositoryProtocol {
     func getBankAccount() async -> BankAccountDomain?
     func saveServiceInfo(_ data: ServiceInfoDomain) async
     func getServiceInfo() async -> ServiceInfoDomain?
+    func flushData() async
 }

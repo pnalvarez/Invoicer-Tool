@@ -3,6 +3,7 @@ import Combine
 final class PreOnboardingViewModel: ObservableObject {
     private let saveOnboardingStep: SaveOnboardingStepProtocol
     private let getOnboardingStep: GetOnboardingStepProtocol
+    private let flushOnboarding: FlushOnboardingProtocol
     private let coordinator: PreOnboardingCoordinatorProtocol
     
     @Published var shouldShowOnboardingReminderDialog: Bool = false
@@ -11,10 +12,12 @@ final class PreOnboardingViewModel: ObservableObject {
     init(
         saveOnboardingStep: SaveOnboardingStepProtocol = SaveOnboardingStep(),
         getOnboardingStep: GetOnboardingStepProtocol = GetOnboardingStep(),
+        flushOnboarding: FlushOnboardingProtocol = FlushOnboarding(),
         coordinator: PreOnboardingCoordinatorProtocol
     ) {
         self.saveOnboardingStep = saveOnboardingStep
         self.getOnboardingStep = getOnboardingStep
+        self.flushOnboarding = flushOnboarding
         self.coordinator = coordinator
     }
     
@@ -27,9 +30,12 @@ final class PreOnboardingViewModel: ObservableObject {
         coordinator.navigateToOnboarding(step: .contractorInfo)
     }
     
-    func didTapDialogCloseButton() {
+    func didTapRestartOnboarding() {
         shouldShowOnboardingReminderDialog = false
-        saveOnboardingStep.save(nil)
+        Task {
+            await flushOnboarding.flush()
+            saveOnboardingStep.save(nil)
+        }
     }
     
     func onAppear() {

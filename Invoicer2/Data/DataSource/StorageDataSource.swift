@@ -7,6 +7,7 @@ protocol StorageDataSourceProtocol {
     func getBankAccount() async -> BankAccountData?
     func saveServiceInfo(_ data: ServiceInfoData) async
     func getServiceInfo() async -> ServiceInfoData?
+    func flushData() async
 }
 
 
@@ -18,7 +19,7 @@ final class StorageDataSource: StorageDataSourceProtocol {
     }
     
     func saveContractorInfo(_ data: ContractorInfoData) async {
-        await client.save(data)
+        await client.replaceAndSave(newModel: data, where: nil)
     }
     
     func getContractorInfo() async -> ContractorInfoData? {
@@ -27,7 +28,7 @@ final class StorageDataSource: StorageDataSourceProtocol {
     }
     
     func saveCompanyAddress(_ data: CompanyAddressData) async {
-        await client.save(data)
+        await client.replaceAndSave(newModel: data, where: nil)
     }
     
     func getCompanyAddress() async -> CompanyAddressData? {
@@ -35,7 +36,7 @@ final class StorageDataSource: StorageDataSourceProtocol {
     }
     
     func saveBankAccount(_ data: BankAccountData) async {
-        await client.save(data)
+        await client.replaceAndSave(newModel: data, where: nil)
     }
     
     func getBankAccount() async -> BankAccountData? {
@@ -43,10 +44,14 @@ final class StorageDataSource: StorageDataSourceProtocol {
     }
     
     func saveServiceInfo(_ data: ServiceInfoData) async {
-        await client.save(data)
+        await client.replaceAndSave(newModel: data, where: nil)
     }
     
     func getServiceInfo() async -> ServiceInfoData? {
         return await client.fetchSingle()
+    }
+    
+    func flushData() async {
+        await client.flushAllData()
     }
 }

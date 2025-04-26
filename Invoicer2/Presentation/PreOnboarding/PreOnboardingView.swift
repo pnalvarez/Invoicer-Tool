@@ -36,10 +36,10 @@ struct PreOnboardingView: View {
                     action: viewModel.didTapTapToResumeOnboarding)
                     Spacer()
                         .frame(height: 16)
-                PrimaryButton(
+                SecondaryButton(
                     text: "Restart",
                     expandedWidth: true,
-                    action: viewModel.didTapDialogCloseButton
+                    action: viewModel.didTapRestartOnboarding
                 )
             }
         }

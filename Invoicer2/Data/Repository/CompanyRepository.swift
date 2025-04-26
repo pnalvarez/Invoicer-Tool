@@ -37,4 +37,7 @@ final class CompanyRepository: CompanyRepositoryProtocol {
         await dataSource.getServiceInfo()?.toDomainModel()
     }
     
+    func flushData() async {
+        await dataSource.flushData()
+    }
 }

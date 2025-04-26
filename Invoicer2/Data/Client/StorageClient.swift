@@ -6,7 +6,8 @@ protocol StorageClientProtocol {
         newModel: T,
         where shouldDelete: ((T) -> Bool)?
     ) async
-    func fetchSingle<T: PersistentModel>() async -> T? 
+    func fetchSingle<T: PersistentModel>() async -> T?
+    func flushAllData() async
 }
 
 final class StorageClient: StorageClientProtocol {
@@ -19,8 +20,7 @@ final class StorageClient: StorageClientProtocol {
                                            CompanyAddressData.self,
                                            BankAccountData.self,
                                            BankInfoData.self,
-                                           ServiceInfoData.self,
-                                           configurations: ModelConfiguration(isStoredInMemoryOnly: true)
+                                           ServiceInfoData.self
             )
             
             Task { @MainActor in
@@ -76,6 +76,34 @@ final class StorageClient: StorageClientProtocol {
             return results.first
         } catch {
             return nil
+        }
+    }
+    
+    @MainActor
+    func flushAllData() async {
+        guard let context else { return }
+        
+        do {
+            try flush(ContractorInfoData.self)
+            try flush(CompanyAddressData.self)
+            try flush(BankAccountData.self)
+            try flush(BankInfoData.self)
+            try flush(ServiceInfoData.self)
+            
+            try context.save()
+            print("✅ All data flushed successfully!")
+        } catch {
+            print("❌ Failed to flush data: \(error)")
+        }
+    }
+
+    private func flush<T: PersistentModel>(_ type: T.Type) throws {
+        guard let context else { return }
+        let fetchDescriptor = FetchDescriptor<T>()
+        let objects = try context.fetch(fetchDescriptor)
+        
+        for object in objects {
+            context.delete(object)
         }
     }
 }

@@ -7,32 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B1BA9BA6-CA62-478D-B8B0-4526B5057EAC"
-            shouldBeEnabled = "Yes"
+            uuid = "713F84E4-1DB3-4DE3-8AAD-4B24BEB386D2"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Invoicer2/Data/DataSource/StorageDataSource.swift"
+            filePath = "Invoicer2/Data/Client/StorageClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getContractorInfo()"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "fetchSingle()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "39270D97-BD0B-40F7-87DD-05471F392C04"
-            shouldBeEnabled = "Yes"
+            uuid = "E99669D9-F6F7-4275-9C76-FC52B70AE122"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Invoicer2/Data/DataSource/StorageDataSource.swift"
+            filePath = "Invoicer2/Data/Client/StorageClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "saveCompanyAddress(_:)"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "fetchSingle()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "05AC3902-6962-477E-9510-34145F236B81"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Invoicer2/Data/Client/StorageClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "fetchSingle()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
