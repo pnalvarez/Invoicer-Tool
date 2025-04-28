@@ -3,14 +3,20 @@ protocol GetContractorInfoProtocol {
 }
 
 final class GetContractorInfo: GetContractorInfoProtocol {
-    private let repository: CompanyRepositoryProtocol
+    private let companyRepository: CompanyRepositoryProtocol
+    private let cacheRepository: CacheRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
-        self.repository = repository
+    init(
+        companyRepository: CompanyRepositoryProtocol = CompanyRepository(),
+        cacheRepository: CacheRepositoryProtocol = CacheRepository()
+    ) {
+        self.companyRepository = companyRepository
+        self.cacheRepository = cacheRepository
     }
     
     func get() async -> ContractorInfoDomain? {
-        return await repository.getContractorInfo()
+        let contractorInfo = await companyRepository.getContractorInfo()
+        return contractorInfo ?? cacheRepository.getContractorInfo()
     }
     
 }

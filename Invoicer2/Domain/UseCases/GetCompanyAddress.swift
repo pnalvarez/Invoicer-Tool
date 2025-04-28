@@ -3,14 +3,21 @@ protocol GetCompanyAddressProtocol {
 }
 
 final class GetCompanyAddress: GetCompanyAddressProtocol {
-    private let repository: CompanyRepositoryProtocol
+    private let companyRepository: CompanyRepositoryProtocol
+    private let cacheRepository: CacheRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
-        self.repository = repository
+    init(
+        companyRepository: CompanyRepositoryProtocol = CompanyRepository(),
+        cacheRepository: CacheRepositoryProtocol = CacheRepository()
+    ) {
+        self.companyRepository = companyRepository
+        self.cacheRepository = cacheRepository
     }
     
     func get() async -> CompanyAddressDomain? {
-        return await repository.getCompanyAddress()
+        let companyAddress = await companyRepository.getCompanyAddress()
+        let cachedValue = cacheRepository.getCompanyAddress()
+        return companyAddress ?? cachedValue
     }
     
 }

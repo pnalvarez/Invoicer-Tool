@@ -3,13 +3,19 @@ protocol GetBankAccountProtocol {
 }
 
 final class GetBankAccount: GetBankAccountProtocol {
-    private let repository: CompanyRepositoryProtocol
+    private let companyRepository: CompanyRepositoryProtocol
+    private let cacheRepository: CacheRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
-        self.repository = repository
+    init(
+        companyRepository: CompanyRepositoryProtocol = CompanyRepository(),
+        cacheRepository: CacheRepositoryProtocol = CacheRepository()
+    ){
+        self.companyRepository = companyRepository
+        self.cacheRepository = cacheRepository
     }
     
     func get() async -> BankAccountDomain? {
-        return await repository.getBankAccount()
+        let bankAccount = await companyRepository.getBankAccount()
+        return bankAccount ?? cacheRepository.getBankInfo()
     }
 }

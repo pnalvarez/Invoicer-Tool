@@ -12,6 +12,11 @@ final class OnboardingViewModel: ObservableObject {
     private let saveServiceInfo: SaveServiceInfoProtocol
     private let getServiceInfo: GetServiceInfoProtocol
     private let saveOnboardingStep: SaveOnboardingStepProtocol
+    private let cacheContractorInfo: CacheContractorInfoProtocol
+    private let cacheCompanyAddress: CacheCompanyAddressProtocol
+    private let cacheBankAccount: CacheBankAccountProtocol
+    private let cacheServiceInfo: CacheServiceInfoProtocol
+    private let cleanCache: CleanCacheProtocol
     
     @Published var contractorInfo: OnboardingContractorInfo = .init()
     @Published var companyAddress: OnboardingCompanyAddress = .init()
@@ -64,6 +69,11 @@ final class OnboardingViewModel: ObservableObject {
         saveServiceInfo: SaveServiceInfoProtocol = SaveServiceInfo(),
         getServiceInfo: GetServiceInfoProtocol = GetServiceInfo(),
         saveOnboardingStep: SaveOnboardingStepProtocol = SaveOnboardingStep(),
+        cacheContractorInfo: CacheContractorInfoProtocol = CacheContractorInfo(),
+        cacheCompanyAddress: CacheCompanyAddressProtocol = CacheCompanyAddress(),
+        cacheBankAccount: CacheBankAccountProtocol = CacheBankAccount(),
+        cacheServiceInfo: CacheServiceInfoProtocol = CacheServiceInfo(),
+        cleanCache: CleanCacheProtocol = CleanCache(),
         step: OnboardingStepUI = .contractorInfo,
         coordinator: OnboardingCoordinatorProtocol
     ) {
@@ -75,7 +85,12 @@ final class OnboardingViewModel: ObservableObject {
         self.getBankAccount = getBankAccount
         self.saveServiceInfo = saveServiceInfo
         self.getServiceInfo = getServiceInfo
+        self.cacheContractorInfo = cacheContractorInfo
+        self.cacheCompanyAddress = cacheCompanyAddress
+        self.cacheBankAccount = cacheBankAccount
+        self.cacheServiceInfo = cacheServiceInfo
         self.saveOnboardingStep = saveOnboardingStep
+        self.cleanCache = cleanCache
         self.step = step
         self.coordinator = coordinator
         setUpSubscriptions()
@@ -179,6 +194,13 @@ final class OnboardingViewModel: ObservableObject {
             }
             .store(in: &disposeBag)
         
+        $contractorInfo
+            .sink { [weak self] in
+                guard let self else { return }
+                cacheContractorInfo.cache($0.toDomainModel())
+            }
+            .store(in: &disposeBag)
+        
         $companyAddress
             .mapDistinct(\.streetAddress)
             .sink { [weak self] in
@@ -225,6 +247,13 @@ final class OnboardingViewModel: ObservableObject {
             .mapDistinct(\.number)
             .sink { [weak self] in
                 self?.numberHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $companyAddress
+            .sink { [weak self] in
+                guard let self else { return }
+                cacheCompanyAddress.cache($0.toDomainModel())
             }
             .store(in: &disposeBag)
         
@@ -292,6 +321,13 @@ final class OnboardingViewModel: ObservableObject {
             .store(in: &disposeBag)
         
         $bankAccountInfo
+            .sink { [weak self] in
+                guard let self else { return }
+                cacheBankAccount.cache($0.toDomainModel())
+            }
+            .store(in: &disposeBag)
+        
+        $bankAccountInfo
             .map(\.secondaryBankInfo.bankAddress)
             .removeDuplicates()
             .dropFirst()
@@ -330,6 +366,20 @@ final class OnboardingViewModel: ObservableObject {
                 }
                 
                 self?.unitPriceHasError = $0.isEmpty
+            }
+            .store(in: &disposeBag)
+        
+        $serviceInfo
+            .sink { [weak self] in
+                guard let self else { return }
+                cacheServiceInfo.cache($0.toDomainModel())
+            }
+            .store(in: &disposeBag)
+        
+        $step
+            .sink { [weak self] _ in
+                guard let self else { return }
+                cleanCache.clean()
             }
             .store(in: &disposeBag)
     }

@@ -1,4 +1,4 @@
-struct CompanyAddressDomain {
+struct CompanyAddressDomain: Codable {
     let streetAddress: String
     let city: String
     let neighbourhood: String

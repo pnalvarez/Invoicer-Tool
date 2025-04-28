@@ -3,14 +3,20 @@ protocol GetServiceInfoProtocol {
 }
 
 final class GetServiceInfo: GetServiceInfoProtocol {
-    private let repository: CompanyRepositoryProtocol
+    private let companyRepository: CompanyRepositoryProtocol
+    private let cacheRepository: CacheRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
-        self.repository = repository
+    init(
+        companyRepository: CompanyRepositoryProtocol = CompanyRepository(),
+        cacheRepository: CacheRepositoryProtocol = CacheRepository()
+    ){
+        self.companyRepository = companyRepository
+        self.cacheRepository = cacheRepository
     }
     
     func get() async -> ServiceInfoDomain? {
-        return await repository.getServiceInfo()
+        let serviceInfo = await companyRepository.getServiceInfo()
+        return serviceInfo ?? cacheRepository.getServiceInfo()
     }
     
 }
