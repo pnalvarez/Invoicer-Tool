@@ -10,14 +10,14 @@ struct OnboardingCompanyAddressView: View {
                     label: "Street Address",
                     placeholder: "Eg: St Patrick Street",
                     text: $viewModel.companyAddress.streetAddress,
-                    errorMessage: viewModel.streetAddressHasError ? "Street address is required" : nil
+                    errorMessage: viewModel.fieldValidation.streetAddressHasError ? "Street address is required" : nil
                 )
                 .gridCellColumns(3)
                 
                 InputField(
                     label: "Number",
                     text: $viewModel.companyAddress.number,
-                    errorMessage: viewModel.numberHasError ? "Number is required" : nil
+                    errorMessage: viewModel.fieldValidation.numberHasError ? "Number is required" : nil
                 )
             }
             
@@ -26,7 +26,7 @@ struct OnboardingCompanyAddressView: View {
                     label: "Neighbourhood",
                     placeholder: "Eg: Manhattan",
                     text: $viewModel.companyAddress.neighbourhood,
-                    errorMessage: viewModel.neighbourhoodHasError ? "Neighbourhood is required" : nil
+                    errorMessage: viewModel.fieldValidation.neighbourhoodHasError ? "Neighbourhood is required" : nil
                 )
                 .gridCellColumns(4)
             }
@@ -36,7 +36,7 @@ struct OnboardingCompanyAddressView: View {
                     label: "City",
                     placeholder: "Eg: São Paulo",
                     text: $viewModel.companyAddress.city,
-                    errorMessage: viewModel.cityHasError ? "City is required" : nil
+                    errorMessage: viewModel.fieldValidation.cityHasError ? "City is required" : nil
                 )
                 .gridCellColumns(2)
                 
@@ -44,14 +44,14 @@ struct OnboardingCompanyAddressView: View {
                 InputField(
                     label: "State",
                     text: $viewModel.companyAddress.state,
-                    errorMessage: viewModel.stateHasError ? "State is required" : nil
+                    errorMessage: viewModel.fieldValidation.stateHasError ? "State is required" : nil
                 )
                 
                 
                 InputField(
                     label: "Country",
                     text: $viewModel.companyAddress.country,
-                    errorMessage: viewModel.countryHasError ? "Country is required" : nil
+                    errorMessage: viewModel.fieldValidation.countryHasError ? "Country is required" : nil
                 )
             }
             
@@ -59,7 +59,7 @@ struct OnboardingCompanyAddressView: View {
                 InputField(
                     label: "Zip Code",
                     text: $viewModel.companyAddress.zipCode,
-                    errorMessage: viewModel.zipCodeHasError ? "Zip Code is required" : nil
+                    errorMessage: viewModel.fieldValidation.zipCodeHasError ? "Zip Code is required" : nil
                 )
                 .gridCellColumns(4)
             }

@@ -23,37 +23,10 @@ final class OnboardingViewModel: ObservableObject {
     @Published var bankAccountInfo: OnboardingBankAccount = .init()
     @Published var serviceInfo: OnboardingServiceInfo = .init()
     @Published var step: OnboardingStepUI
-    
     @Published var shouldShowSecondaryBankForms: Bool = false
-    
-    var ctaEnabled: Bool = false
-    
-    @Published var fullNameHasError: Bool = true
-    @Published var taxIdHasError: Bool = true
-    @Published var companyNameHasError: Bool = true
-    @Published var companyEmailHasError: Bool = true
-    @Published var streetAddressHasError: Bool = true
-    @Published var cityHasError: Bool = true
-    @Published var stateHasError: Bool = true
-    @Published var zipCodeHasError: Bool = true
-    @Published var countryHasError: Bool = true
-    @Published var neighbourhoodHasError: Bool = true
-    @Published var numberHasError: Bool = true
-    @Published var benefitiaryNameHasError: Bool = true
-    @Published var accountNumberHasError: Bool = true
-    @Published var swiftCodeHasError: Bool = true
-    @Published var bankNameHasError: Bool = true
-    @Published var bankAddressHasError: Bool = true
-    @Published var secondaryBenefitiaryNameHasError: Bool = true
-    @Published var secondaryAccountNumberHasError: Bool = true
-    @Published var secondarySwiftCodeHasError: Bool = true
-    @Published var secondaryBankNameHasError: Bool = true
-    @Published var secondaryBankAddressHasError: Bool = true
-    @Published var jobDescriptionHasError: Bool = true
-    @Published var quantityHasError: Bool = true
-    @Published var unitPriceHasError: Bool = true
-    
+    @Published var ctaEnabled: Bool = false
     @Published var shouldShowInfoDialog: Bool = false
+    @Published var fieldValidation: OnboardingFieldValidation = .init()
     
     private var disposeBag: Set<AnyCancellable> = []
     
@@ -129,7 +102,11 @@ final class OnboardingViewModel: ObservableObject {
         Task {
             if step.finishesOnboarding {
                 saveOnboardingStep.save(.done)
-                coordinator.navigateToInvoiceList()
+                let benefitiaryName = bankAccountInfo.benefitiaryName
+                await MainActor.run { [weak self] in
+                    guard let self else { return }
+                    coordinator.navigateToOnboardingSuccess(benefitiaryName: benefitiaryName)
+                }
             } else {
                 switch step {
                 case .contractorInfo:
@@ -169,32 +146,33 @@ final class OnboardingViewModel: ObservableObject {
         $contractorInfo
             .mapDistinct(\.fullName)
             .sink { [weak self] in
-                self?.fullNameHasError = $0.isEmpty
+                self?.fieldValidation.fullNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $contractorInfo
             .mapDistinct(\.cnpj)
             .sink { [weak self] in
-                self?.taxIdHasError = $0.isEmpty
+                self?.fieldValidation.taxIdHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $contractorInfo
             .mapDistinct(\.companyName)
             .sink { [weak self] in
-                self?.companyNameHasError = $0.isEmpty
+                self?.fieldValidation.companyNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $contractorInfo
             .mapDistinct(\.companyEmail)
             .sink { [weak self] in
-                self?.companyEmailHasError = !$0.isValidEmail
+                self?.fieldValidation.companyEmailHasError = !$0.isValidEmail
             }
             .store(in: &disposeBag)
         
         $contractorInfo
+            .dropFirst()
             .sink { [weak self] in
                 guard let self else { return }
                 cacheContractorInfo.cache($0.toDomainModel())
@@ -204,53 +182,54 @@ final class OnboardingViewModel: ObservableObject {
         $companyAddress
             .mapDistinct(\.streetAddress)
             .sink { [weak self] in
-                self?.streetAddressHasError = $0.isEmpty
+                self?.fieldValidation.streetAddressHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
             .mapDistinct(\.city)
             .sink { [weak self] in
-                self?.cityHasError = $0.isEmpty
+                self?.fieldValidation.cityHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
             .mapDistinct(\.state)
             .sink { [weak self] in
-                self?.stateHasError = $0.isEmpty
+                self?.fieldValidation.stateHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
             .mapDistinct(\.zipCode)
             .sink { [weak self] in
-                self?.zipCodeHasError = $0.isEmpty
+                self?.fieldValidation.zipCodeHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
             .mapDistinct(\.country)
             .sink { [weak self] in
-                self?.countryHasError = $0.isEmpty
+                self?.fieldValidation.countryHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
             .mapDistinct(\.neighbourhood)
             .sink { [weak self] in
-                self?.neighbourhoodHasError = $0.isEmpty
+                self?.fieldValidation.neighbourhoodHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
             .mapDistinct(\.number)
             .sink { [weak self] in
-                self?.numberHasError = $0.isEmpty
+                self?.fieldValidation.numberHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $companyAddress
+            .dropFirst()
             .sink { [weak self] in
                 guard let self else { return }
                 cacheCompanyAddress.cache($0.toDomainModel())
@@ -260,67 +239,68 @@ final class OnboardingViewModel: ObservableObject {
         $bankAccountInfo
             .mapDistinct(\.benefitiaryName)
             .sink { [weak self] in
-                self?.benefitiaryNameHasError = $0.isEmpty
+                self?.fieldValidation.benefitiaryNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.bankInfo.bankName)
             .sink { [weak self] in
-                self?.bankNameHasError = $0.isEmpty
+                self?.fieldValidation.bankNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.bankInfo.iban)
             .sink { [weak self] in
-                self?.accountNumberHasError = $0.isEmpty
+                self?.fieldValidation.accountNumberHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.bankInfo.swiftCode)
             .sink { [weak self] in
-                self?.swiftCodeHasError = $0.isEmpty
+                self?.fieldValidation.swiftCodeHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.bankInfo.bankAddress)
             .sink { [weak self] in
-                self?.bankAddressHasError = $0.isEmpty
+                self?.fieldValidation.bankAddressHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.secondaryBankInfo.bankName)
             .sink { [weak self] in
-                self?.secondaryBankNameHasError = $0.isEmpty
+                self?.fieldValidation.secondaryBankNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.secondaryBankInfo.bankName)
             .sink { [weak self] in
-                self?.secondaryBankNameHasError = $0.isEmpty
+                self?.fieldValidation.secondaryBankNameHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.secondaryBankInfo.iban)
             .sink { [weak self] in
-                self?.secondaryAccountNumberHasError = $0.isEmpty
+                self?.fieldValidation.secondaryAccountNumberHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
             .mapDistinct(\.secondaryBankInfo.swiftCode)
             .sink { [weak self] in
-                self?.secondarySwiftCodeHasError = $0.isEmpty
+                self?.fieldValidation.secondarySwiftCodeHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $bankAccountInfo
+            .dropFirst()
             .sink { [weak self] in
                 guard let self else { return }
                 cacheBankAccount.cache($0.toDomainModel())
@@ -332,14 +312,14 @@ final class OnboardingViewModel: ObservableObject {
             .removeDuplicates()
             .dropFirst()
             .sink { [weak self] in
-                self?.secondaryBankAddressHasError = $0.isEmpty
+                self?.fieldValidation.secondaryBankAddressHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $serviceInfo
             .mapDistinct(\.jobDescription)
             .sink { [weak self] in
-                self?.jobDescriptionHasError = $0.isEmpty
+                self?.fieldValidation.jobDescriptionHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
@@ -348,11 +328,11 @@ final class OnboardingViewModel: ObservableObject {
             .sink { [weak self] in
                 guard let quantityDoubleValue = Double($0),
                       quantityDoubleValue > 0.0 else {
-                    self?.quantityHasError = true
+                    self?.fieldValidation.quantityHasError = true
                     return
                 }
                 
-                self?.quantityHasError = $0.isEmpty
+                self?.fieldValidation.quantityHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
@@ -361,15 +341,16 @@ final class OnboardingViewModel: ObservableObject {
             .sink { [weak self] in
                 guard let unitPriceDoubleValue = Double($0),
                       unitPriceDoubleValue > 0.0 else {
-                    self?.unitPriceHasError = true
+                    self?.fieldValidation.unitPriceHasError = true
                     return
                 }
                 
-                self?.unitPriceHasError = $0.isEmpty
+                self?.fieldValidation.unitPriceHasError = $0.isEmpty
             }
             .store(in: &disposeBag)
         
         $serviceInfo
+            .dropFirst()
             .sink { [weak self] in
                 guard let self else { return }
                 cacheServiceInfo.cache($0.toDomainModel())
@@ -377,6 +358,7 @@ final class OnboardingViewModel: ObservableObject {
             .store(in: &disposeBag)
         
         $step
+            .dropFirst()
             .sink { [weak self] _ in
                 guard let self else { return }
                 cleanCache.clean()
@@ -424,10 +406,10 @@ final class OnboardingViewModel: ObservableObject {
     
     private func setUpCTAValidation() {
         Publishers.CombineLatest4(
-            $fullNameHasError,
-            $taxIdHasError,
-            $companyNameHasError,
-            $companyEmailHasError
+            $fieldValidation.mapDistinct(\.fullNameHasError),
+            $fieldValidation.mapDistinct(\.taxIdHasError),
+            $fieldValidation.mapDistinct(\.companyNameHasError),
+            $fieldValidation.mapDistinct(\.companyEmailHasError)
         )
         .map { !$0 && !$1 && !$2 && !$3 }
         .combineLatest($step)
@@ -441,15 +423,15 @@ final class OnboardingViewModel: ObservableObject {
         .store(in: &disposeBag)
         
         Publishers.CombineLatest4(
-            $streetAddressHasError,
-            $numberHasError,
-            $neighbourhoodHasError,
-            $cityHasError
+            $fieldValidation.mapDistinct(\.streetAddressHasError),
+            $fieldValidation.mapDistinct(\.numberHasError),
+            $fieldValidation.mapDistinct(\.neighbourhoodHasError),
+            $fieldValidation.mapDistinct(\.cityHasError)
         )
         .combineLatest(
-            $stateHasError,
-            $countryHasError,
-            $zipCodeHasError
+            $fieldValidation.mapDistinct(\.stateHasError),
+            $fieldValidation.mapDistinct(\.countryHasError),
+            $fieldValidation.mapDistinct(\.zipCodeHasError),
         )
         .map { !$0.0 && !$0.1 && !$0.2 && !$0.3 && !$1 && !$2 && !$3 }
         .combineLatest($step)
@@ -462,16 +444,16 @@ final class OnboardingViewModel: ObservableObject {
         }
         .store(in: &disposeBag)
         
-        $benefitiaryNameHasError
-            .combineLatest($bankNameHasError)
-            .combineLatest($accountNumberHasError)
-            .combineLatest($swiftCodeHasError)
-            .combineLatest($bankAddressHasError)
+        $fieldValidation.mapDistinct(\.benefitiaryNameHasError)
+            .combineLatest($fieldValidation.mapDistinct(\.bankNameHasError))
+            .combineLatest($fieldValidation.mapDistinct(\.accountNumberHasError))
+            .combineLatest($fieldValidation.mapDistinct(\.swiftCodeHasError))
+            .combineLatest($fieldValidation.mapDistinct(\.bankAddressHasError))
             .combineLatest($shouldShowSecondaryBankForms)
-            .combineLatest($secondaryBankNameHasError)
-            .combineLatest($secondaryAccountNumberHasError)
-            .combineLatest($secondarySwiftCodeHasError)
-            .combineLatest($secondaryBankAddressHasError)
+            .combineLatest($fieldValidation.mapDistinct(\.secondaryBankNameHasError))
+            .combineLatest($fieldValidation.mapDistinct(\.secondaryAccountNumberHasError))
+            .combineLatest($fieldValidation.mapDistinct(\.secondarySwiftCodeHasError))
+            .combineLatest($fieldValidation.mapDistinct(\.secondaryBankAddressHasError))
             .map {
                 let (((((((((beneficiaryHasError, bankNameHasError), accountNumberHasError), swiftCodeHasError), bankAddressHasError), shouldShowSecondaryBankForms), secondaryBankNameHasError), secondaryAccountNumberHasError), secondarySwiftCodeHasError), secondaryBankAddressHasError) = $0
                    
@@ -502,9 +484,9 @@ final class OnboardingViewModel: ObservableObject {
             .store(in: &disposeBag)
         
         Publishers.CombineLatest3(
-            $jobDescriptionHasError,
-            $quantityHasError,
-            $unitPriceHasError
+            $fieldValidation.mapDistinct(\.jobDescriptionHasError),
+            $fieldValidation.mapDistinct(\.quantityHasError),
+            $fieldValidation.mapDistinct(\.unitPriceHasError)
         )
         .map {
             return !$0 && !$1 && !$2

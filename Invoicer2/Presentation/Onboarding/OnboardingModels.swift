@@ -323,3 +323,30 @@ struct OnboardingServiceInfo {
         )
     }
 }
+
+struct OnboardingFieldValidation {
+    var fullNameHasError: Bool = true
+    var taxIdHasError: Bool = true
+    var companyNameHasError: Bool = true
+    var companyEmailHasError: Bool = true
+    var streetAddressHasError: Bool = true
+    var cityHasError: Bool = true
+    var stateHasError: Bool = true
+    var zipCodeHasError: Bool = true
+    var countryHasError: Bool = true
+    var neighbourhoodHasError: Bool = true
+    var numberHasError: Bool = true
+    var benefitiaryNameHasError: Bool = true
+    var accountNumberHasError: Bool = true
+    var swiftCodeHasError: Bool = true
+    var bankNameHasError: Bool = true
+    var bankAddressHasError: Bool = true
+    var secondaryBenefitiaryNameHasError: Bool = true
+    var secondaryAccountNumberHasError: Bool = true
+    var secondarySwiftCodeHasError: Bool = true
+    var secondaryBankNameHasError: Bool = true
+    var secondaryBankAddressHasError: Bool = true
+    var jobDescriptionHasError: Bool = true
+    var quantityHasError: Bool = true
+    var unitPriceHasError: Bool = true
+}

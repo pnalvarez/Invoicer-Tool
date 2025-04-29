@@ -14,7 +14,10 @@ final class CacheDataSource: CacheDataSourceProtocol {
     
     func save<T: Codable>(_ key: String, value: T?) {
         do {
-            guard let value else { return }
+            guard let value else {
+                userDefaults.removeObject(forKey: key)
+                return
+            }
             let data = try JSONEncoder().encode(value)
             userDefaults.set(data, forKey: key)
         } catch {
