@@ -450,10 +450,30 @@ final class OnboardingViewModel: ObservableObject {
             .combineLatest($fieldValidation.mapDistinct(\.swiftCodeHasError))
             .combineLatest($fieldValidation.mapDistinct(\.bankAddressHasError))
             .combineLatest($shouldShowSecondaryBankForms)
-            .combineLatest($fieldValidation.mapDistinct(\.secondaryBankNameHasError))
-            .combineLatest($fieldValidation.mapDistinct(\.secondaryAccountNumberHasError))
-            .combineLatest($fieldValidation.mapDistinct(\.secondarySwiftCodeHasError))
-            .combineLatest($fieldValidation.mapDistinct(\.secondaryBankAddressHasError))
+            .combineLatest(
+                $fieldValidation.mapDistinct(
+                    \.secondaryBankNameHasError,
+                     removeDuplicates: false
+                )
+            )
+            .combineLatest(
+                $fieldValidation.mapDistinct(
+                    \.secondaryAccountNumberHasError,
+                     removeDuplicates: false
+                )
+            )
+            .combineLatest(
+                $fieldValidation.mapDistinct(
+                    \.secondarySwiftCodeHasError,
+                     removeDuplicates: false
+                )
+            )
+            .combineLatest(
+                $fieldValidation.mapDistinct(
+                    \.secondaryBankAddressHasError,
+                     removeDuplicates: false
+                )
+            )
             .map {
                 let (((((((((beneficiaryHasError, bankNameHasError), accountNumberHasError), swiftCodeHasError), bankAddressHasError), shouldShowSecondaryBankForms), secondaryBankNameHasError), secondaryAccountNumberHasError), secondarySwiftCodeHasError), secondaryBankAddressHasError) = $0
                    
