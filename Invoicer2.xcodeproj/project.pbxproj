@@ -6,6 +6,103 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		3F07C95D2E11FE7500BD286E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F07C9582E11FE7500BD286E /* Assets.xcassets */; };
+		3F07C95F2E11FE7500BD286E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F07C95B2E11FE7500BD286E /* LaunchScreen.storyboard */; };
+		3F07C9602E11FE7500BD286E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E12E11FE7500BD286E /* AppDelegate.swift */; };
+		3F07C9612E11FE7500BD286E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E22E11FE7500BD286E /* SceneDelegate.swift */; };
+		3F07C9622E11FE7500BD286E /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E42E11FE7500BD286E /* Colors.swift */; };
+		3F07C9632E11FE7500BD286E /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E62E11FE7500BD286E /* PrimaryButton.swift */; };
+		3F07C9642E11FE7500BD286E /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E72E11FE7500BD286E /* SecondaryButton.swift */; };
+		3F07C9652E11FE7500BD286E /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E92E11FE7500BD286E /* InputField.swift */; };
+		3F07C9662E11FE7500BD286E /* AnimatedDialogModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8EC2E11FE7500BD286E /* AnimatedDialogModifier.swift */; };
+		3F07C9672E11FE7500BD286E /* ModalDialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8ED2E11FE7500BD286E /* ModalDialogView.swift */; };
+		3F07C9682E11FE7500BD286E /* ModalDialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8EE2E11FE7500BD286E /* ModalDialogViewModel.swift */; };
+		3F07C9692E11FE7500BD286E /* OpaqueBackgroundModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8EF2E11FE7500BD286E /* OpaqueBackgroundModifier.swift */; };
+		3F07C96A2E11FE7500BD286E /* TransparentBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F02E11FE7500BD286E /* TransparentBackground.swift */; };
+		3F07C96B2E11FE7500BD286E /* MainNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F22E11FE7500BD286E /* MainNavigationView.swift */; };
+		3F07C96C2E11FE7500BD286E /* StepProgressIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F32E11FE7500BD286E /* StepProgressIndicator.swift */; };
+		3F07C96D2E11FE7500BD286E /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F62E11FE7500BD286E /* Color+.swift */; };
+		3F07C96E2E11FE7500BD286E /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F72E11FE7500BD286E /* Date+.swift */; };
+		3F07C96F2E11FE7500BD286E /* Publishers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F82E11FE7500BD286E /* Publishers+.swift */; };
+		3F07C9702E11FE7500BD286E /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F92E11FE7500BD286E /* String+.swift */; };
+		3F07C9712E11FE7500BD286E /* StorageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FC2E11FE7500BD286E /* StorageClient.swift */; };
+		3F07C9722E11FE7500BD286E /* CacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FE2E11FE7500BD286E /* CacheDataSource.swift */; };
+		3F07C9732E11FE7500BD286E /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FF2E11FE7500BD286E /* StorageDataSource.swift */; };
+		3F07C9742E11FE7500BD286E /* BankAccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9012E11FE7500BD286E /* BankAccountData.swift */; };
+		3F07C9752E11FE7500BD286E /* CompanyAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9022E11FE7500BD286E /* CompanyAddressData.swift */; };
+		3F07C9762E11FE7500BD286E /* ContractorInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9032E11FE7500BD286E /* ContractorInfoData.swift */; };
+		3F07C9772E11FE7500BD286E /* ServiceInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9042E11FE7500BD286E /* ServiceInfoData.swift */; };
+		3F07C9782E11FE7500BD286E /* CacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9062E11FE7500BD286E /* CacheRepository.swift */; };
+		3F07C9792E11FE7500BD286E /* CompanyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9072E11FE7500BD286E /* CompanyRepository.swift */; };
+		3F07C97A2E11FE7500BD286E /* OnboardingStepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9082E11FE7500BD286E /* OnboardingStepRepository.swift */; };
+		3F07C97B2E11FE7500BD286E /* BankAccountDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90B2E11FE7500BD286E /* BankAccountDomain.swift */; };
+		3F07C97C2E11FE7500BD286E /* CompanyAddressDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90C2E11FE7500BD286E /* CompanyAddressDomain.swift */; };
+		3F07C97D2E11FE7500BD286E /* ContractorInfoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90D2E11FE7500BD286E /* ContractorInfoDomain.swift */; };
+		3F07C97E2E11FE7500BD286E /* InvoiceDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90E2E11FE7500BD286E /* InvoiceDomain.swift */; };
+		3F07C97F2E11FE7500BD286E /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90F2E11FE7500BD286E /* OnboardingStep.swift */; };
+		3F07C9802E11FE7500BD286E /* ServiceInfoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9102E11FE7500BD286E /* ServiceInfoDomain.swift */; };
+		3F07C9812E11FE7500BD286E /* CacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9122E11FE7500BD286E /* CacheRepositoryProtocol.swift */; };
+		3F07C9822E11FE7500BD286E /* CompanyRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9132E11FE7500BD286E /* CompanyRepositoryProtocol.swift */; };
+		3F07C9832E11FE7500BD286E /* CacheBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9152E11FE7500BD286E /* CacheBankAccount.swift */; };
+		3F07C9842E11FE7500BD286E /* CacheCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9162E11FE7500BD286E /* CacheCompanyAddress.swift */; };
+		3F07C9852E11FE7500BD286E /* CacheContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9172E11FE7500BD286E /* CacheContractorInfo.swift */; };
+		3F07C9862E11FE7500BD286E /* CacheServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9182E11FE7500BD286E /* CacheServiceInfo.swift */; };
+		3F07C9872E11FE7500BD286E /* CleanCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9192E11FE7500BD286E /* CleanCache.swift */; };
+		3F07C9882E11FE7500BD286E /* FinishOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91A2E11FE7500BD286E /* FinishOnboarding.swift */; };
+		3F07C9892E11FE7500BD286E /* FlushOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91B2E11FE7500BD286E /* FlushOnboarding.swift */; };
+		3F07C98A2E11FE7500BD286E /* GetBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91C2E11FE7500BD286E /* GetBankAccount.swift */; };
+		3F07C98B2E11FE7500BD286E /* GetCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91D2E11FE7500BD286E /* GetCompanyAddress.swift */; };
+		3F07C98C2E11FE7500BD286E /* GetContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91E2E11FE7500BD286E /* GetContractorInfo.swift */; };
+		3F07C98D2E11FE7500BD286E /* GetInvoiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91F2E11FE7500BD286E /* GetInvoiceList.swift */; };
+		3F07C98E2E11FE7500BD286E /* GetOnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9202E11FE7500BD286E /* GetOnboardingStep.swift */; };
+		3F07C98F2E11FE7500BD286E /* GetServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9212E11FE7500BD286E /* GetServiceInfo.swift */; };
+		3F07C9902E11FE7500BD286E /* SaveBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9222E11FE7500BD286E /* SaveBankAccount.swift */; };
+		3F07C9912E11FE7500BD286E /* SaveCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9232E11FE7500BD286E /* SaveCompanyAddress.swift */; };
+		3F07C9922E11FE7500BD286E /* SaveContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9242E11FE7500BD286E /* SaveContractorInfo.swift */; };
+		3F07C9932E11FE7500BD286E /* SaveOnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9252E11FE7500BD286E /* SaveOnboardingStep.swift */; };
+		3F07C9942E11FE7500BD286E /* SaveServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9262E11FE7500BD286E /* SaveServiceInfo.swift */; };
+		3F07C9952E11FE7500BD286E /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9292E11FE7500BD286E /* BackupView.swift */; };
+		3F07C9962E11FE7500BD286E /* InvoiceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92B2E11FE7500BD286E /* InvoiceItemView.swift */; };
+		3F07C9972E11FE7500BD286E /* InvoiceListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92C2E11FE7500BD286E /* InvoiceListBuilder.swift */; };
+		3F07C9982E11FE7500BD286E /* InvoiceListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92D2E11FE7500BD286E /* InvoiceListCoordinator.swift */; };
+		3F07C9992E11FE7500BD286E /* InvoiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92E2E11FE7500BD286E /* InvoiceListView.swift */; };
+		3F07C99A2E11FE7500BD286E /* InvoiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92F2E11FE7500BD286E /* InvoiceListViewModel.swift */; };
+		3F07C99B2E11FE7500BD286E /* InvoiceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9302E11FE7500BD286E /* InvoiceUI.swift */; };
+		3F07C99C2E11FE7500BD286E /* NewInvoiceFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9322E11FE7500BD286E /* NewInvoiceFormBuilder.swift */; };
+		3F07C99D2E11FE7500BD286E /* NewInvoiceFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9332E11FE7500BD286E /* NewInvoiceFormCoordinator.swift */; };
+		3F07C99E2E11FE7500BD286E /* NewInvoiceFormState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9342E11FE7500BD286E /* NewInvoiceFormState.swift */; };
+		3F07C99F2E11FE7500BD286E /* NewInvoiceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9352E11FE7500BD286E /* NewInvoiceFormView.swift */; };
+		3F07C9A02E11FE7500BD286E /* NewInvoiceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9362E11FE7500BD286E /* NewInvoiceFormViewModel.swift */; };
+		3F07C9A12E11FE7500BD286E /* OnboardingBankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9382E11FE7500BD286E /* OnboardingBankInfoView.swift */; };
+		3F07C9A22E11FE7500BD286E /* OnboardingCompanyAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9392E11FE7500BD286E /* OnboardingCompanyAddressView.swift */; };
+		3F07C9A32E11FE7500BD286E /* OnboardingContractorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93A2E11FE7500BD286E /* OnboardingContractorInfoView.swift */; };
+		3F07C9A42E11FE7500BD286E /* OnboardingServiceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93B2E11FE7500BD286E /* OnboardingServiceInfoView.swift */; };
+		3F07C9A52E11FE7500BD286E /* OnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93D2E11FE7500BD286E /* OnboardingBuilder.swift */; };
+		3F07C9A62E11FE7500BD286E /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93E2E11FE7500BD286E /* OnboardingCoordinator.swift */; };
+		3F07C9A72E11FE7500BD286E /* OnboardingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93F2E11FE7500BD286E /* OnboardingModels.swift */; };
+		3F07C9A82E11FE7500BD286E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9402E11FE7500BD286E /* OnboardingView.swift */; };
+		3F07C9A92E11FE7500BD286E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9412E11FE7500BD286E /* OnboardingViewModel.swift */; };
+		3F07C9AA2E11FE7500BD286E /* OnboardingSuccessBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9432E11FE7500BD286E /* OnboardingSuccessBuilder.swift */; };
+		3F07C9AB2E11FE7500BD286E /* OnboardingSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9442E11FE7500BD286E /* OnboardingSuccessCoordinator.swift */; };
+		3F07C9AC2E11FE7500BD286E /* OnboardingSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9452E11FE7500BD286E /* OnboardingSuccessView.swift */; };
+		3F07C9AD2E11FE7500BD286E /* OnboardingSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9462E11FE7500BD286E /* OnboardingSuccessViewModel.swift */; };
+		3F07C9AE2E11FE7500BD286E /* PreOnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9482E11FE7500BD286E /* PreOnboardingBuilder.swift */; };
+		3F07C9AF2E11FE7500BD286E /* PreOnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9492E11FE7500BD286E /* PreOnboardingCoordinator.swift */; };
+		3F07C9B02E11FE7500BD286E /* PreOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94A2E11FE7500BD286E /* PreOnboardingView.swift */; };
+		3F07C9B12E11FE7500BD286E /* PreOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94B2E11FE7500BD286E /* PreOnboardingViewModel.swift */; };
+		3F07C9B22E11FE7500BD286E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94D2E11FE7500BD286E /* SettingsView.swift */; };
+		3F07C9B32E11FE7500BD286E /* TabBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94F2E11FE7500BD286E /* TabBuilder.swift */; };
+		3F07C9B42E11FE7500BD286E /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9502E11FE7500BD286E /* TabCoordinator.swift */; };
+		3F07C9B52E11FE7500BD286E /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9512E11FE7500BD286E /* TabView.swift */; };
+		3F07C9B62E11FE7500BD286E /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9522E11FE7500BD286E /* TabViewModel.swift */; };
+		3F07C9B72E11FE7500BD286E /* MainBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9552E11FE7500BD286E /* MainBundle.swift */; };
+		3F07C9B82E11FE7500BD286E /* PersonalInfoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9562E11FE7500BD286E /* PersonalInfoWidget.swift */; };
+		3F07C9BB2E11FE7900BD286E /* Invoicer2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9B92E11FE7900BD286E /* Invoicer2Tests.swift */; };
+		3F07C9BF2E11FE7D00BD286E /* Invoicer2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9BC2E11FE7D00BD286E /* Invoicer2UITests.swift */; };
+		3F07C9C02E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9BD2E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		3FE12E832DA032B00090DCE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,41 +121,105 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F07C8E12E11FE7500BD286E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F07C8E22E11FE7500BD286E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		3F07C8E42E11FE7500BD286E /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		3F07C8E62E11FE7500BD286E /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		3F07C8E72E11FE7500BD286E /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
+		3F07C8E92E11FE7500BD286E /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
+		3F07C8EC2E11FE7500BD286E /* AnimatedDialogModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedDialogModifier.swift; sourceTree = "<group>"; };
+		3F07C8ED2E11FE7500BD286E /* ModalDialogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDialogView.swift; sourceTree = "<group>"; };
+		3F07C8EE2E11FE7500BD286E /* ModalDialogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalDialogViewModel.swift; sourceTree = "<group>"; };
+		3F07C8EF2E11FE7500BD286E /* OpaqueBackgroundModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpaqueBackgroundModifier.swift; sourceTree = "<group>"; };
+		3F07C8F02E11FE7500BD286E /* TransparentBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransparentBackground.swift; sourceTree = "<group>"; };
+		3F07C8F22E11FE7500BD286E /* MainNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationView.swift; sourceTree = "<group>"; };
+		3F07C8F32E11FE7500BD286E /* StepProgressIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepProgressIndicator.swift; sourceTree = "<group>"; };
+		3F07C8F62E11FE7500BD286E /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		3F07C8F72E11FE7500BD286E /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
+		3F07C8F82E11FE7500BD286E /* Publishers+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publishers+.swift"; sourceTree = "<group>"; };
+		3F07C8F92E11FE7500BD286E /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		3F07C8FC2E11FE7500BD286E /* StorageClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageClient.swift; sourceTree = "<group>"; };
+		3F07C8FE2E11FE7500BD286E /* CacheDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheDataSource.swift; sourceTree = "<group>"; };
+		3F07C8FF2E11FE7500BD286E /* StorageDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageDataSource.swift; sourceTree = "<group>"; };
+		3F07C9012E11FE7500BD286E /* BankAccountData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountData.swift; sourceTree = "<group>"; };
+		3F07C9022E11FE7500BD286E /* CompanyAddressData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyAddressData.swift; sourceTree = "<group>"; };
+		3F07C9032E11FE7500BD286E /* ContractorInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoData.swift; sourceTree = "<group>"; };
+		3F07C9042E11FE7500BD286E /* ServiceInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoData.swift; sourceTree = "<group>"; };
+		3F07C9062E11FE7500BD286E /* CacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheRepository.swift; sourceTree = "<group>"; };
+		3F07C9072E11FE7500BD286E /* CompanyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRepository.swift; sourceTree = "<group>"; };
+		3F07C9082E11FE7500BD286E /* OnboardingStepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepRepository.swift; sourceTree = "<group>"; };
+		3F07C90B2E11FE7500BD286E /* BankAccountDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountDomain.swift; sourceTree = "<group>"; };
+		3F07C90C2E11FE7500BD286E /* CompanyAddressDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyAddressDomain.swift; sourceTree = "<group>"; };
+		3F07C90D2E11FE7500BD286E /* ContractorInfoDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoDomain.swift; sourceTree = "<group>"; };
+		3F07C90E2E11FE7500BD286E /* InvoiceDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceDomain.swift; sourceTree = "<group>"; };
+		3F07C90F2E11FE7500BD286E /* OnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep.swift; sourceTree = "<group>"; };
+		3F07C9102E11FE7500BD286E /* ServiceInfoDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoDomain.swift; sourceTree = "<group>"; };
+		3F07C9122E11FE7500BD286E /* CacheRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheRepositoryProtocol.swift; sourceTree = "<group>"; };
+		3F07C9132E11FE7500BD286E /* CompanyRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRepositoryProtocol.swift; sourceTree = "<group>"; };
+		3F07C9152E11FE7500BD286E /* CacheBankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBankAccount.swift; sourceTree = "<group>"; };
+		3F07C9162E11FE7500BD286E /* CacheCompanyAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheCompanyAddress.swift; sourceTree = "<group>"; };
+		3F07C9172E11FE7500BD286E /* CacheContractorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheContractorInfo.swift; sourceTree = "<group>"; };
+		3F07C9182E11FE7500BD286E /* CacheServiceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceInfo.swift; sourceTree = "<group>"; };
+		3F07C9192E11FE7500BD286E /* CleanCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanCache.swift; sourceTree = "<group>"; };
+		3F07C91A2E11FE7500BD286E /* FinishOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboarding.swift; sourceTree = "<group>"; };
+		3F07C91B2E11FE7500BD286E /* FlushOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlushOnboarding.swift; sourceTree = "<group>"; };
+		3F07C91C2E11FE7500BD286E /* GetBankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBankAccount.swift; sourceTree = "<group>"; };
+		3F07C91D2E11FE7500BD286E /* GetCompanyAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCompanyAddress.swift; sourceTree = "<group>"; };
+		3F07C91E2E11FE7500BD286E /* GetContractorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContractorInfo.swift; sourceTree = "<group>"; };
+		3F07C91F2E11FE7500BD286E /* GetInvoiceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInvoiceList.swift; sourceTree = "<group>"; };
+		3F07C9202E11FE7500BD286E /* GetOnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOnboardingStep.swift; sourceTree = "<group>"; };
+		3F07C9212E11FE7500BD286E /* GetServiceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceInfo.swift; sourceTree = "<group>"; };
+		3F07C9222E11FE7500BD286E /* SaveBankAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBankAccount.swift; sourceTree = "<group>"; };
+		3F07C9232E11FE7500BD286E /* SaveCompanyAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCompanyAddress.swift; sourceTree = "<group>"; };
+		3F07C9242E11FE7500BD286E /* SaveContractorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContractorInfo.swift; sourceTree = "<group>"; };
+		3F07C9252E11FE7500BD286E /* SaveOnboardingStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOnboardingStep.swift; sourceTree = "<group>"; };
+		3F07C9262E11FE7500BD286E /* SaveServiceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveServiceInfo.swift; sourceTree = "<group>"; };
+		3F07C9292E11FE7500BD286E /* BackupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackupView.swift; sourceTree = "<group>"; };
+		3F07C92B2E11FE7500BD286E /* InvoiceItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceItemView.swift; sourceTree = "<group>"; };
+		3F07C92C2E11FE7500BD286E /* InvoiceListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListBuilder.swift; sourceTree = "<group>"; };
+		3F07C92D2E11FE7500BD286E /* InvoiceListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListCoordinator.swift; sourceTree = "<group>"; };
+		3F07C92E2E11FE7500BD286E /* InvoiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListView.swift; sourceTree = "<group>"; };
+		3F07C92F2E11FE7500BD286E /* InvoiceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceListViewModel.swift; sourceTree = "<group>"; };
+		3F07C9302E11FE7500BD286E /* InvoiceUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceUI.swift; sourceTree = "<group>"; };
+		3F07C9322E11FE7500BD286E /* NewInvoiceFormBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceFormBuilder.swift; sourceTree = "<group>"; };
+		3F07C9332E11FE7500BD286E /* NewInvoiceFormCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceFormCoordinator.swift; sourceTree = "<group>"; };
+		3F07C9342E11FE7500BD286E /* NewInvoiceFormState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceFormState.swift; sourceTree = "<group>"; };
+		3F07C9352E11FE7500BD286E /* NewInvoiceFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceFormView.swift; sourceTree = "<group>"; };
+		3F07C9362E11FE7500BD286E /* NewInvoiceFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewInvoiceFormViewModel.swift; sourceTree = "<group>"; };
+		3F07C9382E11FE7500BD286E /* OnboardingBankInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBankInfoView.swift; sourceTree = "<group>"; };
+		3F07C9392E11FE7500BD286E /* OnboardingCompanyAddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCompanyAddressView.swift; sourceTree = "<group>"; };
+		3F07C93A2E11FE7500BD286E /* OnboardingContractorInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContractorInfoView.swift; sourceTree = "<group>"; };
+		3F07C93B2E11FE7500BD286E /* OnboardingServiceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingServiceInfoView.swift; sourceTree = "<group>"; };
+		3F07C93D2E11FE7500BD286E /* OnboardingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingBuilder.swift; sourceTree = "<group>"; };
+		3F07C93E2E11FE7500BD286E /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		3F07C93F2E11FE7500BD286E /* OnboardingModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModels.swift; sourceTree = "<group>"; };
+		3F07C9402E11FE7500BD286E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		3F07C9412E11FE7500BD286E /* OnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		3F07C9432E11FE7500BD286E /* OnboardingSuccessBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessBuilder.swift; sourceTree = "<group>"; };
+		3F07C9442E11FE7500BD286E /* OnboardingSuccessCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessCoordinator.swift; sourceTree = "<group>"; };
+		3F07C9452E11FE7500BD286E /* OnboardingSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessView.swift; sourceTree = "<group>"; };
+		3F07C9462E11FE7500BD286E /* OnboardingSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSuccessViewModel.swift; sourceTree = "<group>"; };
+		3F07C9482E11FE7500BD286E /* PreOnboardingBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOnboardingBuilder.swift; sourceTree = "<group>"; };
+		3F07C9492E11FE7500BD286E /* PreOnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOnboardingCoordinator.swift; sourceTree = "<group>"; };
+		3F07C94A2E11FE7500BD286E /* PreOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOnboardingView.swift; sourceTree = "<group>"; };
+		3F07C94B2E11FE7500BD286E /* PreOnboardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreOnboardingViewModel.swift; sourceTree = "<group>"; };
+		3F07C94D2E11FE7500BD286E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3F07C94F2E11FE7500BD286E /* TabBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBuilder.swift; sourceTree = "<group>"; };
+		3F07C9502E11FE7500BD286E /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
+		3F07C9512E11FE7500BD286E /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		3F07C9522E11FE7500BD286E /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
+		3F07C9552E11FE7500BD286E /* MainBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBundle.swift; sourceTree = "<group>"; };
+		3F07C9562E11FE7500BD286E /* PersonalInfoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoWidget.swift; sourceTree = "<group>"; };
+		3F07C9582E11FE7500BD286E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F07C9592E11FE7500BD286E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F07C95A2E11FE7500BD286E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F07C9B92E11FE7900BD286E /* Invoicer2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoicer2Tests.swift; sourceTree = "<group>"; };
+		3F07C9BC2E11FE7D00BD286E /* Invoicer2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoicer2UITests.swift; sourceTree = "<group>"; };
+		3F07C9BD2E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoicer2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3FE12E6C2DA032AD0090DCE9 /* Invoicer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Invoicer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE12E822DA032B00090DCE9 /* Invoicer2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Invoicer2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE12E8C2DA032B00090DCE9 /* Invoicer2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Invoicer2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		3FE12E942DA032B00090DCE9 /* Exceptions for "Invoicer2" folder in "Invoicer2" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 3FE12E6B2DA032AD0090DCE9 /* Invoicer2 */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		3FE12E6E2DA032AD0090DCE9 /* Invoicer2 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				3FE12E942DA032B00090DCE9 /* Exceptions for "Invoicer2" folder in "Invoicer2" target */,
-			);
-			path = Invoicer2;
-			sourceTree = "<group>";
-		};
-		3FE12E852DA032B00090DCE9 /* Invoicer2Tests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Invoicer2Tests;
-			sourceTree = "<group>";
-		};
-		3FE12E8F2DA032B00090DCE9 /* Invoicer2UITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Invoicer2UITests;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3FE12E692DA032AD0090DCE9 /* Frameworks */ = {
@@ -85,12 +246,368 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F07C8E32E11FE7500BD286E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E12E11FE7500BD286E /* AppDelegate.swift */,
+				3F07C8E22E11FE7500BD286E /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3F07C8E52E11FE7500BD286E /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E42E11FE7500BD286E /* Colors.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		3F07C8E82E11FE7500BD286E /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E62E11FE7500BD286E /* PrimaryButton.swift */,
+				3F07C8E72E11FE7500BD286E /* SecondaryButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		3F07C8EA2E11FE7500BD286E /* InputFields */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E92E11FE7500BD286E /* InputField.swift */,
+			);
+			path = InputFields;
+			sourceTree = "<group>";
+		};
+		3F07C8EB2E11FE7500BD286E /* Molecules */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E82E11FE7500BD286E /* Buttons */,
+				3F07C8EA2E11FE7500BD286E /* InputFields */,
+			);
+			path = Molecules;
+			sourceTree = "<group>";
+		};
+		3F07C8F12E11FE7500BD286E /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8EC2E11FE7500BD286E /* AnimatedDialogModifier.swift */,
+				3F07C8ED2E11FE7500BD286E /* ModalDialogView.swift */,
+				3F07C8EE2E11FE7500BD286E /* ModalDialogViewModel.swift */,
+				3F07C8EF2E11FE7500BD286E /* OpaqueBackgroundModifier.swift */,
+				3F07C8F02E11FE7500BD286E /* TransparentBackground.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		3F07C8F42E11FE7500BD286E /* Organisms */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8F12E11FE7500BD286E /* Modal */,
+				3F07C8F22E11FE7500BD286E /* MainNavigationView.swift */,
+				3F07C8F32E11FE7500BD286E /* StepProgressIndicator.swift */,
+			);
+			path = Organisms;
+			sourceTree = "<group>";
+		};
+		3F07C8F52E11FE7500BD286E /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E52E11FE7500BD286E /* Atoms */,
+				3F07C8EB2E11FE7500BD286E /* Molecules */,
+				3F07C8F42E11FE7500BD286E /* Organisms */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		3F07C8FA2E11FE7500BD286E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8F62E11FE7500BD286E /* Color+.swift */,
+				3F07C8F72E11FE7500BD286E /* Date+.swift */,
+				3F07C8F82E11FE7500BD286E /* Publishers+.swift */,
+				3F07C8F92E11FE7500BD286E /* String+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		3F07C8FB2E11FE7500BD286E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8E32E11FE7500BD286E /* App */,
+				3F07C8F52E11FE7500BD286E /* DesignSystem */,
+				3F07C8FA2E11FE7500BD286E /* Extensions */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3F07C8FD2E11FE7500BD286E /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8FC2E11FE7500BD286E /* StorageClient.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		3F07C9002E11FE7500BD286E /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8FE2E11FE7500BD286E /* CacheDataSource.swift */,
+				3F07C8FF2E11FE7500BD286E /* StorageDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		3F07C9052E11FE7500BD286E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9012E11FE7500BD286E /* BankAccountData.swift */,
+				3F07C9022E11FE7500BD286E /* CompanyAddressData.swift */,
+				3F07C9032E11FE7500BD286E /* ContractorInfoData.swift */,
+				3F07C9042E11FE7500BD286E /* ServiceInfoData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F07C9092E11FE7500BD286E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9062E11FE7500BD286E /* CacheRepository.swift */,
+				3F07C9072E11FE7500BD286E /* CompanyRepository.swift */,
+				3F07C9082E11FE7500BD286E /* OnboardingStepRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3F07C90A2E11FE7500BD286E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8FD2E11FE7500BD286E /* Client */,
+				3F07C9002E11FE7500BD286E /* DataSource */,
+				3F07C9052E11FE7500BD286E /* Models */,
+				3F07C9092E11FE7500BD286E /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3F07C9112E11FE7500BD286E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C90B2E11FE7500BD286E /* BankAccountDomain.swift */,
+				3F07C90C2E11FE7500BD286E /* CompanyAddressDomain.swift */,
+				3F07C90D2E11FE7500BD286E /* ContractorInfoDomain.swift */,
+				3F07C90E2E11FE7500BD286E /* InvoiceDomain.swift */,
+				3F07C90F2E11FE7500BD286E /* OnboardingStep.swift */,
+				3F07C9102E11FE7500BD286E /* ServiceInfoDomain.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3F07C9142E11FE7500BD286E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9122E11FE7500BD286E /* CacheRepositoryProtocol.swift */,
+				3F07C9132E11FE7500BD286E /* CompanyRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		3F07C9272E11FE7500BD286E /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9152E11FE7500BD286E /* CacheBankAccount.swift */,
+				3F07C9162E11FE7500BD286E /* CacheCompanyAddress.swift */,
+				3F07C9172E11FE7500BD286E /* CacheContractorInfo.swift */,
+				3F07C9182E11FE7500BD286E /* CacheServiceInfo.swift */,
+				3F07C9192E11FE7500BD286E /* CleanCache.swift */,
+				3F07C91A2E11FE7500BD286E /* FinishOnboarding.swift */,
+				3F07C91B2E11FE7500BD286E /* FlushOnboarding.swift */,
+				3F07C91C2E11FE7500BD286E /* GetBankAccount.swift */,
+				3F07C91D2E11FE7500BD286E /* GetCompanyAddress.swift */,
+				3F07C91E2E11FE7500BD286E /* GetContractorInfo.swift */,
+				3F07C91F2E11FE7500BD286E /* GetInvoiceList.swift */,
+				3F07C9202E11FE7500BD286E /* GetOnboardingStep.swift */,
+				3F07C9212E11FE7500BD286E /* GetServiceInfo.swift */,
+				3F07C9222E11FE7500BD286E /* SaveBankAccount.swift */,
+				3F07C9232E11FE7500BD286E /* SaveCompanyAddress.swift */,
+				3F07C9242E11FE7500BD286E /* SaveContractorInfo.swift */,
+				3F07C9252E11FE7500BD286E /* SaveOnboardingStep.swift */,
+				3F07C9262E11FE7500BD286E /* SaveServiceInfo.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		3F07C9282E11FE7500BD286E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9112E11FE7500BD286E /* Models */,
+				3F07C9142E11FE7500BD286E /* Repository */,
+				3F07C9272E11FE7500BD286E /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		3F07C92A2E11FE7500BD286E /* Backup */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9292E11FE7500BD286E /* BackupView.swift */,
+			);
+			path = Backup;
+			sourceTree = "<group>";
+		};
+		3F07C9312E11FE7500BD286E /* InvoiceList */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C92B2E11FE7500BD286E /* InvoiceItemView.swift */,
+				3F07C92C2E11FE7500BD286E /* InvoiceListBuilder.swift */,
+				3F07C92D2E11FE7500BD286E /* InvoiceListCoordinator.swift */,
+				3F07C92E2E11FE7500BD286E /* InvoiceListView.swift */,
+				3F07C92F2E11FE7500BD286E /* InvoiceListViewModel.swift */,
+				3F07C9302E11FE7500BD286E /* InvoiceUI.swift */,
+			);
+			path = InvoiceList;
+			sourceTree = "<group>";
+		};
+		3F07C9372E11FE7500BD286E /* NewInvoiceForm */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9322E11FE7500BD286E /* NewInvoiceFormBuilder.swift */,
+				3F07C9332E11FE7500BD286E /* NewInvoiceFormCoordinator.swift */,
+				3F07C9342E11FE7500BD286E /* NewInvoiceFormState.swift */,
+				3F07C9352E11FE7500BD286E /* NewInvoiceFormView.swift */,
+				3F07C9362E11FE7500BD286E /* NewInvoiceFormViewModel.swift */,
+			);
+			path = NewInvoiceForm;
+			sourceTree = "<group>";
+		};
+		3F07C93C2E11FE7500BD286E /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9382E11FE7500BD286E /* OnboardingBankInfoView.swift */,
+				3F07C9392E11FE7500BD286E /* OnboardingCompanyAddressView.swift */,
+				3F07C93A2E11FE7500BD286E /* OnboardingContractorInfoView.swift */,
+				3F07C93B2E11FE7500BD286E /* OnboardingServiceInfoView.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		3F07C9422E11FE7500BD286E /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C93C2E11FE7500BD286E /* Subviews */,
+				3F07C93D2E11FE7500BD286E /* OnboardingBuilder.swift */,
+				3F07C93E2E11FE7500BD286E /* OnboardingCoordinator.swift */,
+				3F07C93F2E11FE7500BD286E /* OnboardingModels.swift */,
+				3F07C9402E11FE7500BD286E /* OnboardingView.swift */,
+				3F07C9412E11FE7500BD286E /* OnboardingViewModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		3F07C9472E11FE7500BD286E /* OnboardingSuccess */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9432E11FE7500BD286E /* OnboardingSuccessBuilder.swift */,
+				3F07C9442E11FE7500BD286E /* OnboardingSuccessCoordinator.swift */,
+				3F07C9452E11FE7500BD286E /* OnboardingSuccessView.swift */,
+				3F07C9462E11FE7500BD286E /* OnboardingSuccessViewModel.swift */,
+			);
+			path = OnboardingSuccess;
+			sourceTree = "<group>";
+		};
+		3F07C94C2E11FE7500BD286E /* PreOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9482E11FE7500BD286E /* PreOnboardingBuilder.swift */,
+				3F07C9492E11FE7500BD286E /* PreOnboardingCoordinator.swift */,
+				3F07C94A2E11FE7500BD286E /* PreOnboardingView.swift */,
+				3F07C94B2E11FE7500BD286E /* PreOnboardingViewModel.swift */,
+			);
+			path = PreOnboarding;
+			sourceTree = "<group>";
+		};
+		3F07C94E2E11FE7500BD286E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C94D2E11FE7500BD286E /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		3F07C9532E11FE7500BD286E /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C94F2E11FE7500BD286E /* TabBuilder.swift */,
+				3F07C9502E11FE7500BD286E /* TabCoordinator.swift */,
+				3F07C9512E11FE7500BD286E /* TabView.swift */,
+				3F07C9522E11FE7500BD286E /* TabViewModel.swift */,
+			);
+			path = Tab;
+			sourceTree = "<group>";
+		};
+		3F07C9542E11FE7500BD286E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C92A2E11FE7500BD286E /* Backup */,
+				3F07C9312E11FE7500BD286E /* InvoiceList */,
+				3F07C9372E11FE7500BD286E /* NewInvoiceForm */,
+				3F07C9422E11FE7500BD286E /* Onboarding */,
+				3F07C9472E11FE7500BD286E /* OnboardingSuccess */,
+				3F07C94C2E11FE7500BD286E /* PreOnboarding */,
+				3F07C94E2E11FE7500BD286E /* Settings */,
+				3F07C9532E11FE7500BD286E /* Tab */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3F07C9572E11FE7500BD286E /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9552E11FE7500BD286E /* MainBundle.swift */,
+				3F07C9562E11FE7500BD286E /* PersonalInfoWidget.swift */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		3F07C95C2E11FE7500BD286E /* Invoicer2 */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C8FB2E11FE7500BD286E /* Common */,
+				3F07C90A2E11FE7500BD286E /* Data */,
+				3F07C9282E11FE7500BD286E /* Domain */,
+				3F07C9542E11FE7500BD286E /* Presentation */,
+				3F07C9572E11FE7500BD286E /* Widgets */,
+				3F07C9582E11FE7500BD286E /* Assets.xcassets */,
+				3F07C9592E11FE7500BD286E /* Info.plist */,
+				3F07C95B2E11FE7500BD286E /* LaunchScreen.storyboard */,
+			);
+			path = Invoicer2;
+			sourceTree = "<group>";
+		};
+		3F07C9BA2E11FE7900BD286E /* Invoicer2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9B92E11FE7900BD286E /* Invoicer2Tests.swift */,
+			);
+			path = Invoicer2Tests;
+			sourceTree = "<group>";
+		};
+		3F07C9BE2E11FE7D00BD286E /* Invoicer2UITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F07C9BC2E11FE7D00BD286E /* Invoicer2UITests.swift */,
+				3F07C9BD2E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift */,
+			);
+			path = Invoicer2UITests;
+			sourceTree = "<group>";
+		};
 		3FE12E632DA032AD0090DCE9 = {
 			isa = PBXGroup;
 			children = (
-				3FE12E6E2DA032AD0090DCE9 /* Invoicer2 */,
-				3FE12E852DA032B00090DCE9 /* Invoicer2Tests */,
-				3FE12E8F2DA032B00090DCE9 /* Invoicer2UITests */,
+				3F07C95C2E11FE7500BD286E /* Invoicer2 */,
+				3F07C9BA2E11FE7900BD286E /* Invoicer2Tests */,
+				3F07C9BE2E11FE7D00BD286E /* Invoicer2UITests */,
 				3FE12E6D2DA032AD0090DCE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,9 +637,6 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				3FE12E6E2DA032AD0090DCE9 /* Invoicer2 */,
-			);
 			name = Invoicer2;
 			packageProductDependencies = (
 			);
@@ -143,9 +657,6 @@
 			dependencies = (
 				3FE12E842DA032B00090DCE9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				3FE12E852DA032B00090DCE9 /* Invoicer2Tests */,
-			);
 			name = Invoicer2Tests;
 			packageProductDependencies = (
 			);
@@ -165,9 +676,6 @@
 			);
 			dependencies = (
 				3FE12E8E2DA032B00090DCE9 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				3FE12E8F2DA032B00090DCE9 /* Invoicer2UITests */,
 			);
 			name = Invoicer2UITests;
 			packageProductDependencies = (
@@ -225,6 +733,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F07C95D2E11FE7500BD286E /* Assets.xcassets in Resources */,
+				3F07C95F2E11FE7500BD286E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +759,95 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F07C9602E11FE7500BD286E /* AppDelegate.swift in Sources */,
+				3F07C9612E11FE7500BD286E /* SceneDelegate.swift in Sources */,
+				3F07C9622E11FE7500BD286E /* Colors.swift in Sources */,
+				3F07C9632E11FE7500BD286E /* PrimaryButton.swift in Sources */,
+				3F07C9642E11FE7500BD286E /* SecondaryButton.swift in Sources */,
+				3F07C9652E11FE7500BD286E /* InputField.swift in Sources */,
+				3F07C9662E11FE7500BD286E /* AnimatedDialogModifier.swift in Sources */,
+				3F07C9672E11FE7500BD286E /* ModalDialogView.swift in Sources */,
+				3F07C9682E11FE7500BD286E /* ModalDialogViewModel.swift in Sources */,
+				3F07C9692E11FE7500BD286E /* OpaqueBackgroundModifier.swift in Sources */,
+				3F07C96A2E11FE7500BD286E /* TransparentBackground.swift in Sources */,
+				3F07C96B2E11FE7500BD286E /* MainNavigationView.swift in Sources */,
+				3F07C96C2E11FE7500BD286E /* StepProgressIndicator.swift in Sources */,
+				3F07C96D2E11FE7500BD286E /* Color+.swift in Sources */,
+				3F07C96E2E11FE7500BD286E /* Date+.swift in Sources */,
+				3F07C96F2E11FE7500BD286E /* Publishers+.swift in Sources */,
+				3F07C9702E11FE7500BD286E /* String+.swift in Sources */,
+				3F07C9712E11FE7500BD286E /* StorageClient.swift in Sources */,
+				3F07C9722E11FE7500BD286E /* CacheDataSource.swift in Sources */,
+				3F07C9732E11FE7500BD286E /* StorageDataSource.swift in Sources */,
+				3F07C9742E11FE7500BD286E /* BankAccountData.swift in Sources */,
+				3F07C9752E11FE7500BD286E /* CompanyAddressData.swift in Sources */,
+				3F07C9762E11FE7500BD286E /* ContractorInfoData.swift in Sources */,
+				3F07C9772E11FE7500BD286E /* ServiceInfoData.swift in Sources */,
+				3F07C9782E11FE7500BD286E /* CacheRepository.swift in Sources */,
+				3F07C9792E11FE7500BD286E /* CompanyRepository.swift in Sources */,
+				3F07C97A2E11FE7500BD286E /* OnboardingStepRepository.swift in Sources */,
+				3F07C97B2E11FE7500BD286E /* BankAccountDomain.swift in Sources */,
+				3F07C97C2E11FE7500BD286E /* CompanyAddressDomain.swift in Sources */,
+				3F07C97D2E11FE7500BD286E /* ContractorInfoDomain.swift in Sources */,
+				3F07C97E2E11FE7500BD286E /* InvoiceDomain.swift in Sources */,
+				3F07C97F2E11FE7500BD286E /* OnboardingStep.swift in Sources */,
+				3F07C9802E11FE7500BD286E /* ServiceInfoDomain.swift in Sources */,
+				3F07C9812E11FE7500BD286E /* CacheRepositoryProtocol.swift in Sources */,
+				3F07C9822E11FE7500BD286E /* CompanyRepositoryProtocol.swift in Sources */,
+				3F07C9832E11FE7500BD286E /* CacheBankAccount.swift in Sources */,
+				3F07C9842E11FE7500BD286E /* CacheCompanyAddress.swift in Sources */,
+				3F07C9852E11FE7500BD286E /* CacheContractorInfo.swift in Sources */,
+				3F07C9862E11FE7500BD286E /* CacheServiceInfo.swift in Sources */,
+				3F07C9872E11FE7500BD286E /* CleanCache.swift in Sources */,
+				3F07C9882E11FE7500BD286E /* FinishOnboarding.swift in Sources */,
+				3F07C9892E11FE7500BD286E /* FlushOnboarding.swift in Sources */,
+				3F07C98A2E11FE7500BD286E /* GetBankAccount.swift in Sources */,
+				3F07C98B2E11FE7500BD286E /* GetCompanyAddress.swift in Sources */,
+				3F07C98C2E11FE7500BD286E /* GetContractorInfo.swift in Sources */,
+				3F07C98D2E11FE7500BD286E /* GetInvoiceList.swift in Sources */,
+				3F07C98E2E11FE7500BD286E /* GetOnboardingStep.swift in Sources */,
+				3F07C98F2E11FE7500BD286E /* GetServiceInfo.swift in Sources */,
+				3F07C9902E11FE7500BD286E /* SaveBankAccount.swift in Sources */,
+				3F07C9912E11FE7500BD286E /* SaveCompanyAddress.swift in Sources */,
+				3F07C9922E11FE7500BD286E /* SaveContractorInfo.swift in Sources */,
+				3F07C9932E11FE7500BD286E /* SaveOnboardingStep.swift in Sources */,
+				3F07C9942E11FE7500BD286E /* SaveServiceInfo.swift in Sources */,
+				3F07C9952E11FE7500BD286E /* BackupView.swift in Sources */,
+				3F07C9962E11FE7500BD286E /* InvoiceItemView.swift in Sources */,
+				3F07C9972E11FE7500BD286E /* InvoiceListBuilder.swift in Sources */,
+				3F07C9982E11FE7500BD286E /* InvoiceListCoordinator.swift in Sources */,
+				3F07C9992E11FE7500BD286E /* InvoiceListView.swift in Sources */,
+				3F07C99A2E11FE7500BD286E /* InvoiceListViewModel.swift in Sources */,
+				3F07C99B2E11FE7500BD286E /* InvoiceUI.swift in Sources */,
+				3F07C99C2E11FE7500BD286E /* NewInvoiceFormBuilder.swift in Sources */,
+				3F07C99D2E11FE7500BD286E /* NewInvoiceFormCoordinator.swift in Sources */,
+				3F07C99E2E11FE7500BD286E /* NewInvoiceFormState.swift in Sources */,
+				3F07C99F2E11FE7500BD286E /* NewInvoiceFormView.swift in Sources */,
+				3F07C9A02E11FE7500BD286E /* NewInvoiceFormViewModel.swift in Sources */,
+				3F07C9A12E11FE7500BD286E /* OnboardingBankInfoView.swift in Sources */,
+				3F07C9A22E11FE7500BD286E /* OnboardingCompanyAddressView.swift in Sources */,
+				3F07C9A32E11FE7500BD286E /* OnboardingContractorInfoView.swift in Sources */,
+				3F07C9A42E11FE7500BD286E /* OnboardingServiceInfoView.swift in Sources */,
+				3F07C9A52E11FE7500BD286E /* OnboardingBuilder.swift in Sources */,
+				3F07C9A62E11FE7500BD286E /* OnboardingCoordinator.swift in Sources */,
+				3F07C9A72E11FE7500BD286E /* OnboardingModels.swift in Sources */,
+				3F07C9A82E11FE7500BD286E /* OnboardingView.swift in Sources */,
+				3F07C9A92E11FE7500BD286E /* OnboardingViewModel.swift in Sources */,
+				3F07C9AA2E11FE7500BD286E /* OnboardingSuccessBuilder.swift in Sources */,
+				3F07C9AB2E11FE7500BD286E /* OnboardingSuccessCoordinator.swift in Sources */,
+				3F07C9AC2E11FE7500BD286E /* OnboardingSuccessView.swift in Sources */,
+				3F07C9AD2E11FE7500BD286E /* OnboardingSuccessViewModel.swift in Sources */,
+				3F07C9AE2E11FE7500BD286E /* PreOnboardingBuilder.swift in Sources */,
+				3F07C9AF2E11FE7500BD286E /* PreOnboardingCoordinator.swift in Sources */,
+				3F07C9B02E11FE7500BD286E /* PreOnboardingView.swift in Sources */,
+				3F07C9B12E11FE7500BD286E /* PreOnboardingViewModel.swift in Sources */,
+				3F07C9B22E11FE7500BD286E /* SettingsView.swift in Sources */,
+				3F07C9B32E11FE7500BD286E /* TabBuilder.swift in Sources */,
+				3F07C9B42E11FE7500BD286E /* TabCoordinator.swift in Sources */,
+				3F07C9B52E11FE7500BD286E /* TabView.swift in Sources */,
+				3F07C9B62E11FE7500BD286E /* TabViewModel.swift in Sources */,
+				3F07C9B72E11FE7500BD286E /* MainBundle.swift in Sources */,
+				3F07C9B82E11FE7500BD286E /* PersonalInfoWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +855,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F07C9BB2E11FE7900BD286E /* Invoicer2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +863,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F07C9BF2E11FE7D00BD286E /* Invoicer2UITests.swift in Sources */,
+				3F07C9C02E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +882,17 @@
 			targetProxy = 3FE12E8D2DA032B00090DCE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F07C95B2E11FE7500BD286E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F07C95A2E11FE7500BD286E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		3FE12E962DA032B00090DCE9 /* Debug */ = {
