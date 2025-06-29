@@ -48,7 +48,7 @@ private struct MainNavigationView<Content: View, CenterView: View, TrailingView:
                     if let leadingItem {
                         Button(action: leadingAction ?? { }) {
                             Image(systemName: leadingItem.imageName)
-                                .foregroundColor(.primary)
+                                .foregroundColor(Colors.buttonPrimary)
                         }
                     }
                     
@@ -82,11 +82,17 @@ private struct MainNavigationView<Content: View, CenterView: View, TrailingView:
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             } else {
+                Spacer()
                 content()
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .navigationBarHidden(true)
+        .ignoresSafeArea(edges: .bottom)
+        .onTapGesture {
+            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+        }
     }
 }
 

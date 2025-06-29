@@ -1,4 +1,4 @@
-import UIKit
+import SwiftUI
 
 protocol OnboardingSuccessCoordinatorProtocol {
     func navigateToHome()
@@ -6,8 +6,15 @@ protocol OnboardingSuccessCoordinatorProtocol {
 
 final class OnboardingSuccessCoordinator: OnboardingSuccessCoordinatorProtocol {
     weak var viewController: UIViewController?
+    private let tabBuilder: TabBuilderProtocol
+    
+    init(tabBuilder: TabBuilderProtocol = TabBuilder()) {
+        self.tabBuilder = tabBuilder
+    }
     
     func navigateToHome() {
-        // TO DO
+        let vc = tabBuilder.build()
+        vc.modalPresentationStyle = .overFullScreen
+        viewController?.present(vc, animated: true)
     }
 }

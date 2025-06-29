@@ -21,6 +21,10 @@ final class PreOnboardingViewModel: ObservableObject {
         self.coordinator = coordinator
     }
     
+    func onAppear() {
+        checkOnboardingStep()
+    }
+    
     func didTapTapToResumeOnboarding() {
         shouldShowOnboardingReminderDialog = false
         coordinator.navigateToOnboarding(step: onboardingStep ?? .contractorInfo)
@@ -38,13 +42,11 @@ final class PreOnboardingViewModel: ObservableObject {
         }
     }
     
-    func onAppear() {
-        checkOnboardingStep()
-    }
-    
     private func checkOnboardingStep() {
         onboardingStep = OnboardingStepUI.fromDomainModel(getOnboardingStep.get())
-        if onboardingStep != .done && onboardingStep != .intro {
+        if onboardingStep == .done {
+            coordinator.navigateToHome()
+        } else if onboardingStep != .intro {
             shouldShowOnboardingReminderDialog = true
         }
     }

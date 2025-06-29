@@ -17,6 +17,7 @@ final class OnboardingViewModel: ObservableObject {
     private let cacheBankAccount: CacheBankAccountProtocol
     private let cacheServiceInfo: CacheServiceInfoProtocol
     private let cleanCache: CleanCacheProtocol
+    private let finishOnboarding: FinishOnboardingProtocol
     
     @Published var contractorInfo: OnboardingContractorInfo = .init()
     @Published var companyAddress: OnboardingCompanyAddress = .init()
@@ -47,6 +48,7 @@ final class OnboardingViewModel: ObservableObject {
         cacheBankAccount: CacheBankAccountProtocol = CacheBankAccount(),
         cacheServiceInfo: CacheServiceInfoProtocol = CacheServiceInfo(),
         cleanCache: CleanCacheProtocol = CleanCache(),
+        finishOnboarding: FinishOnboardingProtocol = FinishOnboarding(),
         step: OnboardingStepUI = .contractorInfo,
         coordinator: OnboardingCoordinatorProtocol
     ) {
@@ -64,6 +66,7 @@ final class OnboardingViewModel: ObservableObject {
         self.cacheServiceInfo = cacheServiceInfo
         self.saveOnboardingStep = saveOnboardingStep
         self.cleanCache = cleanCache
+        self.finishOnboarding = finishOnboarding
         self.step = step
         self.coordinator = coordinator
         setUpSubscriptions()
@@ -105,6 +108,7 @@ final class OnboardingViewModel: ObservableObject {
                 let benefitiaryName = bankAccountInfo.benefitiaryName
                 await MainActor.run { [weak self] in
                     guard let self else { return }
+                    finishOnboarding.finish()
                     coordinator.navigateToOnboardingSuccess(benefitiaryName: benefitiaryName)
                 }
             } else {
@@ -404,10 +408,10 @@ final class OnboardingViewModel: ObservableObject {
     
     private func setUpCTAValidation() {
         Publishers.CombineLatest4(
-            $fieldValidation.mapDistinct(\.fullNameHasError, removeDuplicates: false),
-            $fieldValidation.mapDistinct(\.taxIdHasError, removeDuplicates: false),
-            $fieldValidation.mapDistinct(\.companyNameHasError, removeDuplicates: false),
-            $fieldValidation.mapDistinct(\.companyEmailHasError, removeDuplicates: false)
+            $fieldValidation.mapDistinct(\.fullNameHasError),
+            $fieldValidation.mapDistinct(\.taxIdHasError),
+            $fieldValidation.mapDistinct(\.companyNameHasError),
+            $fieldValidation.mapDistinct(\.companyEmailHasError)
         )
         .map { !$0 && !$1 && !$2 && !$3 }
         .combineLatest($step)
@@ -422,34 +426,27 @@ final class OnboardingViewModel: ObservableObject {
         
         Publishers.CombineLatest4(
             $fieldValidation.mapDistinct(
-                \.streetAddressHasError,
-                 removeDuplicates: false
+                \.streetAddressHasError
             ),
             $fieldValidation.mapDistinct(
-                \.numberHasError,
-                 removeDuplicates: false
+                \.numberHasError
             ),
             $fieldValidation.mapDistinct(
-                \.neighbourhoodHasError,
-                 removeDuplicates: false
+                \.neighbourhoodHasError
             ),
             $fieldValidation.mapDistinct(
-                \.cityHasError,
-                 removeDuplicates: false
+                \.cityHasError
             )
         )
         .combineLatest(
             $fieldValidation.mapDistinct(
-                \.stateHasError,
-                 removeDuplicates: false
+                \.stateHasError
             ),
             $fieldValidation.mapDistinct(
-                \.countryHasError,
-                 removeDuplicates: false
+                \.countryHasError
             ),
             $fieldValidation.mapDistinct(
-                \.zipCodeHasError,
-                 removeDuplicates: false
+                \.zipCodeHasError
             ),
         )
         .map { !$0.0 && !$0.1 && !$0.2 && !$0.3 && !$1 && !$2 && !$3 }
@@ -466,51 +463,43 @@ final class OnboardingViewModel: ObservableObject {
         $fieldValidation.mapDistinct(\.benefitiaryNameHasError)
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.bankNameHasError,
-                     removeDuplicates: false
+                    \.bankNameHasError
                 )
             )
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.accountNumberHasError,
-                     removeDuplicates: false
+                    \.accountNumberHasError
                 )
             )
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.swiftCodeHasError,
-                     removeDuplicates: false
+                    \.swiftCodeHasError
                 )
             )
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.bankAddressHasError,
-                     removeDuplicates: false
+                    \.bankAddressHasError
                 )
             )
             .combineLatest($shouldShowSecondaryBankForms)
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.secondaryBankNameHasError,
-                     removeDuplicates: false
+                    \.secondaryBankNameHasError
                 )
             )
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.secondaryAccountNumberHasError,
-                     removeDuplicates: false
+                    \.secondaryAccountNumberHasError
                 )
             )
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.secondarySwiftCodeHasError,
-                     removeDuplicates: false
+                    \.secondarySwiftCodeHasError
                 )
             )
             .combineLatest(
                 $fieldValidation.mapDistinct(
-                    \.secondaryBankAddressHasError,
-                     removeDuplicates: false
+                    \.secondaryBankAddressHasError
                 )
             )
             .map {
@@ -544,16 +533,13 @@ final class OnboardingViewModel: ObservableObject {
         
         Publishers.CombineLatest3(
             $fieldValidation.mapDistinct(
-                \.jobDescriptionHasError,
-                 removeDuplicates: false
+                \.jobDescriptionHasError
             ),
             $fieldValidation.mapDistinct(
-                \.quantityHasError,
-                 removeDuplicates: false
+                \.quantityHasError
             ),
             $fieldValidation.mapDistinct(
-                \.unitPriceHasError,
-                 removeDuplicates: false
+                \.unitPriceHasError
             )
         )
         .map {

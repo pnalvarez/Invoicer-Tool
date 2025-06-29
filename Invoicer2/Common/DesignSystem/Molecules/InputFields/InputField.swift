@@ -5,9 +5,11 @@ struct InputField: View {
     var placeholder: String = ""
     var text: Binding<String>
     var errorMessage: String?
+    var disclaimerMessage: String?
     var keyboardType: UIKeyboardType = .default
     var formatter: (String) -> String = { $0 }
     var didFocusChange: (Bool) -> Void = { _ in }
+    var isDisabled: Bool = false
     @State private var internalText: String = ""
     @State private var isFocused: Bool = false
     @State private var hasAlreadyFocused: Bool = false
@@ -27,6 +29,7 @@ struct InputField: View {
                 }
                 didFocusChange($0)
             }
+            .multilineTextAlignment(.leading)
             .keyboardType(keyboardType)
             .autocapitalization(.none)
             .disableAutocorrection(true)
@@ -45,6 +48,7 @@ struct InputField: View {
             .onAppear {
                 internalText = formatter(text.wrappedValue)
             }
+            .disabled(isDisabled)
             
             if let errorMessage, hasAlreadyFocused {
                 Spacer().frame(height: 4)
@@ -52,6 +56,10 @@ struct InputField: View {
                     .font(.footnote)
                     .fontWeight(.light)
                     .foregroundColor(Colors.errorPrimary)
+            } else if let disclaimerMessage {
+                Text(disclaimerMessage)
+                    .font(.footnote)
+                    .fontWeight(.light)
             }
         }
     }

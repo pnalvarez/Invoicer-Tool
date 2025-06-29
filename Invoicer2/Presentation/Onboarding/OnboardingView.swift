@@ -54,11 +54,6 @@ struct OnboardingView: View {
             }
         }
         .environmentObject(viewModel)
-        .onTapGesture {
-            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-        }
-        .ignoresSafeArea(edges: .bottom)
-        .navigationBarHidden(true)
     }
     
     private var mainContent: some View {

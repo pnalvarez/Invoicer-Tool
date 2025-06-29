@@ -8,4 +8,5 @@ enum Colors {
     static let secondaryDisabled = Color(hex: "#FFCDC5D9")
     static let errorPrimary = Color(hex: "#FFD94949")
     static let primaryDisabled = Color(hex: "#FFCDC5D9")
+    static let surface = Color(hex: "#FFF7F4FA")
 }

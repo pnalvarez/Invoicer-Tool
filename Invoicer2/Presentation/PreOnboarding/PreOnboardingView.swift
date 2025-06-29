@@ -18,7 +18,6 @@ struct PreOnboardingView: View {
                 .frame(height: 24)
             PrimaryButton(text: "Start", action: viewModel.didTapCTA)
         }
-        .onAppear(perform: viewModel.onAppear)
         .modalDialogue(isPresented: $viewModel.shouldShowOnboardingReminderDialog) {
             VStack(spacing: .zero) {
                 Text("Resume onboarding?")
@@ -43,6 +42,7 @@ struct PreOnboardingView: View {
                 )
             }
         }
+        .onAppear(perform: viewModel.onAppear)
     }
 }
 
