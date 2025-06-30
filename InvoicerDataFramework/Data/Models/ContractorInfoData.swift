@@ -1,4 +1,5 @@
 import SwiftData
+import InvoicerDomainFramework
 
 @Model final class ContractorInfoData {
     @Attribute var fullName: String

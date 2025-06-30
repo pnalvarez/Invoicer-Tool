@@ -1,4 +1,5 @@
 import SwiftData
+import InvoicerDomainFramework
 
 @Model final class CompanyAddressData {
     @Attribute var streetAddress: String
@@ -27,7 +28,7 @@ import SwiftData
         self.zipCode = zipCode
     }
     
-    static func fromDomainModel(_ model: CompanyAddressDomain) -> CompanyAddressData {
+    public static func fromDomainModel(_ model: CompanyAddressDomain) -> CompanyAddressData {
         return CompanyAddressData(
             streetAddress: model.streetAddress,
             city: model.city,

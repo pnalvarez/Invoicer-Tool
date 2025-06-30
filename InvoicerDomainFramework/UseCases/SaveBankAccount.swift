@@ -1,15 +1,15 @@
-protocol SaveBankAccountProtocol {
+public protocol SaveBankAccountProtocol {
     func save(_ companyAddress: BankAccountDomain) async
 }
 
-final class SaveBankAccount: SaveBankAccountProtocol{
+public final class SaveBankAccount: SaveBankAccountProtocol{
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
+    public init(repository: CompanyRepositoryProtocol) {
         self.repository = repository
     }
     
-    func save(_ bankAccount: BankAccountDomain) async {
+    public func save(_ bankAccount: BankAccountDomain) async {
         await repository.saveBankAccount(bankAccount)
     }
 }

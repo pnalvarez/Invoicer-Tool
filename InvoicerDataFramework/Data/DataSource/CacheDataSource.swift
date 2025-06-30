@@ -1,18 +1,18 @@
 import Foundation
 
-protocol CacheDataSourceProtocol {
+public protocol CacheDataSourceProtocol {
     func save<T: Codable>(_ key: String, value: T?)
     func get<T: Codable>(_ key: String) -> T?
 }
 
-final class CacheDataSource: CacheDataSourceProtocol {
+public final class CacheDataSource: CacheDataSourceProtocol {
     private let userDefaults: UserDefaults
     
-    init(userDefaults: UserDefaults = .standard) {
+    public init(userDefaults: UserDefaults = .standard) {
         self.userDefaults = userDefaults
     }
     
-    func save<T: Codable>(_ key: String, value: T?) {
+    public func save<T: Codable>(_ key: String, value: T?) {
         do {
             guard let value else {
                 userDefaults.removeObject(forKey: key)
@@ -25,7 +25,7 @@ final class CacheDataSource: CacheDataSourceProtocol {
         }
     }
     
-    func get<T: Codable>(_ key: String) -> T? {
+    public func get<T: Codable>(_ key: String) -> T? {
         do {
             guard let data = userDefaults.data(forKey: key) else { return nil }
             return try JSONDecoder().decode(T.self, from: data)

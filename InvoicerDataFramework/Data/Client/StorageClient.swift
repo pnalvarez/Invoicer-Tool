@@ -1,6 +1,6 @@
 import SwiftData
 
-protocol StorageClientProtocol {
+public protocol StorageClientProtocol {
     func save<T: PersistentModel>(_ model: T) async
     func replaceAndSave<T: PersistentModel>(
         newModel: T,
@@ -10,7 +10,7 @@ protocol StorageClientProtocol {
     func flushAllData() async
 }
 
-final class StorageClient: StorageClientProtocol {
+public final class StorageClient: StorageClientProtocol {
     private var context: ModelContext?
     private var container: ModelContainer
     
@@ -32,7 +32,7 @@ final class StorageClient: StorageClientProtocol {
     }
     
     @MainActor
-    func save<T: PersistentModel>(_ model: T) async {
+    public func save<T: PersistentModel>(_ model: T) async {
         guard let context else { return }
         context.insert(model)
         do {
@@ -44,7 +44,7 @@ final class StorageClient: StorageClientProtocol {
     }
     
     @MainActor
-    func replaceAndSave<T: PersistentModel>(
+    public func replaceAndSave<T: PersistentModel>(
         newModel: T,
         where shouldDelete: ((T) -> Bool)? = nil
     ) async {
@@ -68,7 +68,7 @@ final class StorageClient: StorageClientProtocol {
     }
     
     @MainActor
-    func fetchSingle<T: PersistentModel>() -> T? {
+    public func fetchSingle<T: PersistentModel>() -> T? {
         let fetchDescriptor = FetchDescriptor<T>()
         guard let context else { return nil }
         do {
@@ -80,7 +80,7 @@ final class StorageClient: StorageClientProtocol {
     }
     
     @MainActor
-    func flushAllData() async {
+    public func flushAllData() async {
         guard let context else { return }
         
         do {

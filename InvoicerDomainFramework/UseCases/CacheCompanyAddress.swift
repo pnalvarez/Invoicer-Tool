@@ -1,15 +1,15 @@
-protocol CacheCompanyAddressProtocol {
+public protocol CacheCompanyAddressProtocol {
     func cache(_ companyAddress: CompanyAddressDomain)
 }
 
-final class CacheCompanyAddress: CacheCompanyAddressProtocol {
+public final class CacheCompanyAddress: CacheCompanyAddressProtocol {
     private let cacheRepository: CacheRepositoryProtocol
     
-    init(cacheRepository: CacheRepositoryProtocol = CacheRepository()) {
+    public init(cacheRepository: CacheRepositoryProtocol) {
         self.cacheRepository = cacheRepository
     }
     
-    func cache(_ companyAddress: CompanyAddressDomain) {
+    public func cache(_ companyAddress: CompanyAddressDomain) {
         cacheRepository.saveCompanyAddress(companyAddress)
     }
 }

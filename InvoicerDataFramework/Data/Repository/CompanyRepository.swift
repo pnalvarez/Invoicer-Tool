@@ -1,3 +1,5 @@
+import InvoicerDomainFramework
+
 final class CompanyRepository: CompanyRepositoryProtocol {
     private let dataSource: StorageDataSourceProtocol
     

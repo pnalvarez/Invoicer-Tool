@@ -1,15 +1,15 @@
-protocol FlushOnboardingProtocol {
+public protocol FlushOnboardingProtocol {
     func flush() async
 }
 
-final class FlushOnboarding: FlushOnboardingProtocol {
+public final class FlushOnboarding: FlushOnboardingProtocol {
     private let companyRepository: CompanyRepositoryProtocol
     
-    init(companyRepository: CompanyRepositoryProtocol = CompanyRepository()) {
+    public init(companyRepository: CompanyRepositoryProtocol) {
         self.companyRepository = companyRepository
     }
     
-    func flush() async {
+    public func flush() async {
         await companyRepository.flushData()
     }
 }

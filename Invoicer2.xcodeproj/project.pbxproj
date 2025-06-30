@@ -11,42 +11,7 @@
 		3F07C95F2E11FE7500BD286E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F07C95B2E11FE7500BD286E /* LaunchScreen.storyboard */; };
 		3F07C9602E11FE7500BD286E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E12E11FE7500BD286E /* AppDelegate.swift */; };
 		3F07C9612E11FE7500BD286E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E22E11FE7500BD286E /* SceneDelegate.swift */; };
-		3F07C9712E11FE7500BD286E /* StorageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FC2E11FE7500BD286E /* StorageClient.swift */; };
-		3F07C9722E11FE7500BD286E /* CacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FE2E11FE7500BD286E /* CacheDataSource.swift */; };
-		3F07C9732E11FE7500BD286E /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FF2E11FE7500BD286E /* StorageDataSource.swift */; };
-		3F07C9742E11FE7500BD286E /* BankAccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9012E11FE7500BD286E /* BankAccountData.swift */; };
-		3F07C9752E11FE7500BD286E /* CompanyAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9022E11FE7500BD286E /* CompanyAddressData.swift */; };
-		3F07C9762E11FE7500BD286E /* ContractorInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9032E11FE7500BD286E /* ContractorInfoData.swift */; };
-		3F07C9772E11FE7500BD286E /* ServiceInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9042E11FE7500BD286E /* ServiceInfoData.swift */; };
-		3F07C9782E11FE7500BD286E /* CacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9062E11FE7500BD286E /* CacheRepository.swift */; };
-		3F07C9792E11FE7500BD286E /* CompanyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9072E11FE7500BD286E /* CompanyRepository.swift */; };
-		3F07C97A2E11FE7500BD286E /* OnboardingStepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9082E11FE7500BD286E /* OnboardingStepRepository.swift */; };
-		3F07C97B2E11FE7500BD286E /* BankAccountDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90B2E11FE7500BD286E /* BankAccountDomain.swift */; };
-		3F07C97C2E11FE7500BD286E /* CompanyAddressDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90C2E11FE7500BD286E /* CompanyAddressDomain.swift */; };
-		3F07C97D2E11FE7500BD286E /* ContractorInfoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90D2E11FE7500BD286E /* ContractorInfoDomain.swift */; };
-		3F07C97E2E11FE7500BD286E /* InvoiceDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90E2E11FE7500BD286E /* InvoiceDomain.swift */; };
-		3F07C97F2E11FE7500BD286E /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90F2E11FE7500BD286E /* OnboardingStep.swift */; };
-		3F07C9802E11FE7500BD286E /* ServiceInfoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9102E11FE7500BD286E /* ServiceInfoDomain.swift */; };
-		3F07C9812E11FE7500BD286E /* CacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9122E11FE7500BD286E /* CacheRepositoryProtocol.swift */; };
-		3F07C9822E11FE7500BD286E /* CompanyRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9132E11FE7500BD286E /* CompanyRepositoryProtocol.swift */; };
-		3F07C9832E11FE7500BD286E /* CacheBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9152E11FE7500BD286E /* CacheBankAccount.swift */; };
-		3F07C9842E11FE7500BD286E /* CacheCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9162E11FE7500BD286E /* CacheCompanyAddress.swift */; };
-		3F07C9852E11FE7500BD286E /* CacheContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9172E11FE7500BD286E /* CacheContractorInfo.swift */; };
-		3F07C9862E11FE7500BD286E /* CacheServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9182E11FE7500BD286E /* CacheServiceInfo.swift */; };
-		3F07C9872E11FE7500BD286E /* CleanCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9192E11FE7500BD286E /* CleanCache.swift */; };
-		3F07C9882E11FE7500BD286E /* FinishOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91A2E11FE7500BD286E /* FinishOnboarding.swift */; };
-		3F07C9892E11FE7500BD286E /* FlushOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91B2E11FE7500BD286E /* FlushOnboarding.swift */; };
-		3F07C98A2E11FE7500BD286E /* GetBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91C2E11FE7500BD286E /* GetBankAccount.swift */; };
-		3F07C98B2E11FE7500BD286E /* GetCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91D2E11FE7500BD286E /* GetCompanyAddress.swift */; };
-		3F07C98C2E11FE7500BD286E /* GetContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91E2E11FE7500BD286E /* GetContractorInfo.swift */; };
-		3F07C98D2E11FE7500BD286E /* GetInvoiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91F2E11FE7500BD286E /* GetInvoiceList.swift */; };
-		3F07C98E2E11FE7500BD286E /* GetOnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9202E11FE7500BD286E /* GetOnboardingStep.swift */; };
-		3F07C98F2E11FE7500BD286E /* GetServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9212E11FE7500BD286E /* GetServiceInfo.swift */; };
-		3F07C9902E11FE7500BD286E /* SaveBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9222E11FE7500BD286E /* SaveBankAccount.swift */; };
 		3F07C9912E11FE7500BD286E /* SaveCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9232E11FE7500BD286E /* SaveCompanyAddress.swift */; };
-		3F07C9922E11FE7500BD286E /* SaveContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9242E11FE7500BD286E /* SaveContractorInfo.swift */; };
-		3F07C9932E11FE7500BD286E /* SaveOnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9252E11FE7500BD286E /* SaveOnboardingStep.swift */; };
-		3F07C9942E11FE7500BD286E /* SaveServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9262E11FE7500BD286E /* SaveServiceInfo.swift */; };
 		3F07C9952E11FE7500BD286E /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9292E11FE7500BD286E /* BackupView.swift */; };
 		3F07C9962E11FE7500BD286E /* InvoiceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92B2E11FE7500BD286E /* InvoiceItemView.swift */; };
 		3F07C9972E11FE7500BD286E /* InvoiceListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92C2E11FE7500BD286E /* InvoiceListBuilder.swift */; };
@@ -98,7 +63,6 @@
 		3FA730072E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
 		3FA730082E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FA730132E12A2F300FB9CAB /* InvoicerDomainFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730102E12A2F300FB9CAB /* InvoicerDomainFramework.docc */; };
-		3FA730142E12A2F300FB9CAB /* InvoicerDomainFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730112E12A2F300FB9CAB /* InvoicerDomainFramework.swift */; };
 		3FA730152E12A31900FB9CAB /* ContractorInfoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90D2E11FE7500BD286E /* ContractorInfoDomain.swift */; };
 		3FA730162E12A32C00FB9CAB /* GetContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91E2E11FE7500BD286E /* GetContractorInfo.swift */; };
 		3FA730292E12A3B400FB9CAB /* InvoicerDataFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7301E2E12A3B400FB9CAB /* InvoicerDataFramework.framework */; };
@@ -111,7 +75,6 @@
 		3FA730772E12A3E700FB9CAB /* InvoicerCommonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730622E12A3E700FB9CAB /* InvoicerCommonFramework.framework */; };
 		3FA730782E12A3E700FB9CAB /* InvoicerCommonFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730622E12A3E700FB9CAB /* InvoicerCommonFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FA730822E12A3FA00FB9CAB /* InvoicerDataFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7307F2E12A3FA00FB9CAB /* InvoicerDataFramework.docc */; };
-		3FA730832E12A3FA00FB9CAB /* InvoicerDataFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730802E12A3FA00FB9CAB /* InvoicerDataFramework.swift */; };
 		3FA730862E12A3FE00FB9CAB /* InvoicerDataFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730842E12A3FE00FB9CAB /* InvoicerDataFrameworkTests.swift */; };
 		3FA730892E12A40500FB9CAB /* InvoicerDomainFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730872E12A40500FB9CAB /* InvoicerDomainFrameworkTests.swift */; };
 		3FA7308C2E12A40600FB9CAB /* InvoicerPresentationFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7308A2E12A40500FB9CAB /* InvoicerPresentationFrameworkTests.swift */; };
@@ -134,6 +97,47 @@
 		3FA730A62E12A4FC00FB9CAB /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F72E11FE7500BD286E /* Date+.swift */; };
 		3FA730A72E12A50200FB9CAB /* Publishers+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F82E11FE7500BD286E /* Publishers+.swift */; };
 		3FA730A82E12A50900FB9CAB /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8F92E11FE7500BD286E /* String+.swift */; };
+		3FA730A92E12A84800FB9CAB /* StorageClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FC2E11FE7500BD286E /* StorageClient.swift */; };
+		3FA730AA2E12A85A00FB9CAB /* CacheDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FE2E11FE7500BD286E /* CacheDataSource.swift */; };
+		3FA730AB2E12A85F00FB9CAB /* StorageDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8FF2E11FE7500BD286E /* StorageDataSource.swift */; };
+		3FA730AC2E12A86D00FB9CAB /* BankAccountData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9012E11FE7500BD286E /* BankAccountData.swift */; };
+		3FA730AD2E12A87300FB9CAB /* CompanyAddressData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9022E11FE7500BD286E /* CompanyAddressData.swift */; };
+		3FA730AE2E12A87900FB9CAB /* ContractorInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9032E11FE7500BD286E /* ContractorInfoData.swift */; };
+		3FA730AF2E12A87F00FB9CAB /* ServiceInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9042E11FE7500BD286E /* ServiceInfoData.swift */; };
+		3FA730B02E12A89700FB9CAB /* CacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9062E11FE7500BD286E /* CacheRepository.swift */; };
+		3FA730C12E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */; };
+		3FA730CB2E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */; };
+		3FA730CC2E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FA730D62E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730D32E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc */; };
+		3FA730D72E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730D42E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift */; };
+		3FA730DA2E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730D82E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.swift */; };
+		3FA730DB2E12AB0E00FB9CAB /* BankAccountDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90B2E11FE7500BD286E /* BankAccountDomain.swift */; };
+		3FA730DC2E12AB1700FB9CAB /* CompanyAddressDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90C2E11FE7500BD286E /* CompanyAddressDomain.swift */; };
+		3FA730DD2E12AB2100FB9CAB /* InvoiceDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90E2E11FE7500BD286E /* InvoiceDomain.swift */; };
+		3FA730DE2E12AB2A00FB9CAB /* OnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C90F2E11FE7500BD286E /* OnboardingStep.swift */; };
+		3FA730DF2E12AB3100FB9CAB /* ServiceInfoDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9102E11FE7500BD286E /* ServiceInfoDomain.swift */; };
+		3FA730E02E12AB3F00FB9CAB /* CacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9122E11FE7500BD286E /* CacheRepositoryProtocol.swift */; };
+		3FA730E12E12ABB000FB9CAB /* CacheBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9152E11FE7500BD286E /* CacheBankAccount.swift */; };
+		3FA730E22E12ABC200FB9CAB /* CacheCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9162E11FE7500BD286E /* CacheCompanyAddress.swift */; };
+		3FA730E32E12ABDC00FB9CAB /* CacheContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9172E11FE7500BD286E /* CacheContractorInfo.swift */; };
+		3FA730E42E12ABFF00FB9CAB /* CacheServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9182E11FE7500BD286E /* CacheServiceInfo.swift */; };
+		3FA730E52E12AC0F00FB9CAB /* CleanCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9192E11FE7500BD286E /* CleanCache.swift */; };
+		3FA730E62E12ACA600FB9CAB /* FinishOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91A2E11FE7500BD286E /* FinishOnboarding.swift */; };
+		3FA730E92E12ACE000FB9CAB /* OnboardingStepRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730E72E12ACE000FB9CAB /* OnboardingStepRepositoryProtocol.swift */; };
+		3FA730EA2E12AD1A00FB9CAB /* FlushOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91B2E11FE7500BD286E /* FlushOnboarding.swift */; };
+		3FA730EB2E12AD3300FB9CAB /* CompanyRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9132E11FE7500BD286E /* CompanyRepositoryProtocol.swift */; };
+		3FA730EC2E12AD5700FB9CAB /* GetBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91C2E11FE7500BD286E /* GetBankAccount.swift */; };
+		3FA730ED2E12AD9200FB9CAB /* GetCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91D2E11FE7500BD286E /* GetCompanyAddress.swift */; };
+		3FA730EE2E12ADC200FB9CAB /* GetInvoiceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C91F2E11FE7500BD286E /* GetInvoiceList.swift */; };
+		3FA730EF2E12ADF200FB9CAB /* GetOnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9202E11FE7500BD286E /* GetOnboardingStep.swift */; };
+		3FA730F02E12AE1D00FB9CAB /* GetServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9212E11FE7500BD286E /* GetServiceInfo.swift */; };
+		3FA730F12E12AE3A00FB9CAB /* SaveBankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9222E11FE7500BD286E /* SaveBankAccount.swift */; };
+		3FA730F22E12AE4800FB9CAB /* SaveContractorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9242E11FE7500BD286E /* SaveContractorInfo.swift */; };
+		3FA730F32E12AE7500FB9CAB /* SaveOnboardingStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9252E11FE7500BD286E /* SaveOnboardingStep.swift */; };
+		3FA730F42E12AE9B00FB9CAB /* SaveServiceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9262E11FE7500BD286E /* SaveServiceInfo.swift */; };
+		3FA730F52E12AEF800FB9CAB /* CompanyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9072E11FE7500BD286E /* CompanyRepository.swift */; };
+		3FA730F82E12B15800FB9CAB /* OnboardingStepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730F72E12B15800FB9CAB /* OnboardingStepRepository.swift */; };
+		3FA730F92E12B1DC00FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -228,6 +232,27 @@
 			remoteGlobalIDString = 3FA730612E12A3E700FB9CAB;
 			remoteInfo = InvoicerCommonFramework;
 		};
+		3FA730C22E12AAC900FB9CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE12E642DA032AD0090DCE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FA730B52E12AAC900FB9CAB;
+			remoteInfo = InvoicerUseCaseFactoryFramework;
+		};
+		3FA730C42E12AAC900FB9CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE12E642DA032AD0090DCE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FE12E6B2DA032AD0090DCE9;
+			remoteInfo = Invoicer2;
+		};
+		3FA730C92E12AAC900FB9CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FE12E642DA032AD0090DCE9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FA730B52E12AAC900FB9CAB;
+			remoteInfo = InvoicerUseCaseFactoryFramework;
+		};
 		3FE12E832DA032B00090DCE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3FE12E642DA032AD0090DCE9 /* Project object */;
@@ -271,6 +296,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				3FA730CC2E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Embed Frameworks */,
 				3FA730342E12A3B400FB9CAB /* InvoicerDataFramework.framework in Embed Frameworks */,
 				3FA730782E12A3E700FB9CAB /* InvoicerCommonFramework.framework in Embed Frameworks */,
 				3FA730082E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Embed Frameworks */,
@@ -308,7 +334,6 @@
 		3F07C9042E11FE7500BD286E /* ServiceInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceInfoData.swift; sourceTree = "<group>"; };
 		3F07C9062E11FE7500BD286E /* CacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheRepository.swift; sourceTree = "<group>"; };
 		3F07C9072E11FE7500BD286E /* CompanyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRepository.swift; sourceTree = "<group>"; };
-		3F07C9082E11FE7500BD286E /* OnboardingStepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepRepository.swift; sourceTree = "<group>"; };
 		3F07C90B2E11FE7500BD286E /* BankAccountDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankAccountDomain.swift; sourceTree = "<group>"; };
 		3F07C90C2E11FE7500BD286E /* CompanyAddressDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyAddressDomain.swift; sourceTree = "<group>"; };
 		3F07C90D2E11FE7500BD286E /* ContractorInfoDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoDomain.swift; sourceTree = "<group>"; };
@@ -390,7 +415,6 @@
 		3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvoicerDomainFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA72FFC2E12A2E600FB9CAB /* InvoicerDomainFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoicerDomainFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA730102E12A2F300FB9CAB /* InvoicerDomainFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = InvoicerDomainFramework.docc; sourceTree = "<group>"; };
-		3FA730112E12A2F300FB9CAB /* InvoicerDomainFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerDomainFramework.swift; sourceTree = "<group>"; };
 		3FA7301E2E12A3B400FB9CAB /* InvoicerDataFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvoicerDataFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA730282E12A3B400FB9CAB /* InvoicerDataFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoicerDataFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA730402E12A3D300FB9CAB /* InvoicerPresentationFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvoicerPresentationFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,7 +422,6 @@
 		3FA730622E12A3E700FB9CAB /* InvoicerCommonFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvoicerCommonFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA7306C2E12A3E700FB9CAB /* InvoicerCommonFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoicerCommonFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA7307F2E12A3FA00FB9CAB /* InvoicerDataFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = InvoicerDataFramework.docc; sourceTree = "<group>"; };
-		3FA730802E12A3FA00FB9CAB /* InvoicerDataFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerDataFramework.swift; sourceTree = "<group>"; };
 		3FA730842E12A3FE00FB9CAB /* InvoicerDataFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerDataFrameworkTests.swift; sourceTree = "<group>"; };
 		3FA730872E12A40500FB9CAB /* InvoicerDomainFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerDomainFrameworkTests.swift; sourceTree = "<group>"; };
 		3FA7308A2E12A40500FB9CAB /* InvoicerPresentationFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerPresentationFrameworkTests.swift; sourceTree = "<group>"; };
@@ -406,6 +429,13 @@
 		3FA730922E12A40600FB9CAB /* InvoicerCommonFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerCommonFrameworkTests.swift; sourceTree = "<group>"; };
 		3FA730952E12A40600FB9CAB /* InvoicerPresentationFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = InvoicerPresentationFramework.docc; sourceTree = "<group>"; };
 		3FA730962E12A40600FB9CAB /* InvoicerPresentationFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerPresentationFramework.swift; sourceTree = "<group>"; };
+		3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvoicerUseCaseFactoryFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA730C02E12AAC900FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoicerUseCaseFactoryFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FA730D32E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = InvoicerUseCaseFactoryFramework.docc; sourceTree = "<group>"; };
+		3FA730D42E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerUseCaseFactoryFramework.swift; sourceTree = "<group>"; };
+		3FA730D82E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerUseCaseFactoryFrameworkTests.swift; sourceTree = "<group>"; };
+		3FA730E72E12ACE000FB9CAB /* OnboardingStepRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepRepositoryProtocol.swift; sourceTree = "<group>"; };
+		3FA730F72E12B15800FB9CAB /* OnboardingStepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepRepository.swift; sourceTree = "<group>"; };
 		3FE12E6C2DA032AD0090DCE9 /* Invoicer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Invoicer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE12E822DA032B00090DCE9 /* Invoicer2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Invoicer2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE12E8C2DA032B00090DCE9 /* Invoicer2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Invoicer2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -447,6 +477,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA730F92E12B1DC00FB9CAB /* InvoicerDomainFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,10 +519,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FA730B32E12AAC900FB9CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA730BD2E12AAC900FB9CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA730C12E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE12E692DA032AD0090DCE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA730CB2E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Frameworks */,
 				3FA730332E12A3B400FB9CAB /* InvoicerDataFramework.framework in Frameworks */,
 				3FA730772E12A3E700FB9CAB /* InvoicerCommonFramework.framework in Frameworks */,
 				3FA730072E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Frameworks */,
@@ -644,7 +691,7 @@
 			children = (
 				3F07C9062E11FE7500BD286E /* CacheRepository.swift */,
 				3F07C9072E11FE7500BD286E /* CompanyRepository.swift */,
-				3F07C9082E11FE7500BD286E /* OnboardingStepRepository.swift */,
+				3FA730F72E12B15800FB9CAB /* OnboardingStepRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -678,6 +725,7 @@
 			children = (
 				3F07C9122E11FE7500BD286E /* CacheRepositoryProtocol.swift */,
 				3F07C9132E11FE7500BD286E /* CompanyRepositoryProtocol.swift */,
+				3FA730E72E12ACE000FB9CAB /* OnboardingStepRepositoryProtocol.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -840,7 +888,6 @@
 			isa = PBXGroup;
 			children = (
 				3F07C8E32E11FE7500BD286E /* App */,
-				3F07C90A2E11FE7500BD286E /* Data */,
 				3F07C9282E11FE7500BD286E /* Domain */,
 				3F07C9542E11FE7500BD286E /* Presentation */,
 				3F07C9572E11FE7500BD286E /* Widgets */,
@@ -904,7 +951,6 @@
 				3F07C9142E11FE7500BD286E /* Repository */,
 				3F07C9272E11FE7500BD286E /* UseCases */,
 				3FA730102E12A2F300FB9CAB /* InvoicerDomainFramework.docc */,
-				3FA730112E12A2F300FB9CAB /* InvoicerDomainFramework.swift */,
 			);
 			path = InvoicerDomainFramework;
 			sourceTree = "<group>";
@@ -912,8 +958,8 @@
 		3FA730812E12A3FA00FB9CAB /* InvoicerDataFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3F07C90A2E11FE7500BD286E /* Data */,
 				3FA7307F2E12A3FA00FB9CAB /* InvoicerDataFramework.docc */,
-				3FA730802E12A3FA00FB9CAB /* InvoicerDataFramework.swift */,
 			);
 			path = InvoicerDataFramework;
 			sourceTree = "<group>";
@@ -968,6 +1014,23 @@
 			path = InvoicerPresentationFramework;
 			sourceTree = "<group>";
 		};
+		3FA730D52E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework */ = {
+			isa = PBXGroup;
+			children = (
+				3FA730D32E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc */,
+				3FA730D42E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift */,
+			);
+			path = InvoicerUseCaseFactoryFramework;
+			sourceTree = "<group>";
+		};
+		3FA730D92E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FA730D82E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.swift */,
+			);
+			path = InvoicerUseCaseFactoryFrameworkTests;
+			sourceTree = "<group>";
+		};
 		3FE12E632DA032AD0090DCE9 = {
 			isa = PBXGroup;
 			children = (
@@ -984,6 +1047,8 @@
 				3FA7308B2E12A40500FB9CAB /* InvoicerPresentationFrameworkTests */,
 				3FA7308F2E12A40600FB9CAB /* InvoicerCommonFramework */,
 				3FA730932E12A40600FB9CAB /* InvoicerCommonFrameworkTests */,
+				3FA730D52E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework */,
+				3FA730D92E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests */,
 				3FA72FB42E11FF0500FB9CAB /* Frameworks */,
 				3FE12E6D2DA032AD0090DCE9 /* Products */,
 			);
@@ -1005,6 +1070,8 @@
 				3FA7304A2E12A3D300FB9CAB /* InvoicerPresentationFrameworkTests.xctest */,
 				3FA730622E12A3E700FB9CAB /* InvoicerCommonFramework.framework */,
 				3FA7306C2E12A3E700FB9CAB /* InvoicerCommonFrameworkTests.xctest */,
+				3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */,
+				3FA730C02E12AAC900FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1034,6 +1101,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3FA7305D2E12A3E700FB9CAB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA730B12E12AAC900FB9CAB /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1245,6 +1319,47 @@
 			productReference = 3FA7306C2E12A3E700FB9CAB /* InvoicerCommonFrameworkTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3FA730B52E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FA730CD2E12AAC900FB9CAB /* Build configuration list for PBXNativeTarget "InvoicerUseCaseFactoryFramework" */;
+			buildPhases = (
+				3FA730B12E12AAC900FB9CAB /* Headers */,
+				3FA730B22E12AAC900FB9CAB /* Sources */,
+				3FA730B32E12AAC900FB9CAB /* Frameworks */,
+				3FA730B42E12AAC900FB9CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InvoicerUseCaseFactoryFramework;
+			packageProductDependencies = (
+			);
+			productName = InvoicerUseCaseFactoryFramework;
+			productReference = 3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3FA730BF2E12AAC900FB9CAB /* InvoicerUseCaseFactoryFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FA730D02E12AAC900FB9CAB /* Build configuration list for PBXNativeTarget "InvoicerUseCaseFactoryFrameworkTests" */;
+			buildPhases = (
+				3FA730BC2E12AAC900FB9CAB /* Sources */,
+				3FA730BD2E12AAC900FB9CAB /* Frameworks */,
+				3FA730BE2E12AAC900FB9CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FA730C32E12AAC900FB9CAB /* PBXTargetDependency */,
+				3FA730C52E12AAC900FB9CAB /* PBXTargetDependency */,
+			);
+			name = InvoicerUseCaseFactoryFrameworkTests;
+			packageProductDependencies = (
+			);
+			productName = InvoicerUseCaseFactoryFrameworkTests;
+			productReference = 3FA730C02E12AAC900FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		3FE12E6B2DA032AD0090DCE9 /* Invoicer2 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3FE12E952DA032B00090DCE9 /* Build configuration list for PBXNativeTarget "Invoicer2" */;
@@ -1263,6 +1378,7 @@
 				3FA730322E12A3B400FB9CAB /* PBXTargetDependency */,
 				3FA730542E12A3D300FB9CAB /* PBXTargetDependency */,
 				3FA730762E12A3E700FB9CAB /* PBXTargetDependency */,
+				3FA730CA2E12AAC900FB9CAB /* PBXTargetDependency */,
 			);
 			name = Invoicer2;
 			packageProductDependencies = (
@@ -1355,6 +1471,13 @@
 						CreatedOnToolsVersion = 16.4;
 						TestTargetID = 3FE12E6B2DA032AD0090DCE9;
 					};
+					3FA730B52E12AAC900FB9CAB = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					3FA730BF2E12AAC900FB9CAB = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 3FE12E6B2DA032AD0090DCE9;
+					};
 					3FE12E6B2DA032AD0090DCE9 = {
 						CreatedOnToolsVersion = 16.3;
 					};
@@ -1395,6 +1518,8 @@
 				3FA730492E12A3D300FB9CAB /* InvoicerPresentationFrameworkTests */,
 				3FA730612E12A3E700FB9CAB /* InvoicerCommonFramework */,
 				3FA7306B2E12A3E700FB9CAB /* InvoicerCommonFrameworkTests */,
+				3FA730B52E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework */,
+				3FA730BF2E12AAC900FB9CAB /* InvoicerUseCaseFactoryFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1464,6 +1589,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FA730B42E12AAC900FB9CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA730BE2E12AAC900FB9CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE12E6A2DA032AD0090DCE9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1512,10 +1651,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA730F12E12AE3A00FB9CAB /* SaveBankAccount.swift in Sources */,
+				3FA730DC2E12AB1700FB9CAB /* CompanyAddressDomain.swift in Sources */,
+				3FA730DD2E12AB2100FB9CAB /* InvoiceDomain.swift in Sources */,
+				3FA730E02E12AB3F00FB9CAB /* CacheRepositoryProtocol.swift in Sources */,
+				3FA730ED2E12AD9200FB9CAB /* GetCompanyAddress.swift in Sources */,
+				3FA730EA2E12AD1A00FB9CAB /* FlushOnboarding.swift in Sources */,
+				3FA730EB2E12AD3300FB9CAB /* CompanyRepositoryProtocol.swift in Sources */,
+				3FA730E92E12ACE000FB9CAB /* OnboardingStepRepositoryProtocol.swift in Sources */,
+				3FA730E52E12AC0F00FB9CAB /* CleanCache.swift in Sources */,
+				3FA730EE2E12ADC200FB9CAB /* GetInvoiceList.swift in Sources */,
 				3FA730152E12A31900FB9CAB /* ContractorInfoDomain.swift in Sources */,
+				3FA730E62E12ACA600FB9CAB /* FinishOnboarding.swift in Sources */,
+				3FA730EF2E12ADF200FB9CAB /* GetOnboardingStep.swift in Sources */,
+				3FA730F02E12AE1D00FB9CAB /* GetServiceInfo.swift in Sources */,
 				3FA730162E12A32C00FB9CAB /* GetContractorInfo.swift in Sources */,
+				3FA730E22E12ABC200FB9CAB /* CacheCompanyAddress.swift in Sources */,
+				3FA730E12E12ABB000FB9CAB /* CacheBankAccount.swift in Sources */,
+				3FA730F22E12AE4800FB9CAB /* SaveContractorInfo.swift in Sources */,
 				3FA730132E12A2F300FB9CAB /* InvoicerDomainFramework.docc in Sources */,
-				3FA730142E12A2F300FB9CAB /* InvoicerDomainFramework.swift in Sources */,
+				3FA730E42E12ABFF00FB9CAB /* CacheServiceInfo.swift in Sources */,
+				3FA730F42E12AE9B00FB9CAB /* SaveServiceInfo.swift in Sources */,
+				3FA730DB2E12AB0E00FB9CAB /* BankAccountDomain.swift in Sources */,
+				3FA730DF2E12AB3100FB9CAB /* ServiceInfoDomain.swift in Sources */,
+				3FA730EC2E12AD5700FB9CAB /* GetBankAccount.swift in Sources */,
+				3FA730DE2E12AB2A00FB9CAB /* OnboardingStep.swift in Sources */,
+				3FA730E32E12ABDC00FB9CAB /* CacheContractorInfo.swift in Sources */,
+				3FA730F32E12AE7500FB9CAB /* SaveOnboardingStep.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1531,8 +1693,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA730AE2E12A87900FB9CAB /* ContractorInfoData.swift in Sources */,
 				3FA730822E12A3FA00FB9CAB /* InvoicerDataFramework.docc in Sources */,
-				3FA730832E12A3FA00FB9CAB /* InvoicerDataFramework.swift in Sources */,
+				3FA730AF2E12A87F00FB9CAB /* ServiceInfoData.swift in Sources */,
+				3FA730AC2E12A86D00FB9CAB /* BankAccountData.swift in Sources */,
+				3FA730AB2E12A85F00FB9CAB /* StorageDataSource.swift in Sources */,
+				3FA730F82E12B15800FB9CAB /* OnboardingStepRepository.swift in Sources */,
+				3FA730F52E12AEF800FB9CAB /* CompanyRepository.swift in Sources */,
+				3FA730A92E12A84800FB9CAB /* StorageClient.swift in Sources */,
+				3FA730AD2E12A87300FB9CAB /* CompanyAddressData.swift in Sources */,
+				3FA730B02E12A89700FB9CAB /* CacheRepository.swift in Sources */,
+				3FA730AA2E12A85A00FB9CAB /* CacheDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1592,48 +1763,30 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FA730B22E12AAC900FB9CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA730D62E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc in Sources */,
+				3FA730D72E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FA730BC2E12AAC900FB9CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FA730DA2E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3FE12E682DA032AD0090DCE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3F07C9602E11FE7500BD286E /* AppDelegate.swift in Sources */,
 				3F07C9612E11FE7500BD286E /* SceneDelegate.swift in Sources */,
-				3F07C9712E11FE7500BD286E /* StorageClient.swift in Sources */,
-				3F07C9722E11FE7500BD286E /* CacheDataSource.swift in Sources */,
-				3F07C9732E11FE7500BD286E /* StorageDataSource.swift in Sources */,
-				3F07C9742E11FE7500BD286E /* BankAccountData.swift in Sources */,
-				3F07C9752E11FE7500BD286E /* CompanyAddressData.swift in Sources */,
-				3F07C9762E11FE7500BD286E /* ContractorInfoData.swift in Sources */,
-				3F07C9772E11FE7500BD286E /* ServiceInfoData.swift in Sources */,
-				3F07C9782E11FE7500BD286E /* CacheRepository.swift in Sources */,
-				3F07C9792E11FE7500BD286E /* CompanyRepository.swift in Sources */,
-				3F07C97A2E11FE7500BD286E /* OnboardingStepRepository.swift in Sources */,
-				3F07C97B2E11FE7500BD286E /* BankAccountDomain.swift in Sources */,
-				3F07C97C2E11FE7500BD286E /* CompanyAddressDomain.swift in Sources */,
-				3F07C97D2E11FE7500BD286E /* ContractorInfoDomain.swift in Sources */,
-				3F07C97E2E11FE7500BD286E /* InvoiceDomain.swift in Sources */,
-				3F07C97F2E11FE7500BD286E /* OnboardingStep.swift in Sources */,
-				3F07C9802E11FE7500BD286E /* ServiceInfoDomain.swift in Sources */,
-				3F07C9812E11FE7500BD286E /* CacheRepositoryProtocol.swift in Sources */,
-				3F07C9822E11FE7500BD286E /* CompanyRepositoryProtocol.swift in Sources */,
-				3F07C9832E11FE7500BD286E /* CacheBankAccount.swift in Sources */,
-				3F07C9842E11FE7500BD286E /* CacheCompanyAddress.swift in Sources */,
-				3F07C9852E11FE7500BD286E /* CacheContractorInfo.swift in Sources */,
-				3F07C9862E11FE7500BD286E /* CacheServiceInfo.swift in Sources */,
-				3F07C9872E11FE7500BD286E /* CleanCache.swift in Sources */,
-				3F07C9882E11FE7500BD286E /* FinishOnboarding.swift in Sources */,
-				3F07C9892E11FE7500BD286E /* FlushOnboarding.swift in Sources */,
-				3F07C98A2E11FE7500BD286E /* GetBankAccount.swift in Sources */,
-				3F07C98B2E11FE7500BD286E /* GetCompanyAddress.swift in Sources */,
-				3F07C98C2E11FE7500BD286E /* GetContractorInfo.swift in Sources */,
-				3F07C98D2E11FE7500BD286E /* GetInvoiceList.swift in Sources */,
-				3F07C98E2E11FE7500BD286E /* GetOnboardingStep.swift in Sources */,
-				3F07C98F2E11FE7500BD286E /* GetServiceInfo.swift in Sources */,
-				3F07C9902E11FE7500BD286E /* SaveBankAccount.swift in Sources */,
 				3F07C9912E11FE7500BD286E /* SaveCompanyAddress.swift in Sources */,
-				3F07C9922E11FE7500BD286E /* SaveContractorInfo.swift in Sources */,
-				3F07C9932E11FE7500BD286E /* SaveOnboardingStep.swift in Sources */,
-				3F07C9942E11FE7500BD286E /* SaveServiceInfo.swift in Sources */,
 				3F07C9952E11FE7500BD286E /* BackupView.swift in Sources */,
 				3F07C9962E11FE7500BD286E /* InvoiceItemView.swift in Sources */,
 				3F07C9972E11FE7500BD286E /* InvoiceListBuilder.swift in Sources */,
@@ -1757,6 +1910,21 @@
 			isa = PBXTargetDependency;
 			target = 3FA730612E12A3E700FB9CAB /* InvoicerCommonFramework */;
 			targetProxy = 3FA730752E12A3E700FB9CAB /* PBXContainerItemProxy */;
+		};
+		3FA730C32E12AAC900FB9CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FA730B52E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework */;
+			targetProxy = 3FA730C22E12AAC900FB9CAB /* PBXContainerItemProxy */;
+		};
+		3FA730C52E12AAC900FB9CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FE12E6B2DA032AD0090DCE9 /* Invoicer2 */;
+			targetProxy = 3FA730C42E12AAC900FB9CAB /* PBXContainerItemProxy */;
+		};
+		3FA730CA2E12AAC900FB9CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FA730B52E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework */;
+			targetProxy = 3FA730C92E12AAC900FB9CAB /* PBXContainerItemProxy */;
 		};
 		3FE12E842DA032B00090DCE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2298,6 +2466,114 @@
 			};
 			name = Release;
 		};
+		3FA730CE2E12AAC900FB9CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L332B28T9P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = pedro.alvarez.Invoicer2.InvoicerUseCaseFactoryFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3FA730CF2E12AAC900FB9CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L332B28T9P;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c objective-c++";
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
+				PRODUCT_BUNDLE_IDENTIFIER = pedro.alvarez.Invoicer2.InvoicerUseCaseFactoryFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INSTALL_MODULE = YES;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3FA730D12E12AAC900FB9CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L332B28T9P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pedro.alvarez.Invoicer2.InvoicerUseCaseFactoryFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Invoicer2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Invoicer2";
+			};
+			name = Debug;
+		};
+		3FA730D22E12AAC900FB9CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L332B28T9P;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = pedro.alvarez.Invoicer2.InvoicerUseCaseFactoryFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Invoicer2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Invoicer2";
+			};
+			name = Release;
+		};
 		3FE12E962DA032B00090DCE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2634,6 +2910,24 @@
 			buildConfigurations = (
 				3FA7307D2E12A3E700FB9CAB /* Debug */,
 				3FA7307E2E12A3E700FB9CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FA730CD2E12AAC900FB9CAB /* Build configuration list for PBXNativeTarget "InvoicerUseCaseFactoryFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA730CE2E12AAC900FB9CAB /* Debug */,
+				3FA730CF2E12AAC900FB9CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FA730D02E12AAC900FB9CAB /* Build configuration list for PBXNativeTarget "InvoicerUseCaseFactoryFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FA730D12E12AAC900FB9CAB /* Debug */,
+				3FA730D22E12AAC900FB9CAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

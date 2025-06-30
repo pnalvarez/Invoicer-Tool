@@ -1,15 +1,15 @@
-protocol CleanCacheProtocol {
+public protocol CleanCacheProtocol {
     func clean()
 }
 
-final class CleanCache: CleanCacheProtocol {
+public final class CleanCache: CleanCacheProtocol {
     private let cacheRepository: CacheRepositoryProtocol
     
-    init(cacheRepository: CacheRepositoryProtocol = CacheRepository()) {
+    public init(cacheRepository: CacheRepositoryProtocol) {
         self.cacheRepository = cacheRepository
     }
     
-    func clean() {
+    public func clean() {
         cacheRepository.saveContractorInfo(nil)
         cacheRepository.saveCompanyAddress(nil)
         cacheRepository.saveBankInfo(nil)

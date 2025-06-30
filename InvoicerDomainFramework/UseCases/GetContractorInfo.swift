@@ -6,16 +6,12 @@ public final class GetContractorInfo: GetContractorInfoProtocol {
     private let companyRepository: CompanyRepositoryProtocol
     private let cacheRepository: CacheRepositoryProtocol
     
-    init(
+    public init(
         companyRepository: CompanyRepositoryProtocol,
         cacheRepository: CacheRepositoryProtocol
     ) {
         self.companyRepository = companyRepository
         self.cacheRepository = cacheRepository
-    }
-    
-    public convenience init() {
-        self.init(companyRepository: CompanyRepository(), cacheRepository: CacheRepository())
     }
     
     public func get() async -> ContractorInfoDomain? {

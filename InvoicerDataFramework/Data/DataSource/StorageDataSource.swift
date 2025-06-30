@@ -11,7 +11,7 @@ protocol StorageDataSourceProtocol {
 }
 
 
-final class StorageDataSource: StorageDataSourceProtocol {
+public final class StorageDataSource: StorageDataSourceProtocol {
     private let client: StorageClientProtocol
     
     init(client: StorageClientProtocol = StorageClient()) {

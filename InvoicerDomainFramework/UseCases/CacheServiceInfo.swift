@@ -1,15 +1,15 @@
-protocol CacheServiceInfoProtocol {
+public protocol CacheServiceInfoProtocol {
     func cache(_ serviceInfo: ServiceInfoDomain)
 }
 
-final class CacheServiceInfo: CacheServiceInfoProtocol {
+public final class CacheServiceInfo: CacheServiceInfoProtocol {
     private let cacheRepository: CacheRepositoryProtocol
     
-    init(cacheRepository: CacheRepositoryProtocol = CacheRepository()) {
+    public init(cacheRepository: CacheRepositoryProtocol) {
         self.cacheRepository = cacheRepository
     }
     
-    func cache(_ serviceInfo: ServiceInfoDomain) {
+    public func cache(_ serviceInfo: ServiceInfoDomain) {
         cacheRepository.saveServiceInfo(serviceInfo)
     }
 }

@@ -1,15 +1,15 @@
-protocol CacheBankAccountProtocol {
+public protocol CacheBankAccountProtocol {
     func cache(_ bankAccount: BankAccountDomain?)
 }
 
-final class CacheBankAccount: CacheBankAccountProtocol {
+public final class CacheBankAccount: CacheBankAccountProtocol {
     private let cacheRepository: CacheRepositoryProtocol
     
-    init(cacheRepository: CacheRepositoryProtocol = CacheRepository()) {
+    public init(cacheRepository: CacheRepositoryProtocol) {
         self.cacheRepository = cacheRepository
     }
     
-    func cache(_ bankAccount: BankAccountDomain?) {
+    public func cache(_ bankAccount: BankAccountDomain?) {
         cacheRepository.saveBankInfo(bankAccount)
     }
 }

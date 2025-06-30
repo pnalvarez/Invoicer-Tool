@@ -1,4 +1,4 @@
-enum OnboardingStepDomain: String {
+public enum OnboardingStepDomain: String {
     case intro
     case contractorInfo
     case companyAddress

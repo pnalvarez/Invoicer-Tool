@@ -1,15 +1,15 @@
-protocol SaveOnboardingStepProtocol {
+public protocol SaveOnboardingStepProtocol {
     func save(_ step: OnboardingStepDomain?)
 }
 
-final class SaveOnboardingStep: SaveOnboardingStepProtocol {
+public final class SaveOnboardingStep: SaveOnboardingStepProtocol {
     private let repository: OnboardingStepRepositoryProtocol
     
-    init(repository: OnboardingStepRepositoryProtocol = OnboardingStepRepository()) {
+    public init(repository: OnboardingStepRepositoryProtocol) {
         self.repository = repository
     }
     
-    func save(_ step: OnboardingStepDomain?) {
+    public func save(_ step: OnboardingStepDomain?) {
         repository.saveStep(step: step?.rawValue)
     }
 }

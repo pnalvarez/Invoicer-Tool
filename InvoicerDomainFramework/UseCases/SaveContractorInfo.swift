@@ -1,15 +1,15 @@
-protocol SaveContractorInfoProtocol {
+public protocol SaveContractorInfoProtocol {
     func save(_ contractorInfo: ContractorInfoDomain) async
 }
 
-final class SaveContractorInfo: SaveContractorInfoProtocol {
+public final class SaveContractorInfo: SaveContractorInfoProtocol {
     private let repository: CompanyRepositoryProtocol
     
-    init(repository: CompanyRepositoryProtocol = CompanyRepository()) {
+    public init(repository: CompanyRepositoryProtocol) {
         self.repository = repository
     }
     
-    func save(_ contractorInfo: ContractorInfoDomain) async {
+    public func save(_ contractorInfo: ContractorInfoDomain) async {
         await repository.saveContractorInfo(contractorInfo)
     }
 }

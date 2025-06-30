@@ -1,4 +1,4 @@
-protocol CompanyRepositoryProtocol {
+public protocol CompanyRepositoryProtocol {
     func saveContractorInfo(_ data: ContractorInfoDomain) async
     func getContractorInfo() async -> ContractorInfoDomain?
     func saveCompanyAddress(_ data: CompanyAddressDomain) async

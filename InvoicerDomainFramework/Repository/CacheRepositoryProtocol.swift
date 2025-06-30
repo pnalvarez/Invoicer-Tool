@@ -1,4 +1,4 @@
-protocol CacheRepositoryProtocol {
+public protocol CacheRepositoryProtocol {
     func saveContractorInfo(_ contractorInfo: ContractorInfoDomain?)
     func getContractorInfo() -> ContractorInfoDomain?
     func saveCompanyAddress(_ companyAddress: CompanyAddressDomain?)

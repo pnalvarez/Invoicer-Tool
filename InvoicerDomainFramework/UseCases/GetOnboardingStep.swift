@@ -1,15 +1,15 @@
-protocol GetOnboardingStepProtocol {
+public protocol GetOnboardingStepProtocol {
     func get() -> OnboardingStepDomain
 }
 
-final class GetOnboardingStep: GetOnboardingStepProtocol {
+public final class GetOnboardingStep: GetOnboardingStepProtocol {
     private let repository: OnboardingStepRepositoryProtocol
     
-    init(repository: OnboardingStepRepositoryProtocol = OnboardingStepRepository()) {
+    public init(repository: OnboardingStepRepositoryProtocol) {
         self.repository = repository
     }
     
-    func get() -> OnboardingStepDomain {
+    public func get() -> OnboardingStepDomain {
         repository.getCurrentStep()
     }
 }

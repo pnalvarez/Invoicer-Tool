@@ -1,15 +1,15 @@
-protocol FinishOnboardingProtocol {
+public protocol FinishOnboardingProtocol {
     func finish()
 }
 
-final class FinishOnboarding: FinishOnboardingProtocol {
+public final class FinishOnboarding: FinishOnboardingProtocol {
     private let repository: OnboardingStepRepositoryProtocol
     
-    init(repository: OnboardingStepRepositoryProtocol = OnboardingStepRepository()) {
+    public init(repository: OnboardingStepRepositoryProtocol) {
         self.repository = repository
     }
     
-    func finish() {
+    public func finish() {
         repository.saveStep(step: "done")
     }
 }
