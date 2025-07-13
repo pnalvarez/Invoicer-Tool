@@ -14,7 +14,7 @@ public final class StorageClient: StorageClientProtocol {
     private var context: ModelContext?
     private var container: ModelContainer
     
-    init() {
+    public init() {
         do {
             container = try ModelContainer(for: ContractorInfoData.self,
                                            CompanyAddressData.self,

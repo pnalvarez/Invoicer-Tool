@@ -1,7 +1,7 @@
 import SwiftData
 import InvoicerDomainFramework
 
-@Model final class ServiceInfoData {
+@Model public final class ServiceInfoData {
     @Attribute var jobDescription: String
     @Attribute var quantity: String
     @Attribute var unitPrice: String

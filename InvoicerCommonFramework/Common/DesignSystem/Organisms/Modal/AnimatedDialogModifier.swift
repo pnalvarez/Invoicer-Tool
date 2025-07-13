@@ -32,7 +32,7 @@ struct AnimatedDialogModifier<Label: View>: ViewModifier {
     }
 }
 
-extension View {
+public extension View {
     func modalDialogue<Content: View>(isPresented: Binding<Bool>, onDismiss: (() -> Void)? = nil, @ViewBuilder content: @escaping () -> Content) -> some View {
         modifier(
             AnimatedDialogModifier(

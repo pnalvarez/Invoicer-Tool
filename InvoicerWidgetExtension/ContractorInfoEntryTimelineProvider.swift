@@ -1,12 +1,14 @@
 import WidgetKit
 import InvoicerDomainFramework
+import InvoicerUseCaseFactoryFramework
+
 
 struct ContractorInfoEntryTimelineProvider: TimelineProvider {
     private let placeholderEntry = ContractorInfoEntry(date: .now, data: .init())
     
     private let getContractorInfo: GetContractorInfoProtocol
     
-    init(getContractorInfo: GetContractorInfoProtocol = GetContractorInfo()) {
+    init(getContractorInfo: GetContractorInfoProtocol = GetContractorInfoFactory.make()) {
         self.getContractorInfo = getContractorInfo
     }
     
@@ -20,6 +22,9 @@ struct ContractorInfoEntryTimelineProvider: TimelineProvider {
     
     func getTimeline(in context: Context, completion: @escaping @Sendable (Timeline<ContractorInfoEntry>) -> Void) {
         Task {
+            
+            WidgetCenter.shared.reloadAllTimelines()
+            
             let contractorInfo = await getContractorInfo.get()
             
             guard let contractorInfo,

@@ -1,7 +1,7 @@
 import SwiftData
 import InvoicerDomainFramework
 
-@Model final class CompanyAddressData {
+@Model public final class CompanyAddressData {
     @Attribute var streetAddress: String
     @Attribute var city: String
     @Attribute var neighbourhood: String

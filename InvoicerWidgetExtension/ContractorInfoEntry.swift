@@ -1,7 +1,8 @@
 import WidgetKit
-import InvoicerDomain
+import InvoicerDomainFramework
 
 struct ContractorInfoEntry: TimelineEntry {
-    let date: Date
-    let data: ContractorInfoDomain
+    let date: Date // The entry timestamp
+    let data: ContractorInfoDomain // The data to populate UI
 }
+

@@ -11,43 +11,6 @@
 		3F07C95F2E11FE7500BD286E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F07C95B2E11FE7500BD286E /* LaunchScreen.storyboard */; };
 		3F07C9602E11FE7500BD286E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E12E11FE7500BD286E /* AppDelegate.swift */; };
 		3F07C9612E11FE7500BD286E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C8E22E11FE7500BD286E /* SceneDelegate.swift */; };
-		3F07C9912E11FE7500BD286E /* SaveCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9232E11FE7500BD286E /* SaveCompanyAddress.swift */; };
-		3F07C9952E11FE7500BD286E /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9292E11FE7500BD286E /* BackupView.swift */; };
-		3F07C9962E11FE7500BD286E /* InvoiceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92B2E11FE7500BD286E /* InvoiceItemView.swift */; };
-		3F07C9972E11FE7500BD286E /* InvoiceListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92C2E11FE7500BD286E /* InvoiceListBuilder.swift */; };
-		3F07C9982E11FE7500BD286E /* InvoiceListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92D2E11FE7500BD286E /* InvoiceListCoordinator.swift */; };
-		3F07C9992E11FE7500BD286E /* InvoiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92E2E11FE7500BD286E /* InvoiceListView.swift */; };
-		3F07C99A2E11FE7500BD286E /* InvoiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92F2E11FE7500BD286E /* InvoiceListViewModel.swift */; };
-		3F07C99B2E11FE7500BD286E /* InvoiceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9302E11FE7500BD286E /* InvoiceUI.swift */; };
-		3F07C99C2E11FE7500BD286E /* NewInvoiceFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9322E11FE7500BD286E /* NewInvoiceFormBuilder.swift */; };
-		3F07C99D2E11FE7500BD286E /* NewInvoiceFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9332E11FE7500BD286E /* NewInvoiceFormCoordinator.swift */; };
-		3F07C99E2E11FE7500BD286E /* NewInvoiceFormState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9342E11FE7500BD286E /* NewInvoiceFormState.swift */; };
-		3F07C99F2E11FE7500BD286E /* NewInvoiceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9352E11FE7500BD286E /* NewInvoiceFormView.swift */; };
-		3F07C9A02E11FE7500BD286E /* NewInvoiceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9362E11FE7500BD286E /* NewInvoiceFormViewModel.swift */; };
-		3F07C9A12E11FE7500BD286E /* OnboardingBankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9382E11FE7500BD286E /* OnboardingBankInfoView.swift */; };
-		3F07C9A22E11FE7500BD286E /* OnboardingCompanyAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9392E11FE7500BD286E /* OnboardingCompanyAddressView.swift */; };
-		3F07C9A32E11FE7500BD286E /* OnboardingContractorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93A2E11FE7500BD286E /* OnboardingContractorInfoView.swift */; };
-		3F07C9A42E11FE7500BD286E /* OnboardingServiceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93B2E11FE7500BD286E /* OnboardingServiceInfoView.swift */; };
-		3F07C9A52E11FE7500BD286E /* OnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93D2E11FE7500BD286E /* OnboardingBuilder.swift */; };
-		3F07C9A62E11FE7500BD286E /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93E2E11FE7500BD286E /* OnboardingCoordinator.swift */; };
-		3F07C9A72E11FE7500BD286E /* OnboardingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93F2E11FE7500BD286E /* OnboardingModels.swift */; };
-		3F07C9A82E11FE7500BD286E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9402E11FE7500BD286E /* OnboardingView.swift */; };
-		3F07C9A92E11FE7500BD286E /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9412E11FE7500BD286E /* OnboardingViewModel.swift */; };
-		3F07C9AA2E11FE7500BD286E /* OnboardingSuccessBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9432E11FE7500BD286E /* OnboardingSuccessBuilder.swift */; };
-		3F07C9AB2E11FE7500BD286E /* OnboardingSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9442E11FE7500BD286E /* OnboardingSuccessCoordinator.swift */; };
-		3F07C9AC2E11FE7500BD286E /* OnboardingSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9452E11FE7500BD286E /* OnboardingSuccessView.swift */; };
-		3F07C9AD2E11FE7500BD286E /* OnboardingSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9462E11FE7500BD286E /* OnboardingSuccessViewModel.swift */; };
-		3F07C9AE2E11FE7500BD286E /* PreOnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9482E11FE7500BD286E /* PreOnboardingBuilder.swift */; };
-		3F07C9AF2E11FE7500BD286E /* PreOnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9492E11FE7500BD286E /* PreOnboardingCoordinator.swift */; };
-		3F07C9B02E11FE7500BD286E /* PreOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94A2E11FE7500BD286E /* PreOnboardingView.swift */; };
-		3F07C9B12E11FE7500BD286E /* PreOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94B2E11FE7500BD286E /* PreOnboardingViewModel.swift */; };
-		3F07C9B22E11FE7500BD286E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94D2E11FE7500BD286E /* SettingsView.swift */; };
-		3F07C9B32E11FE7500BD286E /* TabBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94F2E11FE7500BD286E /* TabBuilder.swift */; };
-		3F07C9B42E11FE7500BD286E /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9502E11FE7500BD286E /* TabCoordinator.swift */; };
-		3F07C9B52E11FE7500BD286E /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9512E11FE7500BD286E /* TabView.swift */; };
-		3F07C9B62E11FE7500BD286E /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9522E11FE7500BD286E /* TabViewModel.swift */; };
-		3F07C9B72E11FE7500BD286E /* MainBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9552E11FE7500BD286E /* MainBundle.swift */; };
-		3F07C9B82E11FE7500BD286E /* PersonalInfoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9562E11FE7500BD286E /* PersonalInfoWidget.swift */; };
 		3F07C9BB2E11FE7900BD286E /* Invoicer2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9B92E11FE7900BD286E /* Invoicer2Tests.swift */; };
 		3F07C9BF2E11FE7D00BD286E /* Invoicer2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9BC2E11FE7D00BD286E /* Invoicer2UITests.swift */; };
 		3F07C9C02E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9BD2E11FE7D00BD286E /* Invoicer2UITestsLaunchTests.swift */; };
@@ -58,7 +21,7 @@
 		3FA72FD72E1200EA00FB9CAB /* ContractorInfoEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA72FD62E1200EA00FB9CAB /* ContractorInfoEntry.swift */; };
 		3FA72FD92E1204C700FB9CAB /* ContractorInfoEntryTimelineProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA72FD82E1204AD00FB9CAB /* ContractorInfoEntryTimelineProvider.swift */; };
 		3FA72FDB2E129D6000FB9CAB /* ContractorInfoWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA72FDA2E129D5800FB9CAB /* ContractorInfoWidgetView.swift */; };
-		3FA72FDD2E12A08E00FB9CAB /* ContractorInfoWidgetExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA72FDC2E12A08E00FB9CAB /* ContractorInfoWidgetExtension.swift */; };
+		3FA72FDD2E12A08E00FB9CAB /* ContractorInfoWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA72FDC2E12A08E00FB9CAB /* ContractorInfoWidget.swift */; };
 		3FA72FFD2E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
 		3FA730072E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
 		3FA730082E12A2E600FB9CAB /* InvoicerDomainFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -138,6 +101,65 @@
 		3FA730F52E12AEF800FB9CAB /* CompanyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9072E11FE7500BD286E /* CompanyRepository.swift */; };
 		3FA730F82E12B15800FB9CAB /* OnboardingStepRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730F72E12B15800FB9CAB /* OnboardingStepRepository.swift */; };
 		3FA730F92E12B1DC00FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
+		3FA730FA2E12B25D00FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
+		3FA730FB2E12B26500FB9CAB /* InvoicerDataFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA7301E2E12A3B400FB9CAB /* InvoicerDataFramework.framework */; };
+		3FA730FD2E12B29D00FB9CAB /* GetBankAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730FC2E12B29D00FB9CAB /* GetBankAccountFactory.swift */; };
+		3FA730FF2E12FEE000FB9CAB /* SaveBankAccountUseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA730FE2E12FEE000FB9CAB /* SaveBankAccountUseCaseFactory.swift */; };
+		3FA731012E1303AF00FB9CAB /* CacheBankAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731002E1303AF00FB9CAB /* CacheBankAccountFactory.swift */; };
+		3FA731032E135D0D00FB9CAB /* CacheCompanyAddressFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731022E135D0D00FB9CAB /* CacheCompanyAddressFactory.swift */; };
+		3FA731052E135DA400FB9CAB /* CacheContractorInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731042E135DA400FB9CAB /* CacheContractorInfoFactory.swift */; };
+		3FA731072E135DFD00FB9CAB /* CacheServiceInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731062E135DFD00FB9CAB /* CacheServiceInfoFactory.swift */; };
+		3FA731092E135E4400FB9CAB /* CleanCacheFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731082E135E4400FB9CAB /* CleanCacheFactory.swift */; };
+		3FA7310B2E135E7A00FB9CAB /* FinishOnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7310A2E135E7A00FB9CAB /* FinishOnboardingFactory.swift */; };
+		3FA7310D2E135EAE00FB9CAB /* FlushOnboardingFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7310C2E135EAE00FB9CAB /* FlushOnboardingFactory.swift */; };
+		3FA7310F2E135EF400FB9CAB /* GetCompanyAddressFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7310E2E135EF400FB9CAB /* GetCompanyAddressFactory.swift */; };
+		3FA731112E135F3600FB9CAB /* GetContractorInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731102E135F3600FB9CAB /* GetContractorInfoFactory.swift */; };
+		3FA731132E135FAD00FB9CAB /* GetInvoiceListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731122E135FAC00FB9CAB /* GetInvoiceListFactory.swift */; };
+		3FA731152E13606600FB9CAB /* GetOnboardingStepFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731142E13606600FB9CAB /* GetOnboardingStepFactory.swift */; };
+		3FA731172E13609500FB9CAB /* GetServiceInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731162E13609500FB9CAB /* GetServiceInfoFactory.swift */; };
+		3FA731192E1360E600FB9CAB /* SaveCompanyAddressDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731182E1360E600FB9CAB /* SaveCompanyAddressDataFactory.swift */; };
+		3FA7311A2E13611B00FB9CAB /* SaveCompanyAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9232E11FE7500BD286E /* SaveCompanyAddress.swift */; };
+		3FA7311C2E13617200FB9CAB /* SaveContractorInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7311B2E13617200FB9CAB /* SaveContractorInfoFactory.swift */; };
+		3FA7311E2E1361AB00FB9CAB /* SaveOnboardingStepFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7311D2E1361AB00FB9CAB /* SaveOnboardingStepFactory.swift */; };
+		3FA731202E1361D400FB9CAB /* SaveServiceInfoFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA7311F2E1361D400FB9CAB /* SaveServiceInfoFactory.swift */; };
+		3FA731212E13623200FB9CAB /* BackupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9292E11FE7500BD286E /* BackupView.swift */; };
+		3FA731222E13626500FB9CAB /* PreOnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9482E11FE7500BD286E /* PreOnboardingBuilder.swift */; };
+		3FA731232E13626C00FB9CAB /* PreOnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9492E11FE7500BD286E /* PreOnboardingCoordinator.swift */; };
+		3FA731242E13627300FB9CAB /* PreOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94A2E11FE7500BD286E /* PreOnboardingView.swift */; };
+		3FA731252E1362C000FB9CAB /* PreOnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94B2E11FE7500BD286E /* PreOnboardingViewModel.swift */; };
+		3FA731262E1362D100FB9CAB /* TabBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94F2E11FE7500BD286E /* TabBuilder.swift */; };
+		3FA731272E1362DB00FB9CAB /* TabCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9502E11FE7500BD286E /* TabCoordinator.swift */; };
+		3FA731282E1362E300FB9CAB /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9512E11FE7500BD286E /* TabView.swift */; };
+		3FA731292E1362ED00FB9CAB /* TabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9522E11FE7500BD286E /* TabViewModel.swift */; };
+		3FA7312A2E13630200FB9CAB /* OnboardingSuccessBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9432E11FE7500BD286E /* OnboardingSuccessBuilder.swift */; };
+		3FA7312B2E13630A00FB9CAB /* OnboardingSuccessCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9442E11FE7500BD286E /* OnboardingSuccessCoordinator.swift */; };
+		3FA7312C2E13631200FB9CAB /* OnboardingSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9452E11FE7500BD286E /* OnboardingSuccessView.swift */; };
+		3FA7312D2E13631C00FB9CAB /* OnboardingSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9462E11FE7500BD286E /* OnboardingSuccessViewModel.swift */; };
+		3FA7312E2E13632800FB9CAB /* OnboardingBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93D2E11FE7500BD286E /* OnboardingBuilder.swift */; };
+		3FA7312F2E13632D00FB9CAB /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93E2E11FE7500BD286E /* OnboardingCoordinator.swift */; };
+		3FA731302E13633300FB9CAB /* OnboardingModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93F2E11FE7500BD286E /* OnboardingModels.swift */; };
+		3FA731312E13633900FB9CAB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9402E11FE7500BD286E /* OnboardingView.swift */; };
+		3FA731322E13634C00FB9CAB /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9412E11FE7500BD286E /* OnboardingViewModel.swift */; };
+		3FA731332E13636700FB9CAB /* OnboardingBankInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9382E11FE7500BD286E /* OnboardingBankInfoView.swift */; };
+		3FA731342E13636D00FB9CAB /* OnboardingCompanyAddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9392E11FE7500BD286E /* OnboardingCompanyAddressView.swift */; };
+		3FA731352E13637E00FB9CAB /* OnboardingContractorInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93A2E11FE7500BD286E /* OnboardingContractorInfoView.swift */; };
+		3FA731362E13638E00FB9CAB /* OnboardingServiceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C93B2E11FE7500BD286E /* OnboardingServiceInfoView.swift */; };
+		3FA731372E1363CE00FB9CAB /* NewInvoiceFormBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9322E11FE7500BD286E /* NewInvoiceFormBuilder.swift */; };
+		3FA731382E1363D600FB9CAB /* NewInvoiceFormCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9332E11FE7500BD286E /* NewInvoiceFormCoordinator.swift */; };
+		3FA731392E1363DE00FB9CAB /* NewInvoiceFormState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9342E11FE7500BD286E /* NewInvoiceFormState.swift */; };
+		3FA7313A2E1363E300FB9CAB /* NewInvoiceFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9352E11FE7500BD286E /* NewInvoiceFormView.swift */; };
+		3FA7313B2E1363E900FB9CAB /* NewInvoiceFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9362E11FE7500BD286E /* NewInvoiceFormViewModel.swift */; };
+		3FA7313C2E13640A00FB9CAB /* InvoiceItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92B2E11FE7500BD286E /* InvoiceItemView.swift */; };
+		3FA7313D2E13641C00FB9CAB /* InvoiceListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92C2E11FE7500BD286E /* InvoiceListBuilder.swift */; };
+		3FA7313E2E13642500FB9CAB /* InvoiceListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92D2E11FE7500BD286E /* InvoiceListCoordinator.swift */; };
+		3FA7313F2E13642F00FB9CAB /* InvoiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92E2E11FE7500BD286E /* InvoiceListView.swift */; };
+		3FA731402E13643D00FB9CAB /* InvoiceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C92F2E11FE7500BD286E /* InvoiceListViewModel.swift */; };
+		3FA731412E13645200FB9CAB /* InvoiceUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C9302E11FE7500BD286E /* InvoiceUI.swift */; };
+		3FA731422E1364A200FB9CAB /* InvoicerCommonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730622E12A3E700FB9CAB /* InvoicerCommonFramework.framework */; };
+		3FA731432E1364A200FB9CAB /* InvoicerDomainFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */; };
+		3FA731442E1364A200FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FA730B62E12AAC900FB9CAB /* InvoicerUseCaseFactoryFramework.framework */; };
+		3FA731452E1365C900FB9CAB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07C94D2E11FE7500BD286E /* SettingsView.swift */; };
+		3FA731842E14733900FB9CAB /* WidgetExtensionBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA731832E14733900FB9CAB /* WidgetExtensionBundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -394,8 +416,6 @@
 		3F07C9502E11FE7500BD286E /* TabCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCoordinator.swift; sourceTree = "<group>"; };
 		3F07C9512E11FE7500BD286E /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
 		3F07C9522E11FE7500BD286E /* TabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewModel.swift; sourceTree = "<group>"; };
-		3F07C9552E11FE7500BD286E /* MainBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainBundle.swift; sourceTree = "<group>"; };
-		3F07C9562E11FE7500BD286E /* PersonalInfoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoWidget.swift; sourceTree = "<group>"; };
 		3F07C9582E11FE7500BD286E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F07C9592E11FE7500BD286E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F07C95A2E11FE7500BD286E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -410,7 +430,7 @@
 		3FA72FD62E1200EA00FB9CAB /* ContractorInfoEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoEntry.swift; sourceTree = "<group>"; };
 		3FA72FD82E1204AD00FB9CAB /* ContractorInfoEntryTimelineProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoEntryTimelineProvider.swift; sourceTree = "<group>"; };
 		3FA72FDA2E129D5800FB9CAB /* ContractorInfoWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoWidgetView.swift; sourceTree = "<group>"; };
-		3FA72FDC2E12A08E00FB9CAB /* ContractorInfoWidgetExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoWidgetExtension.swift; sourceTree = "<group>"; };
+		3FA72FDC2E12A08E00FB9CAB /* ContractorInfoWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractorInfoWidget.swift; sourceTree = "<group>"; };
 		3FA72FE22E12A21000FB9CAB /* libInvoicerDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libInvoicerDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA72FF22E12A2E600FB9CAB /* InvoicerDomainFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = InvoicerDomainFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FA72FFC2E12A2E600FB9CAB /* InvoicerDomainFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InvoicerDomainFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -436,6 +456,25 @@
 		3FA730D82E12AAD200FB9CAB /* InvoicerUseCaseFactoryFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoicerUseCaseFactoryFrameworkTests.swift; sourceTree = "<group>"; };
 		3FA730E72E12ACE000FB9CAB /* OnboardingStepRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepRepositoryProtocol.swift; sourceTree = "<group>"; };
 		3FA730F72E12B15800FB9CAB /* OnboardingStepRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepRepository.swift; sourceTree = "<group>"; };
+		3FA730FC2E12B29D00FB9CAB /* GetBankAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBankAccountFactory.swift; sourceTree = "<group>"; };
+		3FA730FE2E12FEE000FB9CAB /* SaveBankAccountUseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBankAccountUseCaseFactory.swift; sourceTree = "<group>"; };
+		3FA731002E1303AF00FB9CAB /* CacheBankAccountFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheBankAccountFactory.swift; sourceTree = "<group>"; };
+		3FA731022E135D0D00FB9CAB /* CacheCompanyAddressFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheCompanyAddressFactory.swift; sourceTree = "<group>"; };
+		3FA731042E135DA400FB9CAB /* CacheContractorInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheContractorInfoFactory.swift; sourceTree = "<group>"; };
+		3FA731062E135DFD00FB9CAB /* CacheServiceInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheServiceInfoFactory.swift; sourceTree = "<group>"; };
+		3FA731082E135E4400FB9CAB /* CleanCacheFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleanCacheFactory.swift; sourceTree = "<group>"; };
+		3FA7310A2E135E7A00FB9CAB /* FinishOnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishOnboardingFactory.swift; sourceTree = "<group>"; };
+		3FA7310C2E135EAE00FB9CAB /* FlushOnboardingFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlushOnboardingFactory.swift; sourceTree = "<group>"; };
+		3FA7310E2E135EF400FB9CAB /* GetCompanyAddressFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCompanyAddressFactory.swift; sourceTree = "<group>"; };
+		3FA731102E135F3600FB9CAB /* GetContractorInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetContractorInfoFactory.swift; sourceTree = "<group>"; };
+		3FA731122E135FAC00FB9CAB /* GetInvoiceListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetInvoiceListFactory.swift; sourceTree = "<group>"; };
+		3FA731142E13606600FB9CAB /* GetOnboardingStepFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOnboardingStepFactory.swift; sourceTree = "<group>"; };
+		3FA731162E13609500FB9CAB /* GetServiceInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceInfoFactory.swift; sourceTree = "<group>"; };
+		3FA731182E1360E600FB9CAB /* SaveCompanyAddressDataFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCompanyAddressDataFactory.swift; sourceTree = "<group>"; };
+		3FA7311B2E13617200FB9CAB /* SaveContractorInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveContractorInfoFactory.swift; sourceTree = "<group>"; };
+		3FA7311D2E1361AB00FB9CAB /* SaveOnboardingStepFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveOnboardingStepFactory.swift; sourceTree = "<group>"; };
+		3FA7311F2E1361D400FB9CAB /* SaveServiceInfoFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveServiceInfoFactory.swift; sourceTree = "<group>"; };
+		3FA731832E14733900FB9CAB /* WidgetExtensionBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetExtensionBundle.swift; sourceTree = "<group>"; };
 		3FE12E6C2DA032AD0090DCE9 /* Invoicer2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Invoicer2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE12E822DA032B00090DCE9 /* Invoicer2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Invoicer2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE12E8C2DA032B00090DCE9 /* Invoicer2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Invoicer2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -493,6 +532,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA731422E1364A200FB9CAB /* InvoicerCommonFramework.framework in Frameworks */,
+				3FA731432E1364A200FB9CAB /* InvoicerDomainFramework.framework in Frameworks */,
+				3FA731442E1364A200FB9CAB /* InvoicerUseCaseFactoryFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +565,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA730FB2E12B26500FB9CAB /* InvoicerDataFramework.framework in Frameworks */,
+				3FA730FA2E12B25D00FB9CAB /* InvoicerDomainFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,13 +799,6 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
-		3F07C9282E11FE7500BD286E /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Domain;
-			sourceTree = "<group>";
-		};
 		3F07C92A2E11FE7500BD286E /* Backup */ = {
 			isa = PBXGroup;
 			children = (
@@ -863,34 +900,15 @@
 		3F07C9542E11FE7500BD286E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				3F07C92A2E11FE7500BD286E /* Backup */,
-				3F07C9312E11FE7500BD286E /* InvoiceList */,
-				3F07C9372E11FE7500BD286E /* NewInvoiceForm */,
-				3F07C9422E11FE7500BD286E /* Onboarding */,
-				3F07C9472E11FE7500BD286E /* OnboardingSuccess */,
-				3F07C94C2E11FE7500BD286E /* PreOnboarding */,
-				3F07C94E2E11FE7500BD286E /* Settings */,
-				3F07C9532E11FE7500BD286E /* Tab */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		3F07C9572E11FE7500BD286E /* Widgets */ = {
-			isa = PBXGroup;
-			children = (
-				3F07C9552E11FE7500BD286E /* MainBundle.swift */,
-				3F07C9562E11FE7500BD286E /* PersonalInfoWidget.swift */,
-			);
-			path = Widgets;
 			sourceTree = "<group>";
 		};
 		3F07C95C2E11FE7500BD286E /* Invoicer2 */ = {
 			isa = PBXGroup;
 			children = (
 				3F07C8E32E11FE7500BD286E /* App */,
-				3F07C9282E11FE7500BD286E /* Domain */,
 				3F07C9542E11FE7500BD286E /* Presentation */,
-				3F07C9572E11FE7500BD286E /* Widgets */,
 				3F07C9582E11FE7500BD286E /* Assets.xcassets */,
 				3F07C9592E11FE7500BD286E /* Info.plist */,
 				3F07C95B2E11FE7500BD286E /* LaunchScreen.storyboard */,
@@ -932,7 +950,8 @@
 				3FA72FCB2E11FF1100FB9CAB /* Assets.xcassets */,
 				3FA72FCC2E11FF1100FB9CAB /* Info.plist */,
 				3FA72FD62E1200EA00FB9CAB /* ContractorInfoEntry.swift */,
-				3FA72FDC2E12A08E00FB9CAB /* ContractorInfoWidgetExtension.swift */,
+				3FA72FDC2E12A08E00FB9CAB /* ContractorInfoWidget.swift */,
+				3FA731832E14733900FB9CAB /* WidgetExtensionBundle.swift */,
 			);
 			path = InvoicerWidgetExtension;
 			sourceTree = "<group>";
@@ -1008,6 +1027,14 @@
 		3FA730972E12A40600FB9CAB /* InvoicerPresentationFramework */ = {
 			isa = PBXGroup;
 			children = (
+				3F07C92A2E11FE7500BD286E /* Backup */,
+				3F07C9312E11FE7500BD286E /* InvoiceList */,
+				3F07C9372E11FE7500BD286E /* NewInvoiceForm */,
+				3F07C9422E11FE7500BD286E /* Onboarding */,
+				3F07C9472E11FE7500BD286E /* OnboardingSuccess */,
+				3F07C94C2E11FE7500BD286E /* PreOnboarding */,
+				3F07C94E2E11FE7500BD286E /* Settings */,
+				3F07C9532E11FE7500BD286E /* Tab */,
 				3FA730952E12A40600FB9CAB /* InvoicerPresentationFramework.docc */,
 				3FA730962E12A40600FB9CAB /* InvoicerPresentationFramework.swift */,
 			);
@@ -1019,6 +1046,24 @@
 			children = (
 				3FA730D32E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc */,
 				3FA730D42E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift */,
+				3FA730FC2E12B29D00FB9CAB /* GetBankAccountFactory.swift */,
+				3FA730FE2E12FEE000FB9CAB /* SaveBankAccountUseCaseFactory.swift */,
+				3FA731002E1303AF00FB9CAB /* CacheBankAccountFactory.swift */,
+				3FA731022E135D0D00FB9CAB /* CacheCompanyAddressFactory.swift */,
+				3FA731042E135DA400FB9CAB /* CacheContractorInfoFactory.swift */,
+				3FA731062E135DFD00FB9CAB /* CacheServiceInfoFactory.swift */,
+				3FA731082E135E4400FB9CAB /* CleanCacheFactory.swift */,
+				3FA7310A2E135E7A00FB9CAB /* FinishOnboardingFactory.swift */,
+				3FA7310C2E135EAE00FB9CAB /* FlushOnboardingFactory.swift */,
+				3FA7310E2E135EF400FB9CAB /* GetCompanyAddressFactory.swift */,
+				3FA731102E135F3600FB9CAB /* GetContractorInfoFactory.swift */,
+				3FA731122E135FAC00FB9CAB /* GetInvoiceListFactory.swift */,
+				3FA731142E13606600FB9CAB /* GetOnboardingStepFactory.swift */,
+				3FA731162E13609500FB9CAB /* GetServiceInfoFactory.swift */,
+				3FA731182E1360E600FB9CAB /* SaveCompanyAddressDataFactory.swift */,
+				3FA7311B2E13617200FB9CAB /* SaveContractorInfoFactory.swift */,
+				3FA7311D2E1361AB00FB9CAB /* SaveOnboardingStepFactory.swift */,
+				3FA7311F2E1361D400FB9CAB /* SaveServiceInfoFactory.swift */,
 			);
 			path = InvoicerUseCaseFactoryFramework;
 			sourceTree = "<group>";
@@ -1636,7 +1681,8 @@
 				3FA72FD92E1204C700FB9CAB /* ContractorInfoEntryTimelineProvider.swift in Sources */,
 				3FA72FD72E1200EA00FB9CAB /* ContractorInfoEntry.swift in Sources */,
 				3FA72FDB2E129D6000FB9CAB /* ContractorInfoWidgetView.swift in Sources */,
-				3FA72FDD2E12A08E00FB9CAB /* ContractorInfoWidgetExtension.swift in Sources */,
+				3FA731842E14733900FB9CAB /* WidgetExtensionBundle.swift in Sources */,
+				3FA72FDD2E12A08E00FB9CAB /* ContractorInfoWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1662,6 +1708,7 @@
 				3FA730E52E12AC0F00FB9CAB /* CleanCache.swift in Sources */,
 				3FA730EE2E12ADC200FB9CAB /* GetInvoiceList.swift in Sources */,
 				3FA730152E12A31900FB9CAB /* ContractorInfoDomain.swift in Sources */,
+				3FA7311A2E13611B00FB9CAB /* SaveCompanyAddress.swift in Sources */,
 				3FA730E62E12ACA600FB9CAB /* FinishOnboarding.swift in Sources */,
 				3FA730EF2E12ADF200FB9CAB /* GetOnboardingStep.swift in Sources */,
 				3FA730F02E12AE1D00FB9CAB /* GetServiceInfo.swift in Sources */,
@@ -1719,8 +1766,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA731282E1362E300FB9CAB /* TabView.swift in Sources */,
+				3FA731352E13637E00FB9CAB /* OnboardingContractorInfoView.swift in Sources */,
+				3FA7312B2E13630A00FB9CAB /* OnboardingSuccessCoordinator.swift in Sources */,
+				3FA7313C2E13640A00FB9CAB /* InvoiceItemView.swift in Sources */,
+				3FA7313E2E13642500FB9CAB /* InvoiceListCoordinator.swift in Sources */,
 				3FA730982E12A40600FB9CAB /* InvoicerPresentationFramework.docc in Sources */,
+				3FA7312D2E13631C00FB9CAB /* OnboardingSuccessViewModel.swift in Sources */,
+				3FA731332E13636700FB9CAB /* OnboardingBankInfoView.swift in Sources */,
+				3FA731402E13643D00FB9CAB /* InvoiceListViewModel.swift in Sources */,
+				3FA731272E1362DB00FB9CAB /* TabCoordinator.swift in Sources */,
+				3FA731262E1362D100FB9CAB /* TabBuilder.swift in Sources */,
+				3FA7312C2E13631200FB9CAB /* OnboardingSuccessView.swift in Sources */,
+				3FA7313A2E1363E300FB9CAB /* NewInvoiceFormView.swift in Sources */,
+				3FA7312A2E13630200FB9CAB /* OnboardingSuccessBuilder.swift in Sources */,
+				3FA731212E13623200FB9CAB /* BackupView.swift in Sources */,
+				3FA731222E13626500FB9CAB /* PreOnboardingBuilder.swift in Sources */,
+				3FA7313D2E13641C00FB9CAB /* InvoiceListBuilder.swift in Sources */,
+				3FA731252E1362C000FB9CAB /* PreOnboardingViewModel.swift in Sources */,
+				3FA7313B2E1363E900FB9CAB /* NewInvoiceFormViewModel.swift in Sources */,
+				3FA731362E13638E00FB9CAB /* OnboardingServiceInfoView.swift in Sources */,
+				3FA731312E13633900FB9CAB /* OnboardingView.swift in Sources */,
+				3FA731452E1365C900FB9CAB /* SettingsView.swift in Sources */,
+				3FA731392E1363DE00FB9CAB /* NewInvoiceFormState.swift in Sources */,
+				3FA731292E1362ED00FB9CAB /* TabViewModel.swift in Sources */,
+				3FA731302E13633300FB9CAB /* OnboardingModels.swift in Sources */,
+				3FA731412E13645200FB9CAB /* InvoiceUI.swift in Sources */,
+				3FA731382E1363D600FB9CAB /* NewInvoiceFormCoordinator.swift in Sources */,
+				3FA7312E2E13632800FB9CAB /* OnboardingBuilder.swift in Sources */,
+				3FA731372E1363CE00FB9CAB /* NewInvoiceFormBuilder.swift in Sources */,
+				3FA731322E13634C00FB9CAB /* OnboardingViewModel.swift in Sources */,
 				3FA730992E12A40600FB9CAB /* InvoicerPresentationFramework.swift in Sources */,
+				3FA731232E13626C00FB9CAB /* PreOnboardingCoordinator.swift in Sources */,
+				3FA731242E13627300FB9CAB /* PreOnboardingView.swift in Sources */,
+				3FA731342E13636D00FB9CAB /* OnboardingCompanyAddressView.swift in Sources */,
+				3FA7312F2E13632D00FB9CAB /* OnboardingCoordinator.swift in Sources */,
+				3FA7313F2E13642F00FB9CAB /* InvoiceListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1767,8 +1848,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FA730FD2E12B29D00FB9CAB /* GetBankAccountFactory.swift in Sources */,
+				3FA731132E135FAD00FB9CAB /* GetInvoiceListFactory.swift in Sources */,
+				3FA731072E135DFD00FB9CAB /* CacheServiceInfoFactory.swift in Sources */,
+				3FA731112E135F3600FB9CAB /* GetContractorInfoFactory.swift in Sources */,
+				3FA731192E1360E600FB9CAB /* SaveCompanyAddressDataFactory.swift in Sources */,
+				3FA731092E135E4400FB9CAB /* CleanCacheFactory.swift in Sources */,
 				3FA730D62E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.docc in Sources */,
+				3FA731202E1361D400FB9CAB /* SaveServiceInfoFactory.swift in Sources */,
+				3FA7310D2E135EAE00FB9CAB /* FlushOnboardingFactory.swift in Sources */,
+				3FA7310B2E135E7A00FB9CAB /* FinishOnboardingFactory.swift in Sources */,
+				3FA731012E1303AF00FB9CAB /* CacheBankAccountFactory.swift in Sources */,
 				3FA730D72E12AAD100FB9CAB /* InvoicerUseCaseFactoryFramework.swift in Sources */,
+				3FA7311E2E1361AB00FB9CAB /* SaveOnboardingStepFactory.swift in Sources */,
+				3FA731152E13606600FB9CAB /* GetOnboardingStepFactory.swift in Sources */,
+				3FA7311C2E13617200FB9CAB /* SaveContractorInfoFactory.swift in Sources */,
+				3FA731172E13609500FB9CAB /* GetServiceInfoFactory.swift in Sources */,
+				3FA731052E135DA400FB9CAB /* CacheContractorInfoFactory.swift in Sources */,
+				3FA731032E135D0D00FB9CAB /* CacheCompanyAddressFactory.swift in Sources */,
+				3FA7310F2E135EF400FB9CAB /* GetCompanyAddressFactory.swift in Sources */,
+				3FA730FF2E12FEE000FB9CAB /* SaveBankAccountUseCaseFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1786,43 +1885,6 @@
 			files = (
 				3F07C9602E11FE7500BD286E /* AppDelegate.swift in Sources */,
 				3F07C9612E11FE7500BD286E /* SceneDelegate.swift in Sources */,
-				3F07C9912E11FE7500BD286E /* SaveCompanyAddress.swift in Sources */,
-				3F07C9952E11FE7500BD286E /* BackupView.swift in Sources */,
-				3F07C9962E11FE7500BD286E /* InvoiceItemView.swift in Sources */,
-				3F07C9972E11FE7500BD286E /* InvoiceListBuilder.swift in Sources */,
-				3F07C9982E11FE7500BD286E /* InvoiceListCoordinator.swift in Sources */,
-				3F07C9992E11FE7500BD286E /* InvoiceListView.swift in Sources */,
-				3F07C99A2E11FE7500BD286E /* InvoiceListViewModel.swift in Sources */,
-				3F07C99B2E11FE7500BD286E /* InvoiceUI.swift in Sources */,
-				3F07C99C2E11FE7500BD286E /* NewInvoiceFormBuilder.swift in Sources */,
-				3F07C99D2E11FE7500BD286E /* NewInvoiceFormCoordinator.swift in Sources */,
-				3F07C99E2E11FE7500BD286E /* NewInvoiceFormState.swift in Sources */,
-				3F07C99F2E11FE7500BD286E /* NewInvoiceFormView.swift in Sources */,
-				3F07C9A02E11FE7500BD286E /* NewInvoiceFormViewModel.swift in Sources */,
-				3F07C9A12E11FE7500BD286E /* OnboardingBankInfoView.swift in Sources */,
-				3F07C9A22E11FE7500BD286E /* OnboardingCompanyAddressView.swift in Sources */,
-				3F07C9A32E11FE7500BD286E /* OnboardingContractorInfoView.swift in Sources */,
-				3F07C9A42E11FE7500BD286E /* OnboardingServiceInfoView.swift in Sources */,
-				3F07C9A52E11FE7500BD286E /* OnboardingBuilder.swift in Sources */,
-				3F07C9A62E11FE7500BD286E /* OnboardingCoordinator.swift in Sources */,
-				3F07C9A72E11FE7500BD286E /* OnboardingModels.swift in Sources */,
-				3F07C9A82E11FE7500BD286E /* OnboardingView.swift in Sources */,
-				3F07C9A92E11FE7500BD286E /* OnboardingViewModel.swift in Sources */,
-				3F07C9AA2E11FE7500BD286E /* OnboardingSuccessBuilder.swift in Sources */,
-				3F07C9AB2E11FE7500BD286E /* OnboardingSuccessCoordinator.swift in Sources */,
-				3F07C9AC2E11FE7500BD286E /* OnboardingSuccessView.swift in Sources */,
-				3F07C9AD2E11FE7500BD286E /* OnboardingSuccessViewModel.swift in Sources */,
-				3F07C9AE2E11FE7500BD286E /* PreOnboardingBuilder.swift in Sources */,
-				3F07C9AF2E11FE7500BD286E /* PreOnboardingCoordinator.swift in Sources */,
-				3F07C9B02E11FE7500BD286E /* PreOnboardingView.swift in Sources */,
-				3F07C9B12E11FE7500BD286E /* PreOnboardingViewModel.swift in Sources */,
-				3F07C9B22E11FE7500BD286E /* SettingsView.swift in Sources */,
-				3F07C9B32E11FE7500BD286E /* TabBuilder.swift in Sources */,
-				3F07C9B42E11FE7500BD286E /* TabCoordinator.swift in Sources */,
-				3F07C9B52E11FE7500BD286E /* TabView.swift in Sources */,
-				3F07C9B62E11FE7500BD286E /* TabViewModel.swift in Sources */,
-				3F07C9B72E11FE7500BD286E /* MainBundle.swift in Sources */,
-				3F07C9B82E11FE7500BD286E /* PersonalInfoWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

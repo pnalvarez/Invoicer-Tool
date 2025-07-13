@@ -3,7 +3,7 @@ import InvoicerDomainFramework
 public final class CacheRepository: CacheRepositoryProtocol {
     private let dataSource: CacheDataSourceProtocol
     
-    init(dataSource: CacheDataSourceProtocol = CacheDataSource()) {
+    public init(dataSource: CacheDataSourceProtocol = CacheDataSource()) {
         self.dataSource = dataSource
     }
     

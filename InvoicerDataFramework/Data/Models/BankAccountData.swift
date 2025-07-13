@@ -1,7 +1,7 @@
 import SwiftData
 import InvoicerDomainFramework
 
-@Model final class BankAccountData {
+@Model public final class BankAccountData {
     @Attribute var beneficiaryName: String
     @Attribute var bankInfo: BankInfoData
     @Attribute var secondaryBankInfo: BankInfoData?

@@ -1,0 +1,15 @@
+//
+//  CacheServiceInfoFactory.swift
+//  InvoicerUseCaseFactoryFramework
+//
+//  Created by Pedro Alvarez on 30/06/25.
+//
+
+import InvoicerDomainFramework
+import InvoicerDataFramework
+
+public enum CacheServiceInfoFactory {
+    public static func make() -> CacheServiceInfo {
+        CacheServiceInfo(cacheRepository: CacheRepository())
+    }
+}
