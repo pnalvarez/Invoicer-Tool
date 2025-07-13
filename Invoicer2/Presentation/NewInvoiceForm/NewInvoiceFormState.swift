@@ -12,6 +12,4 @@ struct NewInvoiceFormState {
     var issueDateError: String?
     var dueDateError: String?
     var ctaEnabled: Bool = true
-    var shouldDisplayIssueDatePicker: Bool = false
-    var shouldDisplayDueDatePicker: Bool = false
 }

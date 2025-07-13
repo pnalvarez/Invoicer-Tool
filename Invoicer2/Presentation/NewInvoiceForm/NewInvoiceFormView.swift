@@ -2,7 +2,10 @@ import SwiftUI
 
 struct NewInvoiceFormView: View {
     @ObservedObject var viewModel: NewInvoiceFormViewModel
-    @State private var date = Date()
+    @State private var issueDate: String = ""
+    @State private var dueDate: String = ""
+    @State private var issueDateError: String?
+    @State private var dueDateError: String?
     
     var body: some View {
         VStack {
@@ -21,36 +24,44 @@ struct NewInvoiceFormView: View {
             .padding(.bottom, 32)
             .padding(.horizontal, 20)
         }
-        .modalDialogue(isPresented: $viewModel.state.shouldDisplayIssueDatePicker) {
+        .modalDialogue(isPresented: $viewModel.shouldDisplayIssueDatePicker) {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Select the Issue Date")
                 DatePicker(
                         "Start Date",
-                        selection: $viewModel.state.issueDate,
+                        selection: $viewModel.issueDate,
                         displayedComponents: [.date]
                     )
                 .datePickerStyle(.graphical)
                 .labelsHidden()
             }
-            .onChange(of: viewModel.state.issueDate) {
-                viewModel.state.shouldDisplayIssueDatePicker = false
-            }
         }
-        .modalDialogue(isPresented: $viewModel.state.shouldDisplayDueDatePicker
+        .modalDialogue(isPresented: $viewModel.shouldDisplayDueDatePicker
         ) {
             VStack(alignment: .leading, spacing: 8) {
                 Text("Select the Due Date")
                 DatePicker(
                         "Start Date",
-                        selection: $viewModel.state.dueDate,
+                        selection: $viewModel.dueDate,
                         displayedComponents: [.date]
                     )
                 .datePickerStyle(.graphical)
                 .labelsHidden()
             }
-            .onChange(of: viewModel.state.dueDate) {
-                viewModel.state.shouldDisplayDueDatePicker = false
-            }
+        }
+        .onChange(of: viewModel.dueDate) { _, value in
+            viewModel.shouldDisplayDueDatePicker = false
+            dueDate = value.formatted
+        }
+        .onChange(of: viewModel.issueDate) { _, value in
+            viewModel.shouldDisplayIssueDatePicker = false
+            issueDate = value.formatted
+        }
+        .onChange(of: viewModel.state.issueDateError) { _, value in
+            issueDateError = value
+        }
+        .onChange(of: viewModel.state.dueDateError) { _, value in
+            dueDateError = value
         }
     }
     
@@ -69,26 +80,28 @@ struct NewInvoiceFormView: View {
                 keyboardType: .numberPad)
             Spacer().frame(height: 16)
             Button {
-                viewModel.state.shouldDisplayIssueDatePicker = true
+                viewModel.shouldDisplayIssueDatePicker = true
             } label: {
                 InputField(
                     label: "Issue Date",
-                    text: .constant(viewModel.state.issueDateWasSelected ? viewModel.state.issueDate.formatted : ""),
-                    errorMessage: viewModel.state.issueDateError,
+                    text: $issueDate,
+                    errorMessage: viewModel.issueDateError,
                     keyboardType: .numberPad,
-                    isDisabled: true
+                    isDisabled: true,
+                    needsFocusToShowError: false
                 )
             }
             Spacer().frame(height: 16)
             Button {
-                viewModel.state.shouldDisplayDueDatePicker = true
+                viewModel.shouldDisplayDueDatePicker = true
             } label: {
                 InputField(
                     label: "Due Date",
-                    text: .constant(viewModel.state.dueDateWasSelected ? viewModel.state.dueDate.formatted : ""),
-                    errorMessage: viewModel.state.dueDateError,
+                    text: $dueDate,
+                    errorMessage: viewModel.dueDateError,
                     keyboardType: .numberPad,
-                    isDisabled: true
+                    isDisabled: true,
+                    needsFocusToShowError: false
                 )
             }
         }

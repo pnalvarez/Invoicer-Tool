@@ -10,16 +10,21 @@ struct InputField: View {
     var formatter: (String) -> String = { $0 }
     var didFocusChange: (Bool) -> Void = { _ in }
     var isDisabled: Bool = false
+    var needsFocusToShowError: Bool = true
     @State private var internalText: String = ""
     @State private var isFocused: Bool = false
     @State private var hasAlreadyFocused: Bool = false
+    
+    private var showErrorState: Bool {
+         errorMessage != nil && (hasAlreadyFocused || !needsFocusToShowError)
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: .zero) {
             Text(label)
                 .font(.callout)
                 .fontWeight(.regular)
-                .foregroundColor(errorMessage != nil && hasAlreadyFocused ? Colors.errorPrimary : Colors.textPrimary)
+                .foregroundColor(showErrorState ? Colors.errorPrimary : Colors.textPrimary)
             Spacer()
                 .frame(height: 8)
             TextField(placeholder, text: text) {
@@ -36,7 +41,7 @@ struct InputField: View {
             .padding(8)
             .overlay(
                 RoundedRectangle(cornerRadius: 4)
-                    .stroke(errorMessage != nil && hasAlreadyFocused ? Colors.errorPrimary : isFocused ? Colors.inputHover : Colors.inputBorder.opacity(0.5), lineWidth: isFocused || errorMessage != nil && hasAlreadyFocused ? 2 : 1)
+                    .stroke(showErrorState ? Colors.errorPrimary : isFocused ? Colors.inputHover : Colors.inputBorder.opacity(0.5), lineWidth: isFocused || errorMessage != nil && hasAlreadyFocused ? 2 : 1)
             )
             .onChange(of: internalText) { _, newValue in
                 let formatted = formatter(newValue)
@@ -50,7 +55,7 @@ struct InputField: View {
             }
             .disabled(isDisabled)
             
-            if let errorMessage, hasAlreadyFocused {
+            if let errorMessage, (hasAlreadyFocused || !needsFocusToShowError) {
                 Spacer().frame(height: 4)
                 Text(errorMessage)
                     .font(.footnote)

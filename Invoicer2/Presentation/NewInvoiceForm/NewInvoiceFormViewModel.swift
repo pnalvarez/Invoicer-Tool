@@ -1,8 +1,16 @@
 import Combine
+import Foundation
 
 final class NewInvoiceFormViewModel: ObservableObject {
     private let coordinator: NewInvoiceFormCoordinatorProtocol
     @Published var state: NewInvoiceFormState = .init()
+    @Published var shouldDisplayIssueDatePicker: Bool = false
+    @Published var shouldDisplayDueDatePicker: Bool = false
+    @Published var issueDate: Date = Date()
+    @Published var dueDate: Date = Date()
+    
+    @Published var issueDateError: String?
+    @Published var dueDateError: String?
     private var cancellables: Set<AnyCancellable> = []
     
     init(coordinator: NewInvoiceFormCoordinatorProtocol) {
@@ -15,7 +23,7 @@ final class NewInvoiceFormViewModel: ObservableObject {
     }
     
     func didTapCTA() {
-        state.shouldDisplayIssueDatePicker = true
+        shouldDisplayIssueDatePicker = true
     }
     
     private func setUpFieldValidation() {
@@ -27,33 +35,25 @@ final class NewInvoiceFormViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
-        $state
-            .mapDistinct(\.issueDate)
-            .sink { [weak self] issueDate in
+        $issueDate
+            .sink { [weak self] value in
                 guard let self else { return }
-                state.issueDate = issueDate
-            
-                if state.dueDate < issueDate {
-                    state.dueDateError = "Due date should be after issue date"
-                }
+                dueDateError = nil
+                dueDate = value.plus(days: 7)
             }
             .store(in: &cancellables)
         
-        $state
-            .mapDistinct(\.dueDate)
-            .sink { [weak self] dueDate in
+        $dueDate
+            .sink { [weak self] value in
                 guard let self else { return }
-                state.dueDate = dueDate
-                if dueDate < state.issueDate {
-                    state.dueDateError = "Due date should be after issue date"
-                }
+                dueDateError = value < issueDate ? "Due date should be after issue date" : nil
             }
             .store(in: &cancellables)
         
         Publishers.CombineLatest3(
             $state.mapDistinct(\.invoiceIdError),
-            $state.mapDistinct(\.issueDateError),
-            $state.mapDistinct(\.dueDateError)
+            $issueDateError,
+            $dueDateError
         ).sink { [weak self] (invoiceIdError, issueDateError, dueDateError) in
             guard let self else { return }
             state.ctaEnabled = invoiceIdError == nil && issueDateError == nil && dueDateError == nil

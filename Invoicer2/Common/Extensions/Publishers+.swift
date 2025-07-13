@@ -5,8 +5,7 @@ extension Publisher {
         _ keyPath: KeyPath<Output, Value>,
         removeDuplicates: Bool = true
     ) -> AnyPublisher<Value, Failure> {
-        let mapped = self
-            .map(keyPath)
+        let mapped = map(keyPath)
 
         if removeDuplicates {
             return mapped
